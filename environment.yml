@@ -1,0 +1,11 @@
+---
+name: hybridesmbench
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python>=3.11
+
+  # develop
+  - pre-commit

@@ -1,0 +1,46 @@
+[project]
+name = "hybridesmbench"
+version = "0.0.0"
+description = "Create, couple, test, and evaluate hybrid Earth system model simulations"
+authors = [
+    {name = "Fangfei Lan", email = "fangfei.lan@unil.ch"},
+    {name = "Bettina K. Gier", email = "gier@uni-bremen.de"},
+    {name = "Manuel Schlund", email = "manuel.schlund@dlr.de"},
+]
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["Earth System Model", "Hybrid Earth System Model", "Earth System Model Evaluation"]
+license = {file = "LICENSE"}
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+]
+
+
+[project.optional-dependencies]
+develop = [
+    "pre-commit",
+]
+
+
+[tool.setuptools]
+packages = ["hybridesmbench"]
+
+
+[tool.black]
+line-length = 79
+target-version = ['py311', 'py312', 'py313']
+
+
+[tool.isort]
+line_length = 79
+profile = "black"
