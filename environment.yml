@@ -9,7 +9,9 @@ dependencies:
   - esmvalcore
   - esmvaltool-python
   - iris
+  - loguru
   - ncdata
+  - pyyaml
   - xarray
 
   # develop

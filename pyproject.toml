@@ -25,7 +25,9 @@ classifiers = [
 dependencies = [
     "esmvalcore",
     "esmvaltool",
+    "loguru",
     "ncdata",
+    "pyyaml",
     "scitools-iris",
     "xarray",
 ]
