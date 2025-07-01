@@ -11,6 +11,12 @@ from hybridesmbench.eval._diags.base import Diagnostic as BaseDiagnostic
 class Diagnostic(BaseDiagnostic):
     """Setup time series diagnostic."""
 
+    _OBS_PLOT_KWARGS = {
+        "color": "black",
+        "label": "{dataset}",
+        "linewidth": 1.0,
+        "zorder": 2.4,
+    }
     _SETTINGS = {
         "facet_used_for_labels": "alias",
         "figure_kwargs": {
@@ -38,26 +44,14 @@ class Diagnostic(BaseDiagnostic):
                         "zorder": 1.0,
                     },
                     "CMIP6_CESM2": {
-                        "label": "{project}",
+                        "label": "{project}",  # only show 'CMIP6' label once
                     },
-                    "OBS": {
-                        "color": "black",
-                        "label": "{dataset}",
-                        "linewidth": 1.0,
-                        "zorder": 2.4,
-                    },
-                    "OBS6": {
-                        "color": "black",
-                        "label": "{dataset}",
-                        "linewidth": 1.0,
-                        "zorder": 2.4,
-                    },
-                    "native6": {
-                        "color": "black",
-                        "label": "{dataset}",
-                        "linewidth": 1.0,
-                        "zorder": 2.4,
-                    },
+                    "OBS": _OBS_PLOT_KWARGS,
+                    "OBS_CERES-EBAF": _OBS_PLOT_KWARGS,
+                    "OBS_GPCP-SG": _OBS_PLOT_KWARGS,
+                    "OBS_HadCRUT5": _OBS_PLOT_KWARGS,
+                    "OBS6": _OBS_PLOT_KWARGS,
+                    "native6": _OBS_PLOT_KWARGS,
                 },
             },
         },
