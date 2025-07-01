@@ -1,0 +1,135 @@
+documentation:
+  title: HybridESMBench
+  description: HybridESMBench
+  authors:
+  - schlund_manuel
+
+preprocessors:
+  create_global_annual_mean_time_series:
+    custom_order: true
+    regrid:
+      target_grid: 2x2
+      scheme: nearest
+    area_statistics:
+      operator: mean
+    annual_statistics:
+      operator: mean
+  create_global_annual_mean_time_series_pr:
+    custom_order: true
+    regrid:
+      target_grid: 2x2
+      scheme: nearest
+    area_statistics:
+      operator: mean
+    annual_statistics:
+      operator: mean
+    convert_units:
+      units: mm day-1
+
+diagnostics:
+  timeseries:
+    variables:
+      pr:
+        mip: Amon
+        preprocessor: create_global_annual_mean_time_series_pr
+        title: Global Mean Precipitation
+        additional_datasets:
+        - project: OBS
+          dataset: GPCP-SG
+          type: atmos
+          version: 2.3
+          tier: 2
+          timerange: 19790101/20230430
+        supplementary_variables:
+        - short_name: areacella
+          skip: true
+        - short_name: areacello
+          skip: true
+        - short_name: sftlf
+          skip: true
+        - short_name: sftof
+          skip: true
+      rlut:
+        mip: Amon
+        preprocessor: create_global_annual_mean_time_series
+        title: Global Mean TOA Outgoing Longwave Radiation
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          timerange: 20000331/20231130
+        supplementary_variables:
+        - short_name: areacella
+          skip: true
+        - short_name: areacello
+          skip: true
+        - short_name: sftlf
+          skip: true
+        - short_name: sftof
+          skip: true
+      rsut:
+        mip: Amon
+        preprocessor: create_global_annual_mean_time_series
+        title: Global Mean TOA Outgoing Shortwave Radiation
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          timerange: 20000331/20231130
+        supplementary_variables:
+        - short_name: areacella
+          skip: true
+        - short_name: areacello
+          skip: true
+        - short_name: sftlf
+          skip: true
+        - short_name: sftof
+          skip: true
+      rtmt:
+        mip: Amon
+        preprocessor: create_global_annual_mean_time_series
+        title: Global Mean TOA Net Downward Total Radiation
+        supplementary_variables:
+        - short_name: areacella
+          skip: true
+        - short_name: areacello
+          skip: true
+        - short_name: sftlf
+          skip: true
+        - short_name: sftof
+          skip: true
+      tas:
+        mip: Amon
+        preprocessor: create_global_annual_mean_time_series
+        title: Global Mean Near-Surface Air Temperature
+        additional_datasets:
+        - project: OBS
+          dataset: HadCRUT5
+          type: ground
+          version: 5.0.1.0-analysis
+          tier: 2
+          timerange: 19790101/20211231
+        supplementary_variables:
+        - short_name: areacella
+          skip: true
+        - short_name: areacello
+          skip: true
+        - short_name: sftlf
+          skip: true
+        - short_name: sftof
+          skip: true
+    additional_datasets:
+    - project: CMIP6
+      dataset: '*'
+      exp: historical
+      ensemble: r1i1p1f1
+      grid: '*'
+      institute: '*'
+      timerange: 19790101/20141231
+    scripts:
+      plot:
+        script: monitor/multi_datasets.py
