@@ -23,11 +23,17 @@ classifiers = [
 ]
 
 dependencies = [
+    "esmvalcore",
+    "esmvaltool",
+    "iris",
+    "ncdata",
+    "xarray",
 ]
 
 
 [project.optional-dependencies]
 develop = [
+    "ipykernel",
     "pre-commit",
 ]
 
