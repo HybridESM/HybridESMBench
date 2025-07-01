@@ -1,0 +1,82 @@
+"""Provide time series diagnostic."""
+
+import warnings
+
+from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
+from loguru import logger
+
+from hybridesmbench.eval._diags.base import Diagnostic as BaseDiagnostic
+
+
+class Diagnostic(BaseDiagnostic):
+    """Setup time series diagnostic."""
+
+    _SETTINGS = {
+        "facet_used_for_labels": "alias",
+        "figure_kwargs": {
+            "figsize": [7, 5],
+        },
+        "group_variables_by": "variable_group",
+        "plot_filename": "{plot_type}_{exp}_{real_name}_{dataset}_{mip}",
+        "plot_folder": "{plot_dir}",
+        "plots": {
+            "timeseries": {
+                "annual_mean_kwargs": False,
+                "legend_kwargs": {
+                    "loc": "upper center",
+                    "bbox_to_anchor": [0.5, -0.4],
+                    "borderaxespad": 0.0,
+                },
+                "pyplot_kwargs": {
+                    "title": "{title}",
+                },
+                "plot_kwargs": {
+                    "default": {
+                        "color": "lightgray",
+                        "label": None,
+                        "linewidth": 0.75,
+                        "zorder": 1.0,
+                    },
+                    "CMIP6_CESM2": {
+                        "label": "{project}",
+                    },
+                    "OBS": {
+                        "color": "black",
+                        "label": "{dataset}",
+                        "linewidth": 1.0,
+                        "zorder": 2.4,
+                    },
+                    "OBS6": {
+                        "color": "black",
+                        "label": "{dataset}",
+                        "linewidth": 1.0,
+                        "zorder": 2.4,
+                    },
+                    "native6": {
+                        "color": "black",
+                        "label": "{dataset}",
+                        "linewidth": 1.0,
+                        "zorder": 2.4,
+                    },
+                },
+            },
+        },
+    }
+    _VARS = [
+        {"mip": "Amon", "short_name": "tas"},
+    ]
+
+    def run(self) -> None:
+        """Run diagnostic."""
+        logger.info(f"Running diagnostic '{self.name}'")
+        # TODO: this entire block can be replaced with main(self._cfg) in
+        # ESMValTool v2.13.0
+        with warnings.catch_warnings():
+            warnings.filterwarnings(
+                "ignore",
+                message="Using DEFAULT_SPHERICAL_EARTH_RADIUS",
+                category=UserWarning,
+                module="iris",
+            )
+            MultiDatasets(self._cfg).compute()
+        logger.info(f"Finished diagnostic '{self.name}'")
