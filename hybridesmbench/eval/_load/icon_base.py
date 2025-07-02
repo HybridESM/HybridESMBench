@@ -89,9 +89,9 @@ class BaseICONLoader(BaseLoader):
 
         # Run ESMValCore fixes on the data to "CMORize" it
         cmor_var_info = get_var_info("ICON", var_mip, var_name)
-        extra_facets: dict[str, Any] = {}
-        if self.grid_file is not None:
-            extra_facets["horizontal_grid"] = self.grid_file
+        extra_facets: dict[str, Any] = {
+            "horizontal_grid": self.grid_file,
+        }
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=IrisUserWarning)
             cube = fix_metadata(
