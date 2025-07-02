@@ -60,6 +60,8 @@ class Diagnostic:
         cfg = self._get_cfg(**additional_settings)
         self._run_diag_function(cfg)
 
+        logger.info(f"Finished diagnostic '{self.name}'")
+
     @property
     def input_dir(self) -> Path:
         """Get input directory."""

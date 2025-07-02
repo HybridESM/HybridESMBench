@@ -4,7 +4,6 @@ import warnings
 from typing import Any
 
 from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
-from loguru import logger
 
 from hybridesmbench.eval._diags.base import Diagnostic as BaseDiagnostic
 
@@ -73,4 +72,3 @@ class Diagnostic(BaseDiagnostic):
                 module="iris",
             )
             MultiDatasets(cfg).compute()
-        logger.info(f"Finished diagnostic '{self.name}'")
