@@ -1,4 +1,4 @@
-"""Provide base class for diagnostics."""
+"""Run diagnostics (base class)."""
 
 import datetime
 import inspect
@@ -13,8 +13,8 @@ from loguru import logger
 from hybridesmbench.exceptions import HybridESMBenchWarning
 
 
-class Diagnostic:
-    """Setup base class for diagnostics.
+class BaseDiagnostic:
+    """Run diagnostics (base class).
 
     Parameters
     ----------
@@ -28,8 +28,8 @@ class Diagnostic:
         "output_file_type": "png",
         "recipe": "recipe.yml",
     }
-    _SETTINGS: dict[str, Any] = {}
-    _VARS: list[dict[str, str]] = []
+    _SETTINGS: dict[str, Any]
+    _VARS: list[dict[str, str]]
 
     def __init__(self, work_dir: Path) -> None:
         """Initialize class instance."""
@@ -39,15 +39,46 @@ class Diagnostic:
         logger.debug(f"Initialized diagnostic '{self.name}'")
 
     def get_all_figures(self, suffix: str = "png") -> Generator[Path]:
-        """Get all figure files."""
+        """Get all figure files.
+
+        Parameters
+        ----------
+        suffix:
+            File suffix (extension).
+
+        Yields
+        ------
+        Generator[Path]
+            All figure files.
+
+        """
         return self._get_all_output_files(suffix)
 
     def get_all_nc_files(self, suffix: str = "nc") -> Generator[Path]:
-        """Get all figure files."""
+        """Get all netCDF files.
+
+        Parameters
+        ----------
+        suffix:
+            File suffix (extension).
+
+        Yields
+        ------
+        Generator[Path]
+            All netCDF files.
+
+        """
         return self._get_all_output_files(suffix)
 
     def run(self, **additional_settings: Any) -> None:
-        """Run diagnostic."""
+        """Run diagnostics.
+
+        Parameters
+        ----------
+        **additional_settings
+            Additional diagnostic settings.
+
+        """
         logger.info(f"Running diagnostic '{self.name}'")
 
         self.session_dir.mkdir(parents=True, exist_ok=True)
@@ -88,12 +119,11 @@ class Diagnostic:
     ) -> Generator[Path]:
         """Get all output files."""
         if not self.output_dir.is_dir():
-            warnings.warn(
+            msg = (
                 "Output directory does not exist, make sure to run() the "
-                "diagnostic first",
-                HybridESMBenchWarning,
-                stacklevel=3,
+                "diagnostic first"
             )
+            warnings.warn(msg, HybridESMBenchWarning, stacklevel=3)
         return self.output_dir.rglob(f"*.{suffix}")
 
     def _get_cfg(self, **additional_settings: Any) -> dict[str, Any]:

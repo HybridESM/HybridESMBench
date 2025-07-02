@@ -1,11 +1,11 @@
-"""Provide time series diagnostic."""
+"""Run time series diagnostic."""
 
 import warnings
 from typing import Any
 
 from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
 
-from hybridesmbench.eval._diags.base import Diagnostic as BaseDiagnostic
+from hybridesmbench.eval._diags.base import BaseDiagnostic
 
 
 class Diagnostic(BaseDiagnostic):
@@ -57,7 +57,7 @@ class Diagnostic(BaseDiagnostic):
         },
     }
     _VARS = [
-        {"mip": "Amon", "short_name": "tas"},
+        {"var_name": "tas", "var_mip": "Amon"},
     ]
 
     def _run_diag_function(self, cfg: dict[str, Any]) -> None:
