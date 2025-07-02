@@ -3,6 +3,7 @@
 import datetime
 import inspect
 import warnings
+from collections.abc import Generator
 from pathlib import Path
 from typing import Any
 
@@ -17,10 +18,8 @@ class Diagnostic:
 
     Parameters
     ----------
-    output_dir:
-        Output directory.
-    **additional_settings:
-        Additional diagnostic settings.
+    work_dir:
+        Work directory where files created by the diagnostic are stored.
 
     """
 
@@ -32,28 +31,34 @@ class Diagnostic:
     _SETTINGS: dict[str, Any] = {}
     _VARS: list[dict[str, str]] = []
 
-    def __init__(self, work_dir: Path, **additional_settings: Any) -> None:
+    def __init__(self, work_dir: Path) -> None:
         """Initialize class instance."""
-        logger.info(f"Initializing diagnostic '{self.name}'")
+        self._root_dir = Path(inspect.getfile(self.__class__)).parent
+        self._data_dir = self._root_dir / "data"
         self._session_dir = self._get_session_dir(work_dir)
+        logger.debug(f"Initialized diagnostic '{self.name}'")
+
+    def get_all_figures(self, suffix: str = "png") -> Generator[Path]:
+        """Get all figure files."""
+        return self._get_all_output_files(suffix)
+
+    def get_all_nc_files(self, suffix: str = "nc") -> Generator[Path]:
+        """Get all figure files."""
+        return self._get_all_output_files(suffix)
+
+    def run(self, **additional_settings: Any) -> None:
+        """Run diagnostic."""
+        logger.info(f"Running diagnostic '{self.name}'")
+
+        self.session_dir.mkdir(parents=True, exist_ok=True)
         self.input_dir.mkdir(parents=True, exist_ok=True)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        logger.debug(f"Created session directory {self.session_dir}")
         logger.debug(f"Created input directory {self.input_dir}")
         logger.debug(f"Created output directory {self.output_dir}")
 
-        self._cfg = self._get_cfg(**additional_settings)
-
-    def get_all_figures(self, suffix: str = "png") -> list[Path]:
-        """Get all figure files."""
-        return self._get_all_output_files(suffix)
-
-    def get_all_nc_files(self, suffix: str = "nc") -> list[Path]:
-        """Get all figure files."""
-        return self._get_all_output_files(suffix)
-
-    def run(self) -> None:
-        """Run diagnostic."""
-        raise NotImplementedError()
+        cfg = self._get_cfg(**additional_settings)
+        self._run_diag_function(cfg)
 
     @property
     def input_dir(self) -> Path:
@@ -75,27 +80,19 @@ class Diagnostic:
         """Get output directory."""
         return self._session_dir
 
-    @property
-    def _data_dir(self) -> Path:
-        """Get data directory."""
-        return self._root_dir / "data"
-
-    @property
-    def _root_dir(self) -> Path:
-        """Get root directory of diagnostic."""
-        return Path(inspect.getfile(self.__class__)).parent
-
-    def _get_all_output_files(self, suffix: str | None = None) -> list[Path]:
+    def _get_all_output_files(
+        self,
+        suffix: str | None = None,
+    ) -> Generator[Path]:
         """Get all output files."""
-        files = list(self.output_dir.rglob(f"*.{suffix}"))
-        if not files:
+        if not self.output_dir.is_dir():
             warnings.warn(
-                f"No files of type '{suffix}' available, make sure to run() "
-                f"the diagnostic first",
+                "Output directory does not exist, make sure to run() the "
+                "diagnostic first",
                 HybridESMBenchWarning,
                 stacklevel=3,
             )
-        return files
+        return self.output_dir.rglob(f"*.{suffix}")
 
     def _get_cfg(self, **additional_settings: Any) -> dict[str, Any]:
         """Get configuration dictionary for diagnostic."""
@@ -151,6 +148,12 @@ class Diagnostic:
         """Get session directory."""
         now = datetime.datetime.now(datetime.UTC).strftime("%Y%m%d_%H%M%S")
         session_dir = work_dir / f"{self.name}_{now}"
-        session_dir.mkdir(parents=True, exist_ok=True)
-        logger.debug(f"Created session directory {session_dir}")
         return session_dir
+
+    def _run_diag_function(self, cfg: dict[str, Any]) -> None:
+        """Run diagnostic function.
+
+        Should be implemented by child classes.
+
+        """
+        raise NotImplementedError()

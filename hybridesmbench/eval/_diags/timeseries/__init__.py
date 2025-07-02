@@ -1,6 +1,7 @@
 """Provide time series diagnostic."""
 
 import warnings
+from typing import Any
 
 from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
 from loguru import logger
@@ -60,10 +61,9 @@ class Diagnostic(BaseDiagnostic):
         {"mip": "Amon", "short_name": "tas"},
     ]
 
-    def run(self) -> None:
+    def _run_diag_function(self, cfg: dict[str, Any]) -> None:
         """Run diagnostic."""
-        logger.info(f"Running diagnostic '{self.name}'")
-        # TODO: this entire block can be replaced with main(self._cfg) in
+        # TODO: this entire block can be replaced with main(cfg) in
         # ESMValTool v2.13.0
         with warnings.catch_warnings():
             warnings.filterwarnings(
@@ -72,5 +72,5 @@ class Diagnostic(BaseDiagnostic):
                 category=UserWarning,
                 module="iris",
             )
-            MultiDatasets(self._cfg).compute()
+            MultiDatasets(cfg).compute()
         logger.info(f"Finished diagnostic '{self.name}'")
