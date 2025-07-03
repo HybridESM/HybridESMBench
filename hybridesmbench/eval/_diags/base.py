@@ -99,7 +99,7 @@ class Diagnostic:
     @property
     def diag_name(self) -> str:
         """Get name of diagnostic."""
-        return self.__class__.__name__
+        return self._root_dir.name
 
     @property
     def session_dir(self) -> Path:

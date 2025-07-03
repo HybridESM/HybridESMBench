@@ -26,8 +26,15 @@ def _get_all_diags() -> dict[str, type]:
         module = importlib.import_module(
             f"hybridesmbench.eval._diags.{module_name}",
         )
-        for diag_name, diag in inspect.getmembers(module, _is_diag):
-            diags[diag_name] = diag
+        all_diags = inspect.getmembers(module, _is_diag)
+        if not all_diags:
+            continue
+        msg = (
+            f"Diagnostic modules should have at most one diagnostic, found "
+            f"{[d[0] for d in all_diags]} in {module.__name__}"
+        )
+        assert len(all_diags) < 2, msg
+        diags[module_name] = all_diags[0][1]
     return diags
 
 
