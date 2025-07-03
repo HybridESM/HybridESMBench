@@ -74,7 +74,7 @@ class Diagnostic:
         path: Path,
         model_type: Literal["icon"],
         **kwargs: Any,
-    ) -> None:
+    ) -> Path:
         """Run diagnostics.
 
         Parameters
@@ -86,8 +86,13 @@ class Diagnostic:
         **kwargs
             Additional keyword arguments for running a diagnostic.
 
+        Returns
+        -------
+        Path
+            Diagnostic output directory.
+
         """
-        logger.info(f"Running diagnostic '{self.diag_name}'")
+        logger.debug(f"Running diagnostic '{self.diag_name}'")
 
         self.session_dir.mkdir(parents=True, exist_ok=True)
         self.input_dir.mkdir(parents=True, exist_ok=True)
@@ -101,7 +106,9 @@ class Diagnostic:
 
         self._run_diag(loader, **kwargs)
 
-        logger.info(f"Finished diagnostic '{self.diag_name}'")
+        logger.debug(f"Finished diagnostic '{self.diag_name}'")
+
+        return self.output_dir
 
     @property
     def input_dir(self) -> Path:
@@ -270,7 +277,11 @@ class ESMValToolDiagnostic(Diagnostic):
 
     def _run_diag(self, loader: Loader, **kwargs: Any) -> None:
         """Run diagnostic function."""
+        logger.debug(
+            f"Creating cfg for ESMValTool diagnostic '{self.diag_name}'"
+        )
         cfg = self._get_cfg(loader, **kwargs)
+        logger.debug(f"Running ESMValTool diagnostic '{self.diag_name}'")
         self._run_esmvaltool_diag(cfg)
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
