@@ -9,7 +9,7 @@ preprocessors:
     custom_order: true
     regrid:
       target_grid: 2x2
-      scheme: nearest
+      scheme: linear
     area_statistics:
       operator: mean
     annual_statistics:
@@ -18,7 +18,7 @@ preprocessors:
     custom_order: true
     regrid:
       target_grid: 2x2
-      scheme: nearest
+      scheme: linear
     area_statistics:
       operator: mean
     annual_statistics:
