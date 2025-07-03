@@ -18,3 +18,4 @@ for diag_name, path in output.items():
     print(diag_name)
     if path is not None:
         pprint(list(path.rglob("*.png")))
+    print()
