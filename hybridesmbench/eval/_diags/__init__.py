@@ -17,18 +17,6 @@ def _is_diag(obj: Any):
     )
 
 
-def _is_esmvaltool_diag(obj: Any):
-    """Check if object is an ESMValTool diagnostic."""
-    return (
-        inspect.isclass(obj)
-        and issubclass(obj, ESMValToolDiagnostic)
-        and obj is not ESMValToolDiagnostic
-    )
-
-
 DIAGS: dict[str, type[Diagnostic]] = get_classes(
     "hybridesmbench.eval._diags", _is_diag
-)
-ESMVALTOOL_DIAGS: dict[str, type[ESMValToolDiagnostic]] = get_classes(
-    "hybridesmbench.eval._diags", _is_esmvaltool_diag
 )

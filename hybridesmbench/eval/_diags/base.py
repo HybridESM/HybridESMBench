@@ -2,8 +2,6 @@
 
 import datetime
 import inspect
-import warnings
-from collections.abc import Generator
 from pathlib import Path
 from typing import Any, Literal
 
@@ -15,7 +13,6 @@ from loguru import logger
 from hybridesmbench._utils import get_timerange
 from hybridesmbench.eval._loaders import LOADERS
 from hybridesmbench.eval._loaders.base import Loader
-from hybridesmbench.exceptions import HybridESMBenchWarning
 
 
 class Diagnostic:
@@ -36,38 +33,6 @@ class Diagnostic:
         self._data_dir = self._root_dir / "data"
         self._session_dir = self._get_session_dir(work_dir)
         logger.debug(f"Initialized diagnostic '{self.diag_name}'")
-
-    def get_all_figures(self, suffix: str = "png") -> Generator[Path]:
-        """Get all figure files.
-
-        Parameters
-        ----------
-        suffix:
-            File suffix (extension).
-
-        Yields
-        ------
-        Generator[Path]
-            All figure files.
-
-        """
-        return self._get_all_output_files(suffix)
-
-    def get_all_nc_files(self, suffix: str = "nc") -> Generator[Path]:
-        """Get all netCDF files.
-
-        Parameters
-        ----------
-        suffix:
-            File suffix (extension).
-
-        Yields
-        ------
-        Generator[Path]
-            All netCDF files.
-
-        """
-        return self._get_all_output_files(suffix)
 
     def run(
         self,
@@ -130,19 +95,6 @@ class Diagnostic:
         """Get output directory."""
         return self._session_dir
 
-    def _get_all_output_files(
-        self,
-        suffix: str | None = None,
-    ) -> Generator[Path]:
-        """Get all output files."""
-        if not self.output_dir.is_dir():
-            msg = (
-                "Output directory does not exist, make sure to run() the "
-                "diagnostic first"
-            )
-            warnings.warn(msg, HybridESMBenchWarning, stacklevel=3)
-        return self.output_dir.rglob(f"*.{suffix}")
-
     def _get_session_dir(self, work_dir: Path) -> Path:
         """Get session directory."""
         now = datetime.datetime.now(datetime.UTC).strftime("%Y%m%d_%H%M%S")
@@ -198,9 +150,16 @@ class ESMValToolDiagnostic(Diagnostic):
         file_idx = 0
 
         # Hybrid ESM input data
+        logger.debug(
+            f"Using variables {[v['var_name'] for v in self._VARS]} for "
+            f"diagnostic '{self.diag_name}'"
+        )
         for var in self._VARS:
             cube = loader.load_variable(**var)
-            logger.debug("Running preprocessor")
+            logger.debug(
+                f"Running preprocessor on variable {var['var_name']} for "
+                f"diagnostic '{self.diag_name}'"
+            )
             cube = self._preprocess(cube)
             filename = f"{'_'.join(var.values())}_{loader.path.name}.nc"
             path = (
