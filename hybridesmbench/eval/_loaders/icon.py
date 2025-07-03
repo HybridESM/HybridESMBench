@@ -1,9 +1,9 @@
 """Load ICON hybrid Earth system model output."""
 
-from hybridesmbench.eval._load.icon_base import BaseICONLoader
+from hybridesmbench.eval._loaders.base import BaseICONLoader
 
 
-class Loader(BaseICONLoader):
+class ICONLoader(BaseICONLoader):
     """Load ICON hybrid Earth system model output.
 
     Parameters

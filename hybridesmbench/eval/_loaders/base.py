@@ -1,9 +1,12 @@
-"""Load ICON hybrid Earth system model output (base class)."""
+"""Load hybrid Earth system model output (base class)."""
 
+import functools
+import inspect
 import warnings
 from pathlib import Path
 from typing import Any
 
+import xarray as xr
 from esmvalcore.cmor.fix import fix_data, fix_metadata
 from esmvalcore.cmor.table import get_var_info
 from iris.cube import Cube
@@ -11,11 +14,84 @@ from iris.warnings import IrisUserWarning
 from loguru import logger
 from ncdata.iris_xarray import cubes_from_xarray
 
-from hybridesmbench.eval._load.base import BaseLoader
 from hybridesmbench.exceptions import HybridESMBenchWarning
 
 
-class BaseICONLoader(BaseLoader):
+class Loader:
+    """Load hybrid Earth system model output (base class).
+
+    Parameters
+    ----------
+    path:
+        Path to hybrid Earth system model output.
+
+    """
+
+    _DATASET: str
+    _PROJECT: str
+
+    def __init__(self, path: Path) -> None:
+        """Initialize class instance."""
+        self._root_file = Path(inspect.getfile(self.__class__))
+        self._path = path
+        logger.debug(
+            f"Initialized loader for '{self.model_type}' data located at "
+            f"{path}"
+        )
+
+    def load_variable(self, var_name: str, var_mip: str) -> Cube:
+        """Load single variable.
+
+        Parameters
+        ----------
+        var_name:
+            CMOR variable name, e.g., `"tas"`.
+        var_mip:
+            CMOR MIP table, e.g., `"Amon"`.
+
+        Returns
+        -------
+        Cube
+            Data with single variable.
+
+        """
+        logger.debug(
+            f"Trying to load variable '{var_name}' from MIP '{var_mip}'"
+        )
+        cube = self._load_single_variable(var_name, var_mip)
+        logger.debug(f"Loaded variable '{var_name}' from MIP '{var_mip}'")
+        return cube
+
+    @property
+    def model_type(self) -> str:
+        """Get model type of loader."""
+        return self._root_file.stem
+
+    @property
+    def path(self) -> Path:
+        """Get path to hybrid Earth system model output."""
+        return self._path
+
+    @functools.lru_cache
+    def _load_files(self, path: str | Path, **kwargs: Any) -> xr.Dataset:
+        """Load files using :func:`xarray.open_mfdataset.`
+
+        Use LRU cache to avoid loading the same files over and over.
+
+        """
+        kwargs.setdefault("chunks", "auto")
+        return xr.open_mfdataset(path, **kwargs)
+
+    def _load_single_variable(self, var_name: str, var_mip: str) -> Cube:
+        """Load single variable.
+
+        Should be implemented by child classes.
+
+        """
+        raise NotImplementedError()
+
+
+class BaseICONLoader(Loader):
     """Load ICON hybrid Earth system model output (base class).
 
     Parameters
@@ -25,7 +101,7 @@ class BaseICONLoader(BaseLoader):
 
     """
 
-    _DATASET: str
+    _PROJECT = "ICON"
     _VAR_TYPES: dict[str, str]
 
     def __init__(self, path: Path) -> None:
@@ -88,7 +164,7 @@ class BaseICONLoader(BaseLoader):
                     cube.remove_coord(coord_name)
 
         # Run ESMValCore fixes on the data to "CMORize" it
-        cmor_var_info = get_var_info("ICON", var_mip, var_name)
+        cmor_var_info = get_var_info(self._PROJECT, var_mip, var_name)
         extra_facets: dict[str, Any] = {
             "horizontal_grid": self.grid_file,
         }
@@ -97,7 +173,7 @@ class BaseICONLoader(BaseLoader):
             cube = fix_metadata(
                 cubes,
                 short_name=var_name,
-                project="ICON",
+                project=self._PROJECT,
                 dataset=self._DATASET,
                 mip=var_mip,
                 frequency=cmor_var_info.frequency,
@@ -106,11 +182,11 @@ class BaseICONLoader(BaseLoader):
             cube = fix_data(
                 cube,
                 short_name=var_name,
-                project="ICON",
+                project=self._PROJECT,
                 dataset=self._DATASET,
                 mip=var_mip,
                 frequency=cmor_var_info.frequency,
                 **extra_facets,
             )
 
-        return cubes
+        return cube

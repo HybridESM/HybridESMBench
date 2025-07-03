@@ -1,12 +1,30 @@
 from pathlib import Path
-from pprint import pprint
 
-from hybridesmbench.eval._diags.timeseries import TimeSeriesDiagnostic
+from hybridesmbench.eval._loaders.icon import ICONLoader
 
-d = TimeSeriesDiagnostic(Path("/scratch/b/b309141/esmvaltool_output"))
+# from hybridesmbench.eval._diags.timeseries import TimeSeriesDiagnostic
 
-d.run()
+# d = TimeSeriesDiagnostic(Path("/scratch/b/b309141/esmvaltool_output"))
 
-pprint(list(d.get_all_figures()))
+# d.run()
 
-pprint(list(d.get_all_nc_files()))
+# print(list(d.get_all_figures()))
+
+# print(list(d.get_all_nc_files()))
+
+
+loader = ICONLoader(
+    Path(
+        "/work/bd1179/b309170/icon-ml_models/icon-a-ml/experiments/"
+        "ag_atm_amip_r2b5_auto_tuned_baseline_20yrs/"
+    )
+)
+cube = loader.load_variable("tas", "Amon")
+print(cube)
+
+
+# from hybridesmbench.eval._diags import DIAGS
+# from hybridesmbench.eval._loaders import LOADERS
+
+# print(DIAGS)
+# print(LOADERS)
