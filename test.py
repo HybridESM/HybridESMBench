@@ -1,7 +1,13 @@
+import sys
 from pathlib import Path
 from pprint import pprint
 
+from loguru import logger
+
 from hybridesmbench.eval._diags.timeseries import TimeSeriesDiagnostic
+
+logger.remove()
+logger.add(sys.stdout, colorize=True)
 
 d = TimeSeriesDiagnostic(Path("/home/manuel/tmp/hybridesmbench"))
 
