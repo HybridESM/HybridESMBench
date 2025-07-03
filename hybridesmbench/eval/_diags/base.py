@@ -64,11 +64,13 @@ class Diagnostic:
         """
         return self._get_all_output_files(suffix)
 
-    def run(self, **kwargs: Any) -> None:
+    def run(self, path: Path, **kwargs: Any) -> None:
         """Run diagnostics.
 
         Parameters
         ----------
+        path:
+            Path to hybrid Earth system model output.
         **kwargs
             Additional keyword arguments for running a diagnostic.
 
@@ -82,7 +84,7 @@ class Diagnostic:
         logger.debug(f"Created input directory {self.input_dir}")
         logger.debug(f"Created output directory {self.output_dir}")
 
-        self._run_diag(**kwargs)
+        self._run_diag(path, **kwargs)
 
         logger.info(f"Finished diagnostic '{self.diag_name}'")
 
@@ -125,7 +127,7 @@ class Diagnostic:
         session_dir = work_dir / f"{self.diag_name}_{now}"
         return session_dir
 
-    def _run_diag(self, **kwargs: Any) -> None:
+    def _run_diag(self, path: Path, **kwargs: Any) -> None:
         """Run diagnostic function.
 
         Should be implemented by child classes.
@@ -151,7 +153,7 @@ class ESMValToolDiagnostic(Diagnostic):
     }
     _DIAG_CFG: dict[str, Any]
 
-    def _get_cfg(self, **additional_cfg: Any) -> dict[str, Any]:
+    def _get_cfg(self, path: Path, **additional_cfg: Any) -> dict[str, Any]:
         """Get configuration dictionary for ESMValTool diagnostic."""
         cfg: dict[str, Any] = {
             **self._BASE_CFG,
@@ -201,9 +203,9 @@ class ESMValToolDiagnostic(Diagnostic):
 
         return cfg
 
-    def _run_diag(self, **kwargs: Any) -> None:
+    def _run_diag(self, path: Path, **kwargs: Any) -> None:
         """Run diagnostic function."""
-        cfg = self._get_cfg(**kwargs)
+        cfg = self._get_cfg(path, **kwargs)
         self._run_esmvaltool_diag(cfg)
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
