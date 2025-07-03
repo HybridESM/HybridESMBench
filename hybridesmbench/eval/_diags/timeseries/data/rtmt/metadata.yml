@@ -1,4 +1,4 @@
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_ACCESS-CM2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_ACCESS-CM2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_ACCESS-CM2
   dataset: ACCESS-CM2
@@ -6,7 +6,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_ACCESS-CM2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_ACCESS-CM2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: CSIRO-ARCCSS
@@ -25,7 +25,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20191108
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_ACCESS-ESM1-5_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_ACCESS-ESM1-5_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_ACCESS-ESM1-5
   dataset: ACCESS-ESM1-5
@@ -33,7 +33,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_ACCESS-ESM1-5_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_ACCESS-ESM1-5_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: CSIRO
@@ -52,7 +52,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20191115
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_BCC-CSM2-MR
   dataset: BCC-CSM2-MR
@@ -60,7 +60,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: BCC
@@ -79,7 +79,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20181126
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_BCC-ESM1
   dataset: BCC-ESM1
@@ -87,7 +87,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: BCC
@@ -106,7 +106,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20181214
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-FV2
   dataset: CESM2-FV2
@@ -114,7 +114,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -133,7 +133,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20191120
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-WACCM-FV2
   dataset: CESM2-WACCM-FV2
@@ -141,7 +141,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -160,7 +160,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20191120
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-WACCM
   dataset: CESM2-WACCM
@@ -168,7 +168,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -187,7 +187,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190227
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CESM2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_CESM2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2
   dataset: CESM2
@@ -195,7 +195,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CESM2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_CESM2_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -214,7 +214,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190308
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CanESM5_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_CanESM5_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CanESM5
   dataset: CanESM5
@@ -222,7 +222,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_CanESM5_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_CanESM5_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: CCCma
@@ -241,7 +241,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190429
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_E3SM-1-0_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+? rtmt/CMIP6_E3SM-1-0_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_E3SM-1-0
   dataset: E3SM-1-0
@@ -249,7 +249,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_E3SM-1-0_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+  filename: rtmt/CMIP6_E3SM-1-0_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: E3SM-Project
@@ -268,7 +268,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190913
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_E3SM-1-1-ECA_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+? rtmt/CMIP6_E3SM-1-1-ECA_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_E3SM-1-1-ECA
   dataset: E3SM-1-1-ECA
@@ -276,7 +276,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_E3SM-1-1-ECA_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+  filename: rtmt/CMIP6_E3SM-1-1-ECA_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: E3SM-Project
@@ -295,7 +295,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20200623
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_E3SM-1-1_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+? rtmt/CMIP6_E3SM-1-1_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_E3SM-1-1
   dataset: E3SM-1-1
@@ -303,7 +303,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_E3SM-1-1_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+  filename: rtmt/CMIP6_E3SM-1-1_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: E3SM-Project
@@ -322,7 +322,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20191211
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_FGOALS-g3
   dataset: FGOALS-g3
@@ -330,7 +330,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: CAS
@@ -349,7 +349,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190818
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
+? rtmt/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_GFDL-CM4
   dataset: GFDL-CM4
@@ -357,7 +357,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
+  filename: rtmt/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
   frequency: monC
   grid: gr1
   institute: NOAA-GFDL
@@ -376,7 +376,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20180701
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
+? rtmt/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_GFDL-ESM4
   dataset: GFDL-ESM4
@@ -384,7 +384,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
+  filename: rtmt/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
   frequency: mon
   grid: gr1
   institute: NOAA-GFDL
@@ -403,7 +403,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190726
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_GISS-E2-1-G
   dataset: GISS-E2-1-G
@@ -411,7 +411,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NASA-GISS
@@ -430,7 +430,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20180827
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_GISS-E2-1-H
   dataset: GISS-E2-1-H
@@ -438,7 +438,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NASA-GISS
@@ -457,7 +457,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190403
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_ICON-ESM-LR
   dataset: ICON-ESM-LR
@@ -465,7 +465,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: MPI-M
@@ -484,7 +484,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20210215
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
+? rtmt/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_INM-CM4-8
   dataset: INM-CM4-8
@@ -492,7 +492,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
+  filename: rtmt/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
   frequency: mon
   grid: gr1
   institute: INM
@@ -511,7 +511,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190530
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
+? rtmt/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_INM-CM5-0
   dataset: INM-CM5-0
@@ -519,7 +519,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
+  filename: rtmt/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_rtmt_gr1_19790101-20141231.nc
   frequency: mon
   grid: gr1
   institute: INM
@@ -538,7 +538,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190610
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+? rtmt/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_IPSL-CM6A-LR
   dataset: IPSL-CM6A-LR
@@ -546,7 +546,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+  filename: rtmt/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: IPSL
@@ -565,7 +565,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20180803
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+? rtmt/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_KACE-1-0-G
   dataset: KACE-1-0-G
@@ -573,7 +573,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
+  filename: rtmt/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_rtmt_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: NIMS-KMA
@@ -592,7 +592,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190910
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_MCM-UA-1-0_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_MCM-UA-1-0_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MCM-UA-1-0
   dataset: MCM-UA-1-0
@@ -600,7 +600,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_MCM-UA-1-0_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_MCM-UA-1-0_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: UA
@@ -619,7 +619,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190731
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_MIROC6_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_MIROC6_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MIROC6
   dataset: MIROC6
@@ -627,7 +627,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_MIROC6_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_MIROC6_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: MIROC
@@ -646,7 +646,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20181212
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_NorESM2-LM
   dataset: NorESM2-LM
@@ -654,7 +654,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCC
@@ -673,7 +673,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190815
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_NorESM2-MM
   dataset: NorESM2-MM
@@ -681,7 +681,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCC
@@ -700,7 +700,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20191108
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_SAM0-UNICON
   dataset: SAM0-UNICON
@@ -708,7 +708,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: SNU
@@ -727,7 +727,7 @@
   units: W m-2
   variable_group: rtmt
   version: v20190323
-? /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+? rtmt/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_TaiESM1
   dataset: TaiESM1
@@ -735,7 +735,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: historical
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_timeseries_20250703_122132/preproc/timeseries/rtmt/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
+  filename: rtmt/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_rtmt_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: AS-RCEC
