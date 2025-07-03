@@ -5,11 +5,11 @@ from typing import Any
 
 from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
 
-from hybridesmbench.eval._diags.base import BaseDiagnostic
+from hybridesmbench.eval._diags.base import ESMValToolDiagnostic
 
 
-class Diagnostic(BaseDiagnostic):
-    """Setup time series diagnostic."""
+class TimeSeriesDiagnostic(ESMValToolDiagnostic):
+    """Run time series diagnostic."""
 
     _OBS_PLOT_KWARGS = {
         "color": "black",
@@ -17,7 +17,7 @@ class Diagnostic(BaseDiagnostic):
         "linewidth": 1.0,
         "zorder": 2.4,
     }
-    _SETTINGS = {
+    _DIAG_CFG = {
         "facet_used_for_labels": "alias",
         "figure_kwargs": {
             "figsize": [7, 5],
@@ -60,8 +60,8 @@ class Diagnostic(BaseDiagnostic):
         {"var_name": "tas", "var_mip": "Amon"},
     ]
 
-    def _run_diag_function(self, cfg: dict[str, Any]) -> None:
-        """Run diagnostic."""
+    def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
+        """Run ESMValTool diagnostic."""
         # TODO: this entire block can be replaced with main(cfg) in
         # ESMValTool v2.13.0
         with warnings.catch_warnings():

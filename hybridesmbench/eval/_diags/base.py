@@ -13,7 +13,7 @@ from loguru import logger
 from hybridesmbench.exceptions import HybridESMBenchWarning
 
 
-class BaseDiagnostic:
+class Diagnostic:
     """Run diagnostics (base class).
 
     Parameters
@@ -23,12 +23,6 @@ class BaseDiagnostic:
 
     """
 
-    _BASE_SETTINGS: dict[str, Any] = {
-        "log_level": "info",
-        "output_file_type": "png",
-        "recipe": "recipe.yml",
-    }
-    _SETTINGS: dict[str, Any]
     _VARS: list[dict[str, str]]
 
     def __init__(self, work_dir: Path) -> None:
@@ -36,7 +30,7 @@ class BaseDiagnostic:
         self._root_dir = Path(inspect.getfile(self.__class__)).parent
         self._data_dir = self._root_dir / "data"
         self._session_dir = self._get_session_dir(work_dir)
-        logger.debug(f"Initialized diagnostic '{self.name}'")
+        logger.debug(f"Initialized diagnostic '{self.diag_name}'")
 
     def get_all_figures(self, suffix: str = "png") -> Generator[Path]:
         """Get all figure files.
@@ -70,16 +64,16 @@ class BaseDiagnostic:
         """
         return self._get_all_output_files(suffix)
 
-    def run(self, **additional_settings: Any) -> None:
+    def run(self, **kwargs: Any) -> None:
         """Run diagnostics.
 
         Parameters
         ----------
-        **additional_settings
-            Additional diagnostic settings.
+        **kwargs
+            Additional keyword arguments for running a diagnostic.
 
         """
-        logger.info(f"Running diagnostic '{self.name}'")
+        logger.info(f"Running diagnostic '{self.diag_name}'")
 
         self.session_dir.mkdir(parents=True, exist_ok=True)
         self.input_dir.mkdir(parents=True, exist_ok=True)
@@ -88,10 +82,9 @@ class BaseDiagnostic:
         logger.debug(f"Created input directory {self.input_dir}")
         logger.debug(f"Created output directory {self.output_dir}")
 
-        cfg = self._get_cfg(**additional_settings)
-        self._run_diag_function(cfg)
+        self._run_diag(**kwargs)
 
-        logger.info(f"Finished diagnostic '{self.name}'")
+        logger.info(f"Finished diagnostic '{self.diag_name}'")
 
     @property
     def input_dir(self) -> Path:
@@ -104,9 +97,9 @@ class BaseDiagnostic:
         return self._session_dir / "output"
 
     @property
-    def name(self) -> str:
+    def diag_name(self) -> str:
         """Get name of diagnostic."""
-        return self._root_dir.name
+        return self.__class__.__name__
 
     @property
     def session_dir(self) -> Path:
@@ -126,11 +119,43 @@ class BaseDiagnostic:
             warnings.warn(msg, HybridESMBenchWarning, stacklevel=3)
         return self.output_dir.rglob(f"*.{suffix}")
 
-    def _get_cfg(self, **additional_settings: Any) -> dict[str, Any]:
-        """Get configuration dictionary for diagnostic."""
+    def _get_session_dir(self, work_dir: Path) -> Path:
+        """Get session directory."""
+        now = datetime.datetime.now(datetime.UTC).strftime("%Y%m%d_%H%M%S")
+        session_dir = work_dir / f"{self.diag_name}_{now}"
+        return session_dir
+
+    def _run_diag(self, **kwargs: Any) -> None:
+        """Run diagnostic function.
+
+        Should be implemented by child classes.
+
+        """
+        raise NotImplementedError()
+
+
+class ESMValToolDiagnostic(Diagnostic):
+    """Run ESMValTool diagnostics (base class).
+
+    Parameters
+    ----------
+    work_dir:
+        Work directory where files created by the diagnostic are stored.
+
+    """
+
+    _BASE_CFG: dict[str, Any] = {
+        "log_level": "info",
+        "output_file_type": "png",
+        "recipe": "recipe.yml",
+    }
+    _DIAG_CFG: dict[str, Any]
+
+    def _get_cfg(self, **additional_cfg: Any) -> dict[str, Any]:
+        """Get configuration dictionary for ESMValTool diagnostic."""
         cfg: dict[str, Any] = {
-            **self._BASE_SETTINGS,
-            **self._SETTINGS,
+            **self._BASE_CFG,
+            **self._DIAG_CFG,
         }
 
         # Create input/output directories
@@ -172,18 +197,17 @@ class BaseDiagnostic:
             },
         )
 
-        cfg.update(additional_settings)
+        cfg.update(additional_cfg)
 
         return cfg
 
-    def _get_session_dir(self, work_dir: Path) -> Path:
-        """Get session directory."""
-        now = datetime.datetime.now(datetime.UTC).strftime("%Y%m%d_%H%M%S")
-        session_dir = work_dir / f"{self.name}_{now}"
-        return session_dir
+    def _run_diag(self, **kwargs: Any) -> None:
+        """Run diagnostic function."""
+        cfg = self._get_cfg(**kwargs)
+        self._run_esmvaltool_diag(cfg)
 
-    def _run_diag_function(self, cfg: dict[str, Any]) -> None:
-        """Run diagnostic function.
+    def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
+        """Run ESMValTool diagnostic.
 
         Should be implemented by child classes.
 
