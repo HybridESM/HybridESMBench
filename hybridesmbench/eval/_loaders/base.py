@@ -34,10 +34,49 @@ class Loader:
         """Initialize class instance."""
         self._root_file = Path(inspect.getfile(self.__class__))
         self._path = path
+        self._exp = path.name
         logger.debug(
             f"Initialized loader for '{self.model_type}' data located at "
             f"{path}"
         )
+
+    def get_metadata(self, var_name: str, var_mip: str) -> dict[str, Any]:
+        """Get variable metadata.
+
+        Parameters
+        ----------
+        var_name:
+            CMOR variable name, e.g., `"tas"`.
+        var_mip:
+            CMOR MIP table, e.g., `"Amon"`.
+
+        Returns
+        -------
+        dict[str, Any]
+            Variable metadata.
+
+        """
+        metadata: dict[str, Any] = {}
+
+        # OBS6 has basically CMIP6 variables plus all custom variables
+        cmor_var_info = get_var_info("OBS6", var_mip, var_name)
+        msg = f"Invalid variable: '{var_name}' (MIP table: {var_mip})"
+        assert cmor_var_info is not None, msg
+
+        metadata["alias"] = self.alias
+        metadata["dataset"] = self._DATASET
+        metadata["exp"] = self.exp
+        metadata["frequency"] = cmor_var_info.frequency
+        metadata["long_name"] = cmor_var_info.long_name
+        metadata["mip"] = var_mip
+        metadata["modeling_realm"] = cmor_var_info.modeling_realm
+        metadata["project"] = self._PROJECT
+        metadata["short_name"] = var_name
+        metadata["standard_name"] = cmor_var_info.standard_name
+        metadata["units"] = cmor_var_info.units
+        metadata["variable_group"] = var_name
+
+        return metadata
 
     def load_variable(self, var_name: str, var_mip: str) -> Cube:
         """Load single variable.
@@ -61,6 +100,16 @@ class Loader:
         cube = self._load_single_variable(var_name, var_mip)
         logger.debug(f"Loaded variable '{var_name}' from MIP '{var_mip}'")
         return cube
+
+    @property
+    def alias(self) -> str:
+        """Get model alias."""
+        return self.model_type.upper()
+
+    @property
+    def exp(self) -> str:
+        """Get ICON experiment."""
+        return self._exp
 
     @property
     def model_type(self) -> str:
@@ -108,9 +157,6 @@ class BaseICONLoader(Loader):
         """Initialize class instance."""
         super().__init__(path)
 
-        # ICON experiment name
-        self._exp = self._path.name
-
         # ICON grid file
         grid_file_pattern = "icon_grid_*.nc"
         grid_files = list(self.path.glob(grid_file_pattern))
@@ -130,9 +176,9 @@ class BaseICONLoader(Loader):
         self._grid_file = grid_files[0]
 
     @property
-    def exp(self) -> str:
-        """Get ICON experiment."""
-        return self._exp
+    def alias(self) -> str:
+        """Get model alias."""
+        return f"{self._DATASET} ({self.exp})"
 
     @property
     def grid_file(self) -> Path:
@@ -141,11 +187,10 @@ class BaseICONLoader(Loader):
 
     def _load_single_variable(self, var_name: str, var_mip: str) -> Cube:
         """Load single variable."""
-        if var_name not in self._VAR_TYPES:
-            raise ValueError(
-                f"Variable '{var_name}' not supported for model type "
-                f"'{self.model_type}' yet"
-            )
+        msg = (
+            f"Invalid variable '{var_name}' for model type '{self.model_type}'"
+        )
+        assert var_name in self._VAR_TYPES, msg
         var_type = self._VAR_TYPES[var_name]
 
         # Load xarray.Dataset and convert to iris.cube.CubeList

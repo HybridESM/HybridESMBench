@@ -1,16 +1,15 @@
 from pathlib import Path
+from pprint import pprint
 
 from hybridesmbench.eval._diags.timeseries import TimeSeriesDiagnostic
 
-d = TimeSeriesDiagnostic(Path("/scratch/b/b309141/esmvaltool_output"))
+d = TimeSeriesDiagnostic(Path("/home/manuel/tmp/hybridesmbench"))
 
 d.run(
-    Path(
-        "/work/bd1179/b309170/icon-ml_models/icon-a-ml/experiments/"
-        "ag_atm_amip_r2b5_auto_tuned_baseline_20yrs/"
-    )
+    Path("/mnt/d/data/icon/ag_atm_amip_r2b5_auto_tuned_baseline_20yrs"),
+    "icon",
 )
 
-print(list(d.get_all_figures()))
+pprint(list(d.get_all_figures()))
 
-print(list(d.get_all_nc_files()))
+pprint(list(d.get_all_nc_files()))

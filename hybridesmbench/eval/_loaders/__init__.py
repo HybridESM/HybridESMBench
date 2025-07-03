@@ -17,4 +17,6 @@ def _is_loader(obj: Any):
     )
 
 
-LOADERS = get_classes("hybridesmbench.eval._loaders", _is_loader)
+LOADERS: dict[str, type[Loader]] = get_classes(
+    "hybridesmbench.eval._loaders", _is_loader
+)

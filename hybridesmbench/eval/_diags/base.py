@@ -5,11 +5,16 @@ import inspect
 import warnings
 from collections.abc import Generator
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
+import iris
 import yaml
+from iris.cube import Cube
 from loguru import logger
 
+from hybridesmbench._utils import get_timerange
+from hybridesmbench.eval._loaders import LOADERS
+from hybridesmbench.eval._loaders.base import Loader
 from hybridesmbench.exceptions import HybridESMBenchWarning
 
 
@@ -64,13 +69,20 @@ class Diagnostic:
         """
         return self._get_all_output_files(suffix)
 
-    def run(self, path: Path, **kwargs: Any) -> None:
+    def run(
+        self,
+        path: Path,
+        model_type: Literal["icon"],
+        **kwargs: Any,
+    ) -> None:
         """Run diagnostics.
 
         Parameters
         ----------
         path:
             Path to hybrid Earth system model output.
+        model_type:
+            Hybrid Earth system model type.
         **kwargs
             Additional keyword arguments for running a diagnostic.
 
@@ -84,7 +96,10 @@ class Diagnostic:
         logger.debug(f"Created input directory {self.input_dir}")
         logger.debug(f"Created output directory {self.output_dir}")
 
-        self._run_diag(path, **kwargs)
+        assert model_type in LOADERS, f"Invalid model type: '{model_type}'"
+        loader = LOADERS[model_type](path)
+
+        self._run_diag(loader, **kwargs)
 
         logger.info(f"Finished diagnostic '{self.diag_name}'")
 
@@ -127,7 +142,7 @@ class Diagnostic:
         session_dir = work_dir / f"{self.diag_name}_{now}"
         return session_dir
 
-    def _run_diag(self, path: Path, **kwargs: Any) -> None:
+    def _run_diag(self, loader: Loader, **kwargs: Any) -> None:
         """Run diagnostic function.
 
         Should be implemented by child classes.
@@ -153,7 +168,9 @@ class ESMValToolDiagnostic(Diagnostic):
     }
     _DIAG_CFG: dict[str, Any]
 
-    def _get_cfg(self, path: Path, **additional_cfg: Any) -> dict[str, Any]:
+    def _get_cfg(
+        self, loader: Loader, **additional_cfg: Any
+    ) -> dict[str, Any]:
         """Get configuration dictionary for ESMValTool diagnostic."""
         cfg: dict[str, Any] = {
             **self._BASE_CFG,
@@ -171,16 +188,56 @@ class ESMValToolDiagnostic(Diagnostic):
 
         # Setup input data
         new_metadata: dict[str, dict] = {}
+        file_idx = 0
+
+        # Hybrid ESM input data
+        for var in self._VARS:
+            cube = loader.load_variable(**var)
+            logger.debug("Running preprocessor")
+            cube = self._preprocess(cube)
+            filename = f"{'_'.join(var.values())}_{loader.path.name}.nc"
+            path = (
+                self.input_dir
+                / f"{'_'.join(var.values())}_{loader.path.name}.nc"
+            )
+            iris.save(cube, path)
+            logger.debug(f"Saved {path}")
+
+            # Setup metadata for hybrid ESM output
+            metadata = loader.get_metadata(**var)
+            metadata["diagnostic"] = self.diag_name
+            metadata["filename"] = str(path)
+            metadata["preprocessor"] = f"{self.diag_name}_preprocessor"
+            metadata["recipe_dataset_index"] = file_idx
+
+            # Data-specific metadata
+            metadata["long_name"] = cube.long_name
+            metadata["short_name"] = cube.var_name
+            metadata["standard_name"] = cube.standard_name
+            metadata["units"] = str(cube.units)
+            timerange = get_timerange(cube)
+            if timerange is not None:
+                metadata["timerange"] = timerange
+                metadata["start_year"] = timerange.split("/")[0][:4]
+                metadata["end_year"] = timerange.split("/")[1][:4]
+
+            metadata = self._update_metadata(metadata)
+
+            new_metadata[str(path)] = metadata
+            file_idx += 1
+
+        # Other input data
         for metadata_file in self._data_dir.rglob("metadata.yml"):
             with metadata_file.open("r", encoding="utf-8") as file:
                 metadata = yaml.safe_load(file)
                 logger.debug(f"Loaded metadata file {metadata_file}")
 
-            for file_idx, filename in enumerate(metadata):
+            for filename in metadata:
                 filepath = str(self._data_dir / filename)
                 new_metadata[filepath] = metadata[filename]
                 new_metadata[filepath]["filename"] = filepath
                 new_metadata[filepath]["recipe_dataset_index"] = file_idx
+                file_idx += 1
 
         new_metadata_file = self.input_dir / "metadata.yml"
         with new_metadata_file.open("w", encoding="utf-8") as file:
@@ -199,13 +256,21 @@ class ESMValToolDiagnostic(Diagnostic):
             },
         )
 
+        # Additional options from child diagnostics
+        cfg = self._update_cfg(cfg, loader)
+
+        # Additional options from user
         cfg.update(additional_cfg)
 
         return cfg
 
-    def _run_diag(self, path: Path, **kwargs: Any) -> None:
+    def _preprocess(self, cube: Cube) -> Cube:
+        """Preprocess input data."""
+        return cube
+
+    def _run_diag(self, loader: Loader, **kwargs: Any) -> None:
         """Run diagnostic function."""
-        cfg = self._get_cfg(path, **kwargs)
+        cfg = self._get_cfg(loader, **kwargs)
         self._run_esmvaltool_diag(cfg)
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
@@ -215,3 +280,15 @@ class ESMValToolDiagnostic(Diagnostic):
 
         """
         raise NotImplementedError()
+
+    def _update_cfg(
+        self,
+        cfg: dict[str, Any],
+        loader: Loader,
+    ) -> dict[str, Any]:
+        """Update diagnostic configuration settings (in-place)."""
+        return cfg
+
+    def _update_metadata(self, metadata: dict[str, Any]) -> dict[str, Any]:
+        """Update variable metadata (in-place)."""
+        return metadata

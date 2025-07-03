@@ -3,9 +3,18 @@
 import warnings
 from typing import Any
 
+from esmvalcore.preprocessor import (
+    annual_statistics,
+    area_statistics,
+    convert_units,
+    regrid,
+)
 from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
+from iris import Constraint
+from iris.cube import Cube
 
 from hybridesmbench.eval._diags.base import ESMValToolDiagnostic
+from hybridesmbench.eval._loaders.base import Loader
 
 
 class TimeSeriesDiagnostic(ESMValToolDiagnostic):
@@ -57,8 +66,22 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
         },
     }
     _VARS = [
+        {"var_name": "pr", "var_mip": "Amon"},
+        {"var_name": "rlut", "var_mip": "Amon"},
+        {"var_name": "rsut", "var_mip": "Amon"},
+        {"var_name": "rtmt", "var_mip": "Amon"},
         {"var_name": "tas", "var_mip": "Amon"},
     ]
+
+    def _preprocess(self, cube: Cube) -> Cube:
+        """Preprocess input data."""
+        cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
+        cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
+        cube = area_statistics(cube, "mean")
+        cube = annual_statistics(cube, "mean")
+        if cube.var_name == "pr":
+            cube = convert_units(cube, "mm day-1")
+        return cube
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
         """Run ESMValTool diagnostic."""
@@ -72,3 +95,26 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
                 module="iris",
             )
             MultiDatasets(cfg).compute()
+
+    def _update_cfg(
+        self,
+        cfg: dict[str, Any],
+        loader: Loader,
+    ) -> dict[str, Any]:
+        """Update diagnostic configuration settings (in-place)."""
+        plot_kwargs = {
+            "color": "C0",
+            "label": "{alias}",
+            "linewidth": 1.25,
+            "zorder": 2.5,
+        }
+        cfg["plots"]["timeseries"]["plot_kwargs"][loader.alias] = plot_kwargs
+        return cfg
+
+    def _update_metadata(self, metadata: dict[str, Any]) -> dict[str, Any]:
+        """Update variable metadata (in-place)."""
+        if metadata["short_name"] == "rtmt":
+            metadata["title"] = "Global Mean TOA Net Downward Total Radiation"
+        else:
+            metadata["title"] = f"Global Mean {metadata['long_name']}"
+        return metadata

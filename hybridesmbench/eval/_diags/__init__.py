@@ -26,7 +26,9 @@ def _is_esmvaltool_diag(obj: Any):
     )
 
 
-DIAGS = get_classes("hybridesmbench.eval._diags", _is_diag)
-ESMVALTOOL_DIAGS = get_classes(
+DIAGS: dict[str, type[Diagnostic]] = get_classes(
+    "hybridesmbench.eval._diags", _is_diag
+)
+ESMVALTOOL_DIAGS: dict[str, type[ESMValToolDiagnostic]] = get_classes(
     "hybridesmbench.eval._diags", _is_esmvaltool_diag
 )
