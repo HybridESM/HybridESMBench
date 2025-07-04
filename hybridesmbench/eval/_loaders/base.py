@@ -40,14 +40,14 @@ class Loader:
             f"{path}"
         )
 
-    def get_metadata(self, var_name: str, var_mip: str) -> dict[str, Any]:
+    def get_metadata(self, var_name: str, mip_table: str) -> dict[str, Any]:
         """Get variable metadata.
 
         Parameters
         ----------
         var_name:
             CMOR variable name, e.g., `"tas"`.
-        var_mip:
+        mip_table:
             CMOR MIP table, e.g., `"Amon"`.
 
         Returns
@@ -59,8 +59,8 @@ class Loader:
         metadata: dict[str, Any] = {}
 
         # OBS6 has basically CMIP6 variables plus all custom variables
-        cmor_var_info = get_var_info("OBS6", var_mip, var_name)
-        msg = f"Invalid variable: '{var_name}' (MIP table: {var_mip})"
+        cmor_var_info = get_var_info("OBS6", mip_table, var_name)
+        msg = f"Invalid variable: '{var_name}' (MIP table: {mip_table})"
         assert cmor_var_info is not None, msg
 
         metadata["alias"] = self.alias
@@ -68,7 +68,7 @@ class Loader:
         metadata["exp"] = self.exp
         metadata["frequency"] = cmor_var_info.frequency
         metadata["long_name"] = cmor_var_info.long_name
-        metadata["mip"] = var_mip
+        metadata["mip"] = mip_table
         metadata["modeling_realm"] = cmor_var_info.modeling_realm
         metadata["project"] = self._PROJECT
         metadata["short_name"] = var_name
@@ -78,14 +78,14 @@ class Loader:
 
         return metadata
 
-    def load_variable(self, var_name: str, var_mip: str) -> Cube:
+    def load_variable(self, var_name: str, mip_table: str) -> Cube:
         """Load single variable.
 
         Parameters
         ----------
         var_name:
             CMOR variable name, e.g., `"tas"`.
-        var_mip:
+        mip_table:
             CMOR MIP table, e.g., `"Amon"`.
 
         Returns
@@ -95,10 +95,12 @@ class Loader:
 
         """
         logger.debug(
-            f"Trying to load variable '{var_name}' from MIP '{var_mip}'"
+            f"Loading variable '{var_name}' from MIP table '{mip_table}'"
         )
-        cube = self._load_single_variable(var_name, var_mip)
-        logger.debug(f"Loaded variable '{var_name}' from MIP '{var_mip}'")
+        cube = self._load_single_variable(var_name, mip_table)
+        logger.debug(
+            f"Loaded variable '{var_name}' from MIP table'{mip_table}'"
+        )
         return cube
 
     @property
@@ -131,7 +133,7 @@ class Loader:
         kwargs.setdefault("chunks", "auto")
         return xr.open_mfdataset(path, **kwargs)
 
-    def _load_single_variable(self, var_name: str, var_mip: str) -> Cube:
+    def _load_single_variable(self, var_name: str, mip_table: str) -> Cube:
         """Load single variable.
 
         Should be implemented by child classes.
@@ -185,7 +187,7 @@ class BaseICONLoader(Loader):
         """Get path to ICON grid file."""
         return self._grid_file
 
-    def _load_single_variable(self, var_name: str, var_mip: str) -> Cube:
+    def _load_single_variable(self, var_name: str, mip_table: str) -> Cube:
         """Load single variable."""
         msg = (
             f"Invalid variable '{var_name}' for model type '{self.model_type}'"
@@ -209,7 +211,7 @@ class BaseICONLoader(Loader):
                     cube.remove_coord(coord_name)
 
         # Run ESMValCore fixes on the data to "CMORize" it
-        cmor_var_info = get_var_info(self._PROJECT, var_mip, var_name)
+        cmor_var_info = get_var_info(self._PROJECT, mip_table, var_name)
         extra_facets: dict[str, Any] = {
             "horizontal_grid": self.grid_file,
         }
@@ -220,7 +222,7 @@ class BaseICONLoader(Loader):
                 short_name=var_name,
                 project=self._PROJECT,
                 dataset=self._DATASET,
-                mip=var_mip,
+                mip=mip_table,
                 frequency=cmor_var_info.frequency,
                 **extra_facets,
             )[0]
@@ -229,7 +231,7 @@ class BaseICONLoader(Loader):
                 short_name=var_name,
                 project=self._PROJECT,
                 dataset=self._DATASET,
-                mip=var_mip,
+                mip=mip_table,
                 frequency=cmor_var_info.frequency,
                 **extra_facets,
             )

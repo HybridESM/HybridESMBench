@@ -39,7 +39,7 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
                 "annual_mean_kwargs": False,
                 "legend_kwargs": {
                     "loc": "upper center",
-                    "bbox_to_anchor": [0.5, -0.4],
+                    "bbox_to_anchor": [0.5, -0.2],
                     "borderaxespad": 0.0,
                 },
                 "pyplot_kwargs": {
@@ -66,11 +66,11 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
         },
     }
     _VARS = [
-        {"var_name": "pr", "var_mip": "Amon"},
-        {"var_name": "rlut", "var_mip": "Amon"},
-        {"var_name": "rsut", "var_mip": "Amon"},
-        {"var_name": "rtmt", "var_mip": "Amon"},
-        {"var_name": "tas", "var_mip": "Amon"},
+        {"var_name": "pr", "mip_table": "Amon"},
+        {"var_name": "rlut", "mip_table": "Amon"},
+        {"var_name": "rsut", "mip_table": "Amon"},
+        {"var_name": "rtmt", "mip_table": "Amon"},
+        {"var_name": "tas", "mip_table": "Amon"},
     ]
 
     def _preprocess(self, cube: Cube) -> Cube:
