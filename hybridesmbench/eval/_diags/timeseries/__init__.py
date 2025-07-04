@@ -13,8 +13,8 @@ from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
 from iris import Constraint
 from iris.cube import Cube
 
-from hybridesmbench.eval._diags.base import ESMValToolDiagnostic
-from hybridesmbench.eval._loaders.base import Loader
+from hybridesmbench.eval._diags import ESMValToolDiagnostic
+from hybridesmbench.eval._loaders import Loader
 
 
 class TimeSeriesDiagnostic(ESMValToolDiagnostic):

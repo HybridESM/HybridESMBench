@@ -6,6 +6,12 @@ from typing import Any
 from hybridesmbench._utils import get_classes
 from hybridesmbench.eval._diags.base import Diagnostic, ESMValToolDiagnostic
 
+__all__ = [
+    "DIAGS",
+    "Diagnostic",
+    "ESMValToolDiagnostic",
+]
+
 
 def _is_diag(obj: Any):
     """Check if object is a diagnostic."""

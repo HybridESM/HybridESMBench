@@ -11,8 +11,7 @@ from iris.cube import Cube
 from loguru import logger
 
 from hybridesmbench._utils import get_timerange
-from hybridesmbench.eval._loaders import LOADERS
-from hybridesmbench.eval._loaders.base import Loader
+from hybridesmbench.eval._loaders import LOADERS, Loader
 
 
 class Diagnostic:
@@ -32,7 +31,7 @@ class Diagnostic:
         self._root_dir = Path(inspect.getfile(self.__class__)).parent
         self._data_dir = self._root_dir / "data"
         self._session_dir = self._get_session_dir(work_dir)
-        logger.debug(f"Initialized diagnostic '{self.diag_name}'")
+        logger.debug(f"Initialized diagnostic '{self.name}'")
 
     def run(
         self,
@@ -57,7 +56,7 @@ class Diagnostic:
             Diagnostic output directory.
 
         """
-        logger.debug(f"Running diagnostic '{self.diag_name}'")
+        logger.debug(f"Running diagnostic '{self.name}'")
 
         self.session_dir.mkdir(parents=True, exist_ok=True)
         self.input_dir.mkdir(parents=True, exist_ok=True)
@@ -71,7 +70,7 @@ class Diagnostic:
 
         self._run_diag(loader, **kwargs)
 
-        logger.debug(f"Finished diagnostic '{self.diag_name}'")
+        logger.debug(f"Finished diagnostic '{self.name}'")
 
         return self.output_dir
 
@@ -86,7 +85,7 @@ class Diagnostic:
         return self._session_dir / "output"
 
     @property
-    def diag_name(self) -> str:
+    def name(self) -> str:
         """Get name of diagnostic."""
         return self._root_dir.name
 
@@ -98,7 +97,7 @@ class Diagnostic:
     def _get_session_dir(self, work_dir: Path) -> Path:
         """Get session directory."""
         now = datetime.datetime.now(datetime.UTC).strftime("%Y%m%d_%H%M%S")
-        session_dir = work_dir / f"{self.diag_name}_{now}"
+        session_dir = work_dir / f"{self.name}_{now}"
         return session_dir
 
     def _run_diag(self, loader: Loader, **kwargs: Any) -> None:
@@ -152,13 +151,13 @@ class ESMValToolDiagnostic(Diagnostic):
         # Hybrid ESM input data
         logger.debug(
             f"Using variables {[v['var_name'] for v in self._VARS]} for "
-            f"diagnostic '{self.diag_name}'"
+            f"diagnostic '{self.name}'"
         )
         for var in self._VARS:
             cube = loader.load_variable(**var)
             logger.debug(
                 f"Running preprocessor on variable {var['var_name']} for "
-                f"diagnostic '{self.diag_name}'"
+                f"diagnostic '{self.name}'"
             )
             cube = self._preprocess(cube)
             filename = f"{'_'.join(var.values())}_{loader.path.name}.nc"
@@ -171,9 +170,9 @@ class ESMValToolDiagnostic(Diagnostic):
 
             # Setup metadata for hybrid ESM output
             metadata = loader.get_metadata(**var)
-            metadata["diagnostic"] = self.diag_name
+            metadata["diagnostic"] = self.name
             metadata["filename"] = str(path)
-            metadata["preprocessor"] = f"{self.diag_name}_preprocessor"
+            metadata["preprocessor"] = f"{self.name}_preprocessor"
             metadata["recipe_dataset_index"] = file_idx
 
             # Data-specific metadata
@@ -236,11 +235,9 @@ class ESMValToolDiagnostic(Diagnostic):
 
     def _run_diag(self, loader: Loader, **kwargs: Any) -> None:
         """Run diagnostic function."""
-        logger.debug(
-            f"Creating cfg for ESMValTool diagnostic '{self.diag_name}'"
-        )
+        logger.debug(f"Creating cfg for ESMValTool diagnostic '{self.name}'")
         cfg = self._get_cfg(loader, **kwargs)
-        logger.debug(f"Running ESMValTool diagnostic '{self.diag_name}'")
+        logger.debug(f"Running ESMValTool diagnostic '{self.name}'")
         self._run_esmvaltool_diag(cfg)
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:

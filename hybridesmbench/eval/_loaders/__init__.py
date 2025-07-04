@@ -6,6 +6,12 @@ from typing import Any
 from hybridesmbench._utils import get_classes
 from hybridesmbench.eval._loaders.base import BaseICONLoader, Loader
 
+__all__ = [
+    "LOADERS",
+    "BaseICONLoader",
+    "Loader",
+]
+
 
 def _is_loader(obj: Any):
     """Check if object is a loader."""
