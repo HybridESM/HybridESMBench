@@ -3,11 +3,11 @@
 import warnings
 from collections.abc import Iterable
 from pathlib import Path
-from typing import Literal
 
 from hybridesmbench.eval._diags import DIAGS
 from hybridesmbench.eval._loaders import LOADERS
 from hybridesmbench.exceptions import HybridESMBenchWarning
+from hybridesmbench.typing import DiagnosticName, ModelType
 
 __all__ = [
     "evaluate",
@@ -16,9 +16,9 @@ __all__ = [
 
 def evaluate(
     path: str | Path,
-    model_type: Literal["icon"],
+    model_type: ModelType,
     work_dir: str | Path,
-    diagnostics: Iterable[str] | None = None,
+    diagnostics: Iterable[DiagnosticName] | None = None,
 ) -> dict[str, Path | None]:
     """Evaluate hybrid Earth system model output.
 

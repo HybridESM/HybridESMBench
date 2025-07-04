@@ -3,7 +3,7 @@
 import datetime
 import inspect
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any
 
 import iris
 import yaml
@@ -12,6 +12,7 @@ from loguru import logger
 
 from hybridesmbench._utils import get_timerange
 from hybridesmbench.eval._loaders import LOADERS, Loader
+from hybridesmbench.typing import ModelType
 
 
 class Diagnostic:
@@ -36,7 +37,7 @@ class Diagnostic:
     def run(
         self,
         path: Path,
-        model_type: Literal["icon"],
+        model_type: ModelType,
         **kwargs: Any,
     ) -> Path:
         """Run diagnostics.
@@ -127,7 +128,9 @@ class ESMValToolDiagnostic(Diagnostic):
     _DIAG_CFG: dict[str, Any]
 
     def _get_cfg(
-        self, loader: Loader, **additional_cfg: Any
+        self,
+        loader: Loader,
+        **additional_cfg: Any,
     ) -> dict[str, Any]:
         """Get configuration dictionary for ESMValTool diagnostic."""
         cfg: dict[str, Any] = {

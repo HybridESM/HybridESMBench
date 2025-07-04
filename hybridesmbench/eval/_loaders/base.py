@@ -197,7 +197,7 @@ class BaseICONLoader(Loader):
 
         # Load xarray.Dataset and convert to iris.cube.CubeList
         file_pattern = str(self.path / f"{self.exp}_{var_type}_*.nc")
-        logger.debug(f"Loading files at {file_pattern}")
+        logger.debug(f"Loading files {file_pattern}")
         xr_ds = self._load_files(file_pattern)
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=IrisUserWarning)

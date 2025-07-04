@@ -5,6 +5,7 @@ from typing import Any
 
 from hybridesmbench._utils import get_classes
 from hybridesmbench.eval._diags.base import Diagnostic, ESMValToolDiagnostic
+from hybridesmbench.typing import DiagnosticName
 
 __all__ = [
     "DIAGS",
@@ -23,6 +24,6 @@ def _is_diag(obj: Any):
     )
 
 
-DIAGS: dict[str, type[Diagnostic]] = get_classes(
+DIAGS: dict[DiagnosticName, type[Diagnostic]] = get_classes(
     "hybridesmbench.eval._diags", _is_diag
 )

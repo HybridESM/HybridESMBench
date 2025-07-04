@@ -5,6 +5,7 @@ from typing import Any
 
 from hybridesmbench._utils import get_classes
 from hybridesmbench.eval._loaders.base import BaseICONLoader, Loader
+from hybridesmbench.typing import ModelType
 
 __all__ = [
     "LOADERS",
@@ -23,6 +24,6 @@ def _is_loader(obj: Any):
     )
 
 
-LOADERS: dict[str, type[Loader]] = get_classes(
+LOADERS: dict[ModelType, type[Loader]] = get_classes(
     "hybridesmbench.eval._loaders", _is_loader
 )

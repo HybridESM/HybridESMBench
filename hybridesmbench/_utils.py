@@ -12,7 +12,7 @@ from iris.cube import Cube
 def get_classes(
     parent_module_name: str,
     predicate: Callable[[Any], bool],
-) -> dict[str, Any]:
+) -> dict[Any, Any]:
     """Get specific classes of a module.
 
     Parameters
