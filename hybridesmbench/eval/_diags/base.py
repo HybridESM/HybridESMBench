@@ -148,7 +148,7 @@ class ESMValToolDiagnostic(Diagnostic):
             logger.debug(f"Created directory {dir_}")
 
         # Setup input data
-        new_metadata: dict[str, dict] = {}
+        metadata_dict: dict[str, dict] = {}
         file_idx = 0
 
         # Hybrid ESM input data
@@ -191,7 +191,7 @@ class ESMValToolDiagnostic(Diagnostic):
 
             metadata = self._update_metadata(metadata)
 
-            new_metadata[str(path)] = metadata
+            metadata_dict[str(path)] = metadata
             file_idx += 1
 
         # Other input data
@@ -202,21 +202,21 @@ class ESMValToolDiagnostic(Diagnostic):
 
             for filename in metadata:
                 filepath = str(self._data_dir / filename)
-                new_metadata[filepath] = metadata[filename]
-                new_metadata[filepath]["filename"] = filepath
-                new_metadata[filepath]["recipe_dataset_index"] = file_idx
+                metadata_dict[filepath] = metadata[filename]
+                metadata_dict[filepath]["filename"] = filepath
+                metadata_dict[filepath]["recipe_dataset_index"] = file_idx
                 file_idx += 1
 
         new_metadata_file = self.input_dir / "metadata.yml"
         with new_metadata_file.open("w", encoding="utf-8") as file:
-            yaml.safe_dump(new_metadata, file)
+            yaml.safe_dump(metadata_dict, file)
             logger.debug(f"Wrote metadata file {new_metadata_file}")
 
         # Add directories to cfg
         cfg.update(
             {
                 "auxiliary_data_dir": str(aux_dir),
-                "input_data": new_metadata,
+                "input_data": metadata_dict,
                 "input_files": [str(new_metadata_file)],
                 "plot_dir": str(plot_dir),
                 "run_dir": str(run_dir),
@@ -260,5 +260,5 @@ class ESMValToolDiagnostic(Diagnostic):
         return cfg
 
     def _update_metadata(self, metadata: dict[str, Any]) -> dict[str, Any]:
-        """Update variable metadata (in-place)."""
+        """Update hybrid ESM output metadata (in-place)."""
         return metadata

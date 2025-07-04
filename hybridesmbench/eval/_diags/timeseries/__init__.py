@@ -112,7 +112,7 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
         return cfg
 
     def _update_metadata(self, metadata: dict[str, Any]) -> dict[str, Any]:
-        """Update variable metadata (in-place)."""
+        """Update hybrid ESM output metadata (in-place)."""
         if metadata["short_name"] == "rtmt":
             metadata["title"] = "Global Mean TOA Net Downward Total Radiation"
         else:
