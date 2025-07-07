@@ -39,7 +39,7 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
         """Run ESMValTool diagnostic."""
-        pass
+        return
 
     def _update_cfg(
         self,
