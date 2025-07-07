@@ -65,15 +65,15 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
             },
         },
     }
-    _VARS = [
-        {"var_name": "pr", "mip_table": "Amon"},
-        {"var_name": "rlut", "mip_table": "Amon"},
-        {"var_name": "rsut", "mip_table": "Amon"},
-        {"var_name": "rtmt", "mip_table": "Amon"},
-        {"var_name": "tas", "mip_table": "Amon"},
-    ]
+    _VARS = {
+        "pr": {"var_name": "pr", "mip_table": "Amon"},
+        "rlut": {"var_name": "rlut", "mip_table": "Amon"},
+        "rsut": {"var_name": "rsut", "mip_table": "Amon"},
+        "rtmt": {"var_name": "rtmt", "mip_table": "Amon"},
+        "tas": {"var_name": "tas", "mip_table": "Amon"},
+    }
 
-    def _preprocess(self, cube: Cube) -> Cube:
+    def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
@@ -111,9 +111,13 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
         cfg["plots"]["timeseries"]["plot_kwargs"][loader.alias] = plot_kwargs
         return cfg
 
-    def _update_metadata(self, metadata: dict[str, Any]) -> dict[str, Any]:
+    def _update_metadata(
+        self,
+        var_id: str,
+        metadata: dict[str, Any],
+    ) -> dict[str, Any]:
         """Update hybrid ESM output metadata (in-place)."""
-        if metadata["short_name"] == "rtmt":
+        if var_id == "rtmt":
             metadata["title"] = "Global Mean TOA Net Downward Total Radiation"
         else:
             metadata["title"] = f"Global Mean {metadata['long_name']}"

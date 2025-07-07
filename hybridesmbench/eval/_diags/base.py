@@ -25,7 +25,7 @@ class Diagnostic:
 
     """
 
-    _VARS: list[dict[str, str]]
+    _VARS: dict[str, dict[str, str]]
 
     def __init__(self, work_dir: Path) -> None:
         """Initialize class instance."""
@@ -153,26 +153,21 @@ class ESMValToolDiagnostic(Diagnostic):
 
         # Hybrid ESM input data
         logger.debug(
-            f"Using variables {[v['var_name'] for v in self._VARS]} for "
-            f"diagnostic '{self.name}'"
+            f"Using variables {list(self._VARS)} for diagnostic '{self.name}'"
         )
-        for var in self._VARS:
-            cube = loader.load_variable(**var)
+        for var_id, var_dict in self._VARS.items():
+            cube = loader.load_variable(**var_dict)
             logger.debug(
-                f"Running preprocessor on variable {var['var_name']} for "
-                f"diagnostic '{self.name}'"
+                f"Running preprocessor on variable '{var_id}' for diagnostic "
+                f"'{self.name}'"
             )
-            cube = self._preprocess(cube)
-            filename = f"{'_'.join(var.values())}_{loader.path.name}.nc"
-            path = (
-                self.input_dir
-                / f"{'_'.join(var.values())}_{loader.path.name}.nc"
-            )
+            cube = self._preprocess(var_id, cube)
+            path = self.input_dir / f"{var_id}_{loader.path.name}.nc"
             iris.save(cube, path)
             logger.debug(f"Saved {path}")
 
             # Setup metadata for hybrid ESM output
-            metadata = loader.get_metadata(**var)
+            metadata = loader.get_metadata(**var_dict)
             metadata["diagnostic"] = self.name
             metadata["filename"] = str(path)
             metadata["preprocessor"] = f"{self.name}_preprocessor"
@@ -189,7 +184,7 @@ class ESMValToolDiagnostic(Diagnostic):
                 metadata["start_year"] = timerange.split("/")[0][:4]
                 metadata["end_year"] = timerange.split("/")[1][:4]
 
-            metadata = self._update_metadata(metadata)
+            metadata = self._update_metadata(var_id, metadata)
 
             metadata_dict[str(path)] = metadata
             file_idx += 1
@@ -232,7 +227,7 @@ class ESMValToolDiagnostic(Diagnostic):
 
         return cfg
 
-    def _preprocess(self, cube: Cube) -> Cube:
+    def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         return cube
 
@@ -259,6 +254,10 @@ class ESMValToolDiagnostic(Diagnostic):
         """Update diagnostic configuration settings (in-place)."""
         return cfg
 
-    def _update_metadata(self, metadata: dict[str, Any]) -> dict[str, Any]:
+    def _update_metadata(
+        self,
+        var_id: str,
+        metadata: dict[str, Any],
+    ) -> dict[str, Any]:
         """Update hybrid ESM output metadata (in-place)."""
         return metadata
