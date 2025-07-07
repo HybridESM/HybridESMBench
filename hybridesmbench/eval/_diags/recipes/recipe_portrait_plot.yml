@@ -1,0 +1,333 @@
+documentation:
+  title: HybridESMBench
+  description: HybridESMBench
+  authors:
+  - schlund_manuel
+
+preprocessors:
+  create_rmse_surface:
+    custom_order: true
+    regrid:
+      target_grid: 2x2
+      scheme: linear
+    mask_fillvalues:
+      threshold_fraction: 0.95
+    climate_statistics:
+      operator: mean
+      period: month
+    # Comment distance_metric to get reference data
+    distance_metric:
+      metric: weighted_rmse
+      keep_reference_dataset: false
+  create_rmse_200hpa:
+    custom_order: true
+    extract_levels:
+      levels: 20000
+      scheme: linear
+      coordinate: air_pressure
+    regrid:
+      target_grid: 2x2
+      scheme: linear
+    mask_fillvalues:
+      threshold_fraction: 0.95
+    climate_statistics:
+      operator: mean
+      period: month
+    # Comment distance_metric to get reference data
+    distance_metric:
+      metric: weighted_rmse
+      keep_reference_dataset: false
+  create_rmse_400hpa:
+    custom_order: true
+    extract_levels:
+      levels: 40000
+      scheme: linear
+      coordinate: air_pressure
+    regrid:
+      target_grid: 2x2
+      scheme: linear
+    mask_fillvalues:
+      threshold_fraction: 0.95
+    climate_statistics:
+      operator: mean
+      period: month
+    # Comment distance_metric to get reference data
+    distance_metric:
+      metric: weighted_rmse
+      keep_reference_dataset: false
+  create_rmse_850hpa:
+    custom_order: true
+    extract_levels:
+      levels: 40000
+      scheme: linear
+      coordinate: air_pressure
+    regrid:
+      target_grid: 2x2
+      scheme: linear
+    mask_fillvalues:
+      threshold_fraction: 0.95
+    climate_statistics:
+      operator: mean
+      period: month
+    # Comment distance_metric to get reference data
+    distance_metric:
+      metric: weighted_rmse
+      keep_reference_dataset: false
+
+diagnostics:
+  portrait_plot:
+    variables:
+      asr:
+        mip: Amon
+        derive: true
+        force_derivation: true
+        preprocessor: create_rmse_surface
+        variable: asr
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          timerange: 20030101/20221231
+          reference_for_metric: true
+      clivi:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: clivi
+        additional_datasets:
+        - project: OBS
+          dataset: ESACCI-CLOUD
+          type: sat
+          version: AVHRR-AMPM-fv3.0
+          tier: 2
+          timerange: 19970101/20161231
+          reference_for_metric: true
+      clwvi:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: clwvi
+        additional_datasets:
+        - project: OBS
+          dataset: ESACCI-CLOUD
+          type: sat
+          version: AVHRR-AMPM-fv3.0
+          tier: 2
+          timerange: 19970101/20161231
+          reference_for_metric: true
+      clt:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: clt
+        additional_datasets:
+        - project: OBS
+          dataset: ESACCI-CLOUD
+          type: sat
+          version: AVHRR-AMPM-fv3.0
+          tier: 2
+          timerange: 19970101/20161231
+          reference_for_metric: true
+      hus400:
+        short_name: hus
+        mip: Amon
+        preprocessor: create_rmse_400hpa
+        variable: hus400
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          timerange: 20000101/20191231
+          reference_for_metric: true
+      lwcre:
+        mip: Amon
+        derive: true
+        force_derivation: true
+        preprocessor: create_rmse_surface
+        variable: lwcre
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          timerange: 20030101/20221231
+          reference_for_metric: true
+      lwp:
+        mip: Amon
+        derive: true
+        preprocessor: create_rmse_surface
+        variable: lwp
+        additional_datasets:
+        - project: OBS
+          dataset: ESACCI-CLOUD
+          type: sat
+          version: AVHRR-AMPM-fv3.0
+          tier: 2
+          timerange: 19970101/20161231
+          reference_for_metric: true
+      pr:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: pr
+        additional_datasets:
+        - project: OBS
+          dataset: GPCP-SG
+          type: atmos
+          version: 2.3
+          tier: 2
+          timerange: 20030101/20221231
+          reference_for_metric: true
+      prw:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: prw
+        additional_datasets:
+        - project: OBS6
+          dataset: ESACCI-WATERVAPOUR
+          type: sat
+          version: CDR2-L3-COMBI-05deg-fv3.1
+          tier: 3
+          timerange: 20030101/20171231
+          reference_for_metric: true
+      rlut:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: rlut
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          timerange: 20030101/20221231
+          reference_for_metric: true
+      rsut:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: rsut
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          timerange: 20030101/20221231
+          reference_for_metric: true
+      swcre:
+        mip: Amon
+        derive: true
+        force_derivation: true
+        preprocessor: create_rmse_surface
+        variable: swcre
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          timerange: 20030101/20221231
+          reference_for_metric: true
+      ta200:
+        short_name: ta
+        mip: Amon
+        preprocessor: create_rmse_200hpa
+        variable: ta200
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          timerange: 20000101/20191231
+          reference_for_metric: true
+      ta850:
+        short_name: ta
+        mip: Amon
+        preprocessor: create_rmse_850hpa
+        variable: ta850
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          timerange: 20000101/20191231
+          reference_for_metric: true
+      tas:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: tas
+        additional_datasets:
+        - project: OBS
+          dataset: HadCRUT5
+          type: ground
+          version: 5.0.1.0-analysis
+          tier: 2
+          timerange: 20020101/20211231
+          reference_for_metric: true
+      tauu:
+        mip: Amon
+        preprocessor: create_rmse_surface
+        variable: tauu
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          timerange: 20000101/20191231
+          reference_for_metric: true
+      ua200:
+        short_name: ua
+        mip: Amon
+        preprocessor: create_rmse_200hpa
+        variable: ua200
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          timerange: 20000101/20191231
+          reference_for_metric: true
+      ua850:
+        short_name: ua
+        mip: Amon
+        preprocessor: create_rmse_850hpa
+        variable: ua850
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          timerange: 20000101/20191231
+          reference_for_metric: true
+    additional_datasets:
+    - project: CMIP6
+      dataset: '*'
+      exp: historical
+      ensemble: r1i1p1f1
+      grid: '*'
+      institute: '*'
+      timerange: 19950101/20141231
+    scripts:
+      plot:
+        script: portrait_plot.py
+        x_by: alias
+        y_by: variable
+        group_by: project
+        normalize: centered_median
+        nan_color: null
+        matplotlib_rc_params:
+          xtick.labelsize: 6
+          ytick.labelsize: 6
+        plot_kwargs:
+          vmin: -0.5
+          vmax: 0.5
+        cbar_kwargs:
+          label: Relative RMSE
+          extend: both
+        plot_legend: false
