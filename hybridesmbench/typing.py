@@ -2,6 +2,9 @@
 
 from typing import Literal
 
-DiagnosticName = Literal["timeseries"]
+DiagnosticName = Literal[
+    "portrait_plot",
+    "timeseries",
+]
 
 ModelType = Literal["icon"]

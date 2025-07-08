@@ -2,8 +2,14 @@
 
 from typing import Any
 
+from esmvalcore.preprocessor import (
+    climate_statistics,
+    regrid,
+)
+from iris import Constraint
 from iris.cube import Cube
 
+from hybridesmbench._utils import extract_vertical_level
 from hybridesmbench.eval._diags.base import ESMValToolDiagnostic
 from hybridesmbench.eval._loaders.base import Loader
 
@@ -13,28 +19,48 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
 
     _DIAG_CFG = {}
     _VARS = {
-        "asr": {"var_name": "asr", "var_mip": "Amon"},
-        "clivi": {"var_name": "clivi", "var_mip": "Amon"},
-        "clwvi": {"var_name": "clwvi", "var_mip": "Amon"},
-        "clt": {"var_name": "clt", "var_mip": "Amon"},
-        "hus400": {"var_name": "hus", "var_mip": "Amon"},
-        "lwcre": {"var_name": "lwcre", "var_mip": "Amon"},
-        "lwp": {"var_name": "lwp", "var_mip": "Amon"},
-        "pr": {"var_name": "pr", "var_mip": "Amon"},
-        "prw": {"var_name": "prw", "var_mip": "Amon"},
-        "rlut": {"var_name": "rlut", "var_mip": "Amon"},
-        "rsut": {"var_name": "rsut", "var_mip": "Amon"},
-        "swcre": {"var_name": "swcre", "var_mip": "Amon"},
-        "ta200": {"var_name": "ta", "var_mip": "Amon"},
-        "ta850": {"var_name": "ta", "var_mip": "Amon"},
-        "tas": {"var_name": "tas", "var_mip": "Amon"},
-        "tauu": {"var_name": "tauu", "var_mip": "Amon"},
-        "ua200": {"var_name": "ua", "var_mip": "Amon"},
-        "ua850": {"var_name": "ua", "var_mip": "Amon"},
+        # "asr": {"var_name": "asr", "mip_table": "Amon"},
+        "clivi": {"var_name": "clivi", "mip_table": "Amon"},
+        "clwvi": {"var_name": "clwvi", "mip_table": "Amon"},
+        "clt": {"var_name": "clt", "mip_table": "Amon"},
+        "hus400": {"var_name": "hus", "mip_table": "Amon"},
+        # "lwcre": {"var_name": "lwcre", "mip_table": "Amon"},
+        # "lwp": {"var_name": "lwp", "mip_table": "Amon"},
+        "pr": {"var_name": "pr", "mip_table": "Amon"},
+        "prw": {"var_name": "prw", "mip_table": "Amon"},
+        "rlut": {"var_name": "rlut", "mip_table": "Amon"},
+        "rsut": {"var_name": "rsut", "mip_table": "Amon"},
+        # "swcre": {"var_name": "swcre", "mip_table": "Amon"},
+        "ta200": {"var_name": "ta", "mip_table": "Amon"},
+        "ta850": {"var_name": "ta", "mip_table": "Amon"},
+        "tas": {"var_name": "tas", "mip_table": "Amon"},
+        "tauu": {"var_name": "tauu", "mip_table": "Amon"},
+        "ua200": {"var_name": "ua", "mip_table": "Amon"},
+        "ua850": {"var_name": "ua", "mip_table": "Amon"},
     }
+
+    def _get_ref_cube(self, var_id: str) -> Cube:
+        """Get reference data for calculation of distance metrics."""
+        ref_dir = self._data_dir / "references" / var_id
+        if not ref_dir.is_dir():
+            raise ValueError(
+                f"No reference data for '{var_id}' available, {ref_dir} is "
+                f"not a directory"
+            )
+        print(ref_dir)
 
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
+        cube = cube.extract(
+            Constraint(time=lambda c: 1979 <= c.point.year <= 1979)
+        )
+        cube = extract_vertical_level(var_id, cube)
+        cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
+        cube = climate_statistics(cube, operator="mean", period="month")
+        ref_cube = self._get_ref_cube(var_id)
+        print(ref_cube)
+        assert 0
+
         return cube
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:

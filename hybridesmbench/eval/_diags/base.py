@@ -163,6 +163,7 @@ class ESMValToolDiagnostic(Diagnostic):
             )
             cube = self._preprocess(var_id, cube)
             path = self.input_dir / f"{var_id}_{loader.path.name}.nc"
+            logger.debug(f"Saving {path}")
             iris.save(cube, path)
             logger.debug(f"Saved {path}")
 

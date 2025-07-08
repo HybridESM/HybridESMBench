@@ -18,7 +18,9 @@ def evaluate(
     path: str | Path,
     model_type: ModelType,
     work_dir: str | Path,
+    *,
     diagnostics: Iterable[DiagnosticName] | None = None,
+    fail_on_diag_error: bool = True,
 ) -> dict[str, Path | None]:
     """Evaluate hybrid Earth system model output.
 
@@ -32,12 +34,15 @@ def evaluate(
         _description_
     diagnostics:
         Diagnostics to run. If `None`, run all available diagnostics.
+    fail_on_diag_error:
+        If `True`, raise exception if a diagnostic returns an error. If
+        `False`, only raise a warning.
 
     Returns
     -------
     dict[str, Path | None]
-        Diagnostic output directories. If diagnostic failed to run, return
-        `None` for that diagnostic.
+        Diagnostic output directories. If diagnostic failed to run and
+        `fail_on_diag_error=False`, return `None` for that diagnostic.
 
     """
     path = Path(path)
@@ -66,6 +71,8 @@ def evaluate(
         try:
             output_dir: Path | None = diagnostic.run(path, model_type)
         except Exception as exc:
+            if fail_on_diag_error:
+                raise
             msg = (
                 f"Diagnostic '{diag_name}' failed to run on data {path}: {exc}"
             )

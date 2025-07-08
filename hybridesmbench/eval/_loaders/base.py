@@ -99,7 +99,7 @@ class Loader:
         )
         cube = self._load_single_variable(var_name, mip_table)
         logger.debug(
-            f"Loaded variable '{var_name}' from MIP table'{mip_table}'"
+            f"Loaded variable '{var_name}' from MIP table' {mip_table}'"
         )
         return cube
 
