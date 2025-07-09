@@ -2,6 +2,7 @@
 
 from typing import Any
 
+import iris
 from esmvalcore.preprocessor import (
     climate_statistics,
     regrid,
@@ -42,12 +43,13 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
     def _get_ref_cube(self, var_id: str) -> Cube:
         """Get reference data for calculation of distance metrics."""
         ref_dir = self._data_dir / "references" / var_id
-        if not ref_dir.is_dir():
+        ref_paths = list(ref_dir.glob("*.nc"))
+        if len(ref_paths) != 1:
             raise ValueError(
-                f"No reference data for '{var_id}' available, {ref_dir} is "
-                f"not a directory"
+                f"Expected exactly 1 reference dataset for variable "
+                f"'{var_id}' located at {ref_dir}/*.nc, got {len(ref_paths)}"
             )
-        print(ref_dir)
+        return iris.load_cube(ref_paths[0])
 
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
@@ -57,9 +59,7 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
         cube = extract_vertical_level(var_id, cube)
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = climate_statistics(cube, operator="mean", period="month")
-        ref_cube = self._get_ref_cube(var_id)
-        print(ref_cube)
-        assert 0
+        self._get_ref_cube(var_id)
 
         return cube
 
