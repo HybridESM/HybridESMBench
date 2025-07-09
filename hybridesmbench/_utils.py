@@ -72,6 +72,7 @@ def extract_vertical_level(var_id: str, cube: Cube, **kwargs: Any) -> Cube:
         )
         raise ValueError(msg) from exc
 
+    logger.debug(f"Extracting level {level} for variable '{var_id}'")
     kwargs.setdefault("scheme", "linear")
     return extract_levels(cube, level, **kwargs)
 

@@ -44,7 +44,7 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
         "clivi": {"var_name": "clivi", "mip_table": "Amon"},
         "clwvi": {"var_name": "clwvi", "mip_table": "Amon"},
         "clt": {"var_name": "clt", "mip_table": "Amon"},
-        "hus400": {"var_name": "hus", "mip_table": "Amon"},
+        "hus40000": {"var_name": "hus", "mip_table": "Amon"},
         # "lwcre": {"var_name": "lwcre", "mip_table": "Amon"},
         # "lwp": {"var_name": "lwp", "mip_table": "Amon"},
         "pr": {"var_name": "pr", "mip_table": "Amon"},
@@ -52,12 +52,12 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
         "rlut": {"var_name": "rlut", "mip_table": "Amon"},
         "rsut": {"var_name": "rsut", "mip_table": "Amon"},
         # "swcre": {"var_name": "swcre", "mip_table": "Amon"},
-        "ta200": {"var_name": "ta", "mip_table": "Amon"},
-        "ta850": {"var_name": "ta", "mip_table": "Amon"},
+        "ta20000": {"var_name": "ta", "mip_table": "Amon"},
+        "ta85000": {"var_name": "ta", "mip_table": "Amon"},
         "tas": {"var_name": "tas", "mip_table": "Amon"},
         "tauu": {"var_name": "tauu", "mip_table": "Amon"},
-        "ua200": {"var_name": "ua", "mip_table": "Amon"},
-        "ua850": {"var_name": "ua", "mip_table": "Amon"},
+        "ua20000": {"var_name": "ua", "mip_table": "Amon"},
+        "ua85000": {"var_name": "ua", "mip_table": "Amon"},
     }
 
     def _get_ref_cube(self, var_id: str) -> Cube:
@@ -74,7 +74,7 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
-        cube = extract_vertical_level(var_id, cube)
+        cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = climate_statistics(cube, operator="mean", period="month")
         ref_cube = self._get_ref_cube(var_id)
