@@ -5,20 +5,40 @@ from typing import Any
 import iris
 from esmvalcore.preprocessor import (
     climate_statistics,
+    distance_metric,
     regrid,
 )
+from esmvaltool.diag_scripts.portrait_plot import main
 from iris import Constraint
 from iris.cube import Cube
 
 from hybridesmbench._utils import extract_vertical_level
 from hybridesmbench.eval._diags.base import ESMValToolDiagnostic
-from hybridesmbench.eval._loaders.base import Loader
 
 
 class PortraiPlotDiagnostic(ESMValToolDiagnostic):
     """Run time series diagnostic."""
 
-    _DIAG_CFG = {}
+    _DIAG_CFG = {
+        "x_by": "alias",
+        "y_by": "variable",
+        "group_by": "project",
+        "normalize": "centered_median",
+        "nan_color": None,
+        "matplotlib_rc_params": {
+            "xtick.labelsize": 6,
+            "ytick.labelsize": 6,
+        },
+        "plot_kwargs": {
+            "vmin": -0.5,
+            "vmax": 0.5,
+        },
+        "cbar_kwargs": {
+            "label": "Relative RMSE",
+            "extend": "both",
+        },
+        "plot_legend": False,
+    }
     _VARS = {
         # "asr": {"var_name": "asr", "mip_table": "Amon"},
         "clivi": {"var_name": "clivi", "mip_table": "Amon"},
@@ -53,32 +73,24 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
 
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
-        cube = cube.extract(
-            Constraint(time=lambda c: 1979 <= c.point.year <= 1979)
-        )
+        cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
         cube = extract_vertical_level(var_id, cube)
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = climate_statistics(cube, operator="mean", period="month")
-        self._get_ref_cube(var_id)
-
+        ref_cube = self._get_ref_cube(var_id)
+        cube = distance_metric([cube], "weighted_rmse", reference=ref_cube)[0]
         return cube
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
         """Run ESMValTool diagnostic."""
-        return
-
-    def _update_cfg(
-        self,
-        cfg: dict[str, Any],
-        loader: Loader,
-    ) -> dict[str, Any]:
-        """Update diagnostic configuration settings (in-place)."""
-        return cfg
+        return main(cfg)
 
     def _update_metadata(
         self,
         var_id: str,
         metadata: dict[str, Any],
     ) -> dict[str, Any]:
-        """Update variable metadata (in-place)."""
+        """Update hybrid ESM output metadata (in-place)."""
+        metadata["alias"] = metadata["dataset"]
+        metadata["variable"] = var_id
         return metadata

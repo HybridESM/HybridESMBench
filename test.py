@@ -1,5 +1,4 @@
 import sys
-from pprint import pprint
 from typing import Literal
 
 from loguru import logger
@@ -18,7 +17,14 @@ output = evaluate(
     icon_output,
     model_type,
     work_dir,
-    diagnostics=["portrait_plot"],
+    # diagnostics=["portrait_plot"],
 )
 
-pprint(output)
+for diag_name, diag_output in output.items():
+    print(diag_name)
+    if diag_output is None:
+        print("No output")
+        print()
+        continue
+    print(list(diag_output.rglob("*.png")))
+    print()

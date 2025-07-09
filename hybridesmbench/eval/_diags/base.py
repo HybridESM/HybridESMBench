@@ -162,6 +162,7 @@ class ESMValToolDiagnostic(Diagnostic):
             metadata["filename"] = str(path)
             metadata["preprocessor"] = f"{self.name}_preprocessor"
             metadata["recipe_dataset_index"] = file_idx
+            metadata["variable_group"] = var_id
 
             # Data-specific metadata
             metadata["long_name"] = cube.long_name

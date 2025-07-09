@@ -74,7 +74,6 @@ class Loader:
         metadata["short_name"] = var_name
         metadata["standard_name"] = cmor_var_info.standard_name
         metadata["units"] = cmor_var_info.units
-        metadata["variable_group"] = var_name
 
         return metadata
 
