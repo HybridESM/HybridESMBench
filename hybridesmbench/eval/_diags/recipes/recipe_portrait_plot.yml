@@ -103,10 +103,10 @@ diagnostics:
           tier: 2
           timerange: 19970101/20161231
           reference_for_metric: true
-      clwvi:
+      clt:
         mip: Amon
         preprocessor: create_rmse_surface
-        variable: clwvi
+        variable: clt
         additional_datasets:
         - project: OBS
           dataset: ESACCI-CLOUD
@@ -115,10 +115,10 @@ diagnostics:
           tier: 2
           timerange: 19970101/20161231
           reference_for_metric: true
-      clt:
+      clwvi:
         mip: Amon
         preprocessor: create_rmse_surface
-        variable: clt
+        variable: clwvi
         additional_datasets:
         - project: OBS
           dataset: ESACCI-CLOUD

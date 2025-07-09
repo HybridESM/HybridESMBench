@@ -1,0 +1,915 @@
+? clwvi/CMIP6_AWI-CM-1-1-MR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_AWI-CM-1-1-MR
+  dataset: AWI-CM-1-1-MR
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_AWI-CM-1-1-MR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: AWI
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 1
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20200511
+? clwvi/CMIP6_AWI-ESM-1-1-LR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_AWI-ESM-1-1-LR
+  dataset: AWI-ESM-1-1-LR
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_AWI-ESM-1-1-LR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: AWI
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 2
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20200212
+? clwvi/CMIP6_AWI-ESM-1-REcoM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_AWI-ESM-1-REcoM
+  dataset: AWI-ESM-1-REcoM
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_AWI-ESM-1-REcoM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: AWI
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 3
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20230314
+? clwvi/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_BCC-CSM2-MR
+  dataset: BCC-CSM2-MR
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: BCC
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 4
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190311
+? clwvi/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_BCC-ESM1
+  dataset: BCC-ESM1
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: BCC
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 5
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190311
+? clwvi/CMIP6_CAMS-CSM1-0_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_CAMS-CSM1-0
+  dataset: CAMS-CSM1-0
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_CAMS-CSM1-0_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: CAMS
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 6
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190708
+? clwvi/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_CESM2-FV2
+  dataset: CESM2-FV2
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NCAR
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 23
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20191120
+? clwvi/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_CESM2-WACCM-FV2
+  dataset: CESM2-WACCM-FV2
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NCAR
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 25
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20191120
+? clwvi/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_CESM2-WACCM
+  dataset: CESM2-WACCM
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NCAR
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 24
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190227
+? clwvi/CMIP6_CESM2_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_CESM2
+  dataset: CESM2
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_CESM2_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NCAR
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 22
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190308
+? clwvi/CMIP6_CMCC-CM2-HR4_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_CMCC-CM2-HR4
+  dataset: CMCC-CM2-HR4
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_CMCC-CM2-HR4_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: CMCC
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 10
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20200904
+? clwvi/CMIP6_CanESM5_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_CanESM5
+  dataset: CanESM5
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_CanESM5_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: CCCma
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 9
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190429
+? clwvi/CMIP6_FGOALS-f3-L_Amon_historical_r1i1p1f1_clwvi_gr_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_FGOALS-f3-L
+  dataset: FGOALS-f3-L
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_FGOALS-f3-L_Amon_historical_r1i1p1f1_clwvi_gr_19790101-20141231.nc
+  frequency: mon
+  grid: gr
+  institute: CAS
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 7
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190927
+? clwvi/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_FGOALS-g3
+  dataset: FGOALS-g3
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: CAS
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 8
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190818
+? clwvi/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_clwvi_gr1_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_GFDL-CM4
+  dataset: GFDL-CM4
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_clwvi_gr1_19790101-20141231.nc
+  frequency: monC
+  grid: gr1
+  institute: NOAA-GFDL
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 29
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20180701
+? clwvi/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_clwvi_gr1_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_GFDL-ESM4
+  dataset: GFDL-ESM4
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_clwvi_gr1_19790101-20141231.nc
+  frequency: mon
+  grid: gr1
+  institute: NOAA-GFDL
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 30
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190726
+? clwvi/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_GISS-E2-1-G
+  dataset: GISS-E2-1-G
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NASA-GISS
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 20
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20180827
+? clwvi/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_GISS-E2-1-H
+  dataset: GISS-E2-1-H
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NASA-GISS
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 21
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190403
+? clwvi/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_ICON-ESM-LR
+  dataset: ICON-ESM-LR
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: MPI-M
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 16
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20210215
+? clwvi/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_clwvi_gr1_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_INM-CM4-8
+  dataset: INM-CM4-8
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_clwvi_gr1_19790101-20141231.nc
+  frequency: mon
+  grid: gr1
+  institute: INM
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 12
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190530
+? clwvi/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_clwvi_gr1_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_INM-CM5-0
+  dataset: INM-CM5-0
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_clwvi_gr1_19790101-20141231.nc
+  frequency: mon
+  grid: gr1
+  institute: INM
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 13
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190610
+? clwvi/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_clwvi_gr_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_IPSL-CM6A-LR
+  dataset: IPSL-CM6A-LR
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_clwvi_gr_19790101-20141231.nc
+  frequency: mon
+  grid: gr
+  institute: IPSL
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 14
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20180803
+? clwvi/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_clwvi_gr_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_KACE-1-0-G
+  dataset: KACE-1-0-G
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_clwvi_gr_19790101-20141231.nc
+  frequency: mon
+  grid: gr
+  institute: NIMS-KMA
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 28
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190910
+? clwvi/CMIP6_MIROC6_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_MIROC6
+  dataset: MIROC6
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_MIROC6_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: MIROC
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 15
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190311
+? clwvi/CMIP6_MPI-ESM-1-2-HAM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_MPI-ESM-1-2-HAM
+  dataset: MPI-ESM-1-2-HAM
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_MPI-ESM-1-2-HAM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: HAMMOZ-Consortium
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 11
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190627
+? clwvi/CMIP6_MPI-ESM1-2-HR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_MPI-ESM1-2-HR
+  dataset: MPI-ESM1-2-HR
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_MPI-ESM1-2-HR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: MPI-M
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 17
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190710
+? clwvi/CMIP6_MPI-ESM1-2-LR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_MPI-ESM1-2-LR
+  dataset: MPI-ESM1-2-LR
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_MPI-ESM1-2-LR_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: MPI-M
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 18
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190710
+? clwvi/CMIP6_MRI-ESM2-0_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_MRI-ESM2-0
+  dataset: MRI-ESM2-0
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_MRI-ESM2-0_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: MRI
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 19
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190222
+? clwvi/CMIP6_NESM3_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_NESM3
+  dataset: NESM3
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_NESM3_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NUIST
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 31
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190630
+? clwvi/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_NorESM2-LM
+  dataset: NorESM2-LM
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NCC
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 26
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190815
+? clwvi/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_NorESM2-MM
+  dataset: NorESM2-MM
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: NCC
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 27
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20191108
+? clwvi/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_SAM0-UNICON
+  dataset: SAM0-UNICON
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: SNU
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 32
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20190323
+? clwvi/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_TaiESM1
+  dataset: TaiESM1
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: historical
+  filename: clwvi/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_clwvi_gn_19790101-20141231.nc
+  frequency: mon
+  grid: gn
+  institute: AS-RCEC
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 0
+  short_name: clwvi
+  standard_name: atmosphere_mass_content_of_cloud_condensed_water
+  start_year: 1979
+  timerange: 19790101/20141231
+  title: Global Mean Condensed Water Path
+  units: kg m-2
+  variable_group: clwvi
+  version: v20200623
+? clwvi/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clwvi_19820101-20161231.nc
+: alias: OBS_ESACCI-CLOUD
+  dataset: ESACCI-CLOUD
+  diagnostic: timeseries
+  end_year: 2016
+  filename: clwvi/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clwvi_19820101-20161231.nc
+  frequency: mon
+  long_name: Condensed Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: OBS
+  recipe_dataset_index: 33
+  short_name: clwvi
+  standard_name: atmosphere_cloud_condensed_water_content
+  start_year: 1982
+  tier: 2
+  timerange: 19820101/20161231
+  title: Global Mean Condensed Water Path
+  type: sat
+  units: kg m-2
+  variable_group: clwvi
+  version: AVHRR-AMPM-fv3.0

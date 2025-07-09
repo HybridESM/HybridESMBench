@@ -13,6 +13,7 @@ from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
 from iris import Constraint
 from iris.cube import Cube
 
+from hybridesmbench._utils import extract_vertical_level
 from hybridesmbench.eval._diags import ESMValToolDiagnostic
 from hybridesmbench.eval._loaders import Loader
 
@@ -57,25 +58,43 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
                     },
                     "OBS": _OBS_PLOT_KWARGS,
                     "OBS_CERES-EBAF": _OBS_PLOT_KWARGS,
+                    "OBS_ESACCI-CLOUD": _OBS_PLOT_KWARGS,
                     "OBS_GPCP-SG": _OBS_PLOT_KWARGS,
                     "OBS_HadCRUT5": _OBS_PLOT_KWARGS,
                     "OBS6": _OBS_PLOT_KWARGS,
+                    "OBS6_ESACCI-WATERVAPOUR": _OBS_PLOT_KWARGS,
                     "native6": _OBS_PLOT_KWARGS,
+                    "native6_ERA5": _OBS_PLOT_KWARGS,
                 },
             },
         },
     }
     _VARS = {
+        # "asr": {"var_name": "asr", "mip_table": "Amon"},
+        "clivi": {"var_name": "clivi", "mip_table": "Amon"},
+        "clwvi": {"var_name": "clwvi", "mip_table": "Amon"},
+        "clt": {"var_name": "clt", "mip_table": "Amon"},
+        "hus40000": {"var_name": "hus", "mip_table": "Amon"},
+        # "lwcre": {"var_name": "lwcre", "mip_table": "Amon"},
+        # "lwp": {"var_name": "lwp", "mip_table": "Amon"},
         "pr": {"var_name": "pr", "mip_table": "Amon"},
+        "prw": {"var_name": "prw", "mip_table": "Amon"},
         "rlut": {"var_name": "rlut", "mip_table": "Amon"},
         "rsut": {"var_name": "rsut", "mip_table": "Amon"},
         "rtmt": {"var_name": "rtmt", "mip_table": "Amon"},
+        # "swcre": {"var_name": "swcre", "mip_table": "Amon"},
+        "ta20000": {"var_name": "ta", "mip_table": "Amon"},
+        "ta85000": {"var_name": "ta", "mip_table": "Amon"},
         "tas": {"var_name": "tas", "mip_table": "Amon"},
+        "tauu": {"var_name": "tauu", "mip_table": "Amon"},
+        "ua20000": {"var_name": "ua", "mip_table": "Amon"},
+        "ua85000": {"var_name": "ua", "mip_table": "Amon"},
     }
 
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
+        cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = area_statistics(cube, "mean")
         cube = annual_statistics(cube, "mean")
@@ -117,8 +136,17 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
         metadata: dict[str, Any],
     ) -> dict[str, Any]:
         """Update hybrid ESM output metadata (in-place)."""
-        if var_id == "rtmt":
+        if var_id == "asr":
+            metadata["title"] = "Global Mean Absorbed Shortwave Radiation"
+        elif var_id == "clt":
+            metadata["title"] = "Global Mean Total Cloud Cover"
+        elif var_id == "rtmt":
             metadata["title"] = "Global Mean TOA Net Downward Total Radiation"
-        else:
+        elif var_id == metadata["short_name"]:
             metadata["title"] = f"Global Mean {metadata['long_name']}"
+        else:
+            level = int(int(var_id.replace(metadata["short_name"], "")) / 100)
+            metadata["title"] = (
+                f"Global Mean {metadata['long_name']} at {level} hPa"
+            )
         return metadata

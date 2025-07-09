@@ -1,4 +1,5 @@
 import sys
+from pprint import pprint
 from typing import Literal
 
 from distributed import Client
@@ -35,7 +36,7 @@ def main():
         icon_output,
         model_type,
         work_dir,
-        # diagnostics=["portrait_plot"],
+        diagnostics=["timeseries"],
     )
 
     for diag_name, diag_output in output.items():
@@ -44,7 +45,7 @@ def main():
             print("No output")
             print()
             continue
-        print(list(diag_output.rglob("*.png")))
+        pprint(list(diag_output.rglob("*.png")))
         print()
 
 

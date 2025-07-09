@@ -96,7 +96,7 @@ class Loader:
         logger.debug(
             f"Loading variable '{var_name}' from MIP table '{mip_table}'"
         )
-        cube = self._load_single_variable(var_name, mip_table)
+        cube = self._load_single_variable(var_name, mip_table).copy()
         logger.debug(
             f"Loaded variable '{var_name}' from MIP table' {mip_table}'"
         )
@@ -186,6 +186,7 @@ class BaseICONLoader(Loader):
         """Get path to ICON grid file."""
         return self._grid_file
 
+    @functools.lru_cache
     def _load_single_variable(self, var_name: str, mip_table: str) -> Cube:
         """Load single variable."""
         msg = (
@@ -197,7 +198,7 @@ class BaseICONLoader(Loader):
         # Load xarray.Dataset and convert to iris.cube.CubeList
         file_pattern = str(self.path / f"{self.exp}_{var_type}_*.nc")
         logger.debug(f"Loading files {file_pattern}")
-        xr_ds = self._load_files(file_pattern)
+        xr_ds = self._load_files(file_pattern).copy()
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=IrisUserWarning)
             cubes = cubes_from_xarray(xr_ds)
