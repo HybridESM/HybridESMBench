@@ -54,6 +54,7 @@ def evaluate(
             f"{list(LOADERS)}"
         )
         raise ValueError(msg)
+    loader = LOADERS[model_type](path)
 
     if diagnostics is None:
         diagnostics = list(DIAGS)
@@ -69,12 +70,13 @@ def evaluate(
     for diag_name in diagnostics:
         diagnostic = DIAGS[diag_name](work_dir)
         try:
-            output_dir: Path | None = diagnostic.run(path, model_type)
+            output_dir: Path | None = diagnostic.run(loader)
         except Exception as exc:
             if fail_on_diag_error:
                 raise
             msg = (
-                f"Diagnostic '{diag_name}' failed to run on data {path}: {exc}"
+                f"Diagnostic '{diag_name}' failed to run on '{model_type}' "
+                f"data located at {path}: {exc}"
             )
             warnings.warn(msg, HybridESMBenchWarning, stacklevel=2)
             output_dir = None

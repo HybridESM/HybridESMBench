@@ -11,8 +11,7 @@ from iris.cube import Cube
 from loguru import logger
 
 from hybridesmbench._utils import get_timerange
-from hybridesmbench.eval._loaders import LOADERS, Loader
-from hybridesmbench.typing import ModelType
+from hybridesmbench.eval._loaders import Loader
 
 
 class Diagnostic:
@@ -34,20 +33,13 @@ class Diagnostic:
         self._session_dir = self._get_session_dir(work_dir)
         logger.debug(f"Initialized diagnostic '{self.name}'")
 
-    def run(
-        self,
-        path: Path,
-        model_type: ModelType,
-        **kwargs: Any,
-    ) -> Path:
+    def run(self, loader: Loader, **kwargs: Any) -> Path:
         """Run diagnostics.
 
         Parameters
         ----------
-        path:
-            Path to hybrid Earth system model output.
-        model_type:
-            Hybrid Earth system model type.
+        loader:
+            Loader instance of hybrid Earth system model output.
         **kwargs
             Additional keyword arguments for running a diagnostic.
 
@@ -65,9 +57,6 @@ class Diagnostic:
         logger.debug(f"Created session directory {self.session_dir}")
         logger.debug(f"Created input directory {self.input_dir}")
         logger.debug(f"Created output directory {self.output_dir}")
-
-        assert model_type in LOADERS, f"Invalid model type: '{model_type}'"
-        loader = LOADERS[model_type](path)
 
         self._run_diag(loader, **kwargs)
 
