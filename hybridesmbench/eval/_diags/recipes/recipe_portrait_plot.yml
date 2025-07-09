@@ -127,11 +127,11 @@ diagnostics:
           tier: 2
           timerange: 19970101/20161231
           reference_for_metric: true
-      hus400:
+      hus40000:
         short_name: hus
         mip: Amon
         preprocessor: create_rmse_400hpa
-        variable: hus400
+        variable: hus40000
         additional_datasets:
         - project: native6
           dataset: ERA5
@@ -229,11 +229,11 @@ diagnostics:
           tier: 2
           timerange: 20030101/20221231
           reference_for_metric: true
-      ta200:
+      ta20000:
         short_name: ta
         mip: Amon
         preprocessor: create_rmse_200hpa
-        variable: ta200
+        variable: ta20000
         additional_datasets:
         - project: native6
           dataset: ERA5
@@ -242,11 +242,11 @@ diagnostics:
           tier: 3
           timerange: 20000101/20191231
           reference_for_metric: true
-      ta850:
+      ta85000:
         short_name: ta
         mip: Amon
         preprocessor: create_rmse_850hpa
-        variable: ta850
+        variable: ta85000
         additional_datasets:
         - project: native6
           dataset: ERA5
@@ -279,11 +279,11 @@ diagnostics:
           tier: 3
           timerange: 20000101/20191231
           reference_for_metric: true
-      ua200:
+      ua20000:
         short_name: ua
         mip: Amon
         preprocessor: create_rmse_200hpa
-        variable: ua200
+        variable: ua20000
         additional_datasets:
         - project: native6
           dataset: ERA5
@@ -292,11 +292,11 @@ diagnostics:
           tier: 3
           timerange: 20000101/20191231
           reference_for_metric: true
-      ua850:
+      ua85000:
         short_name: ua
         mip: Amon
         preprocessor: create_rmse_850hpa
-        variable: ua850
+        variable: ua85000
         additional_datasets:
         - project: native6
           dataset: ERA5
