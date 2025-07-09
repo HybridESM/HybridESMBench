@@ -58,7 +58,7 @@ preprocessors:
   create_rmse_850hpa:
     custom_order: true
     extract_levels:
-      levels: 40000
+      levels: 85000
       scheme: linear
       coordinate: air_pressure
     regrid:
