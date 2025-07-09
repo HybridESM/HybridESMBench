@@ -1,30 +1,52 @@
 import sys
 from typing import Literal
 
+from distributed import Client
 from loguru import logger
 
 from hybridesmbench.eval import evaluate
 
-logger.remove()
-logger.add(sys.stdout, colorize=True)
 
+def main():
+    """Test HybridESMBench."""
+    logger.remove()
+    logger.add(sys.stdout, colorize=True)
 
-icon_output = "/mnt/d/data/icon/ag_atm_amip_r2b5_auto_tuned_baseline_20yrs"
-model_type: Literal["icon"] = "icon"
-work_dir = "/home/manuel/tmp/hybridesmbench"
+    cluster_kwargs = dict(
+        n_workers=6,
+        threads_per_worker=2,
+        memory_limit="6 GiB",
+    )
+    client = Client(**cluster_kwargs)
+    print("Dask dashboard:", client.dashboard_link)
 
-output = evaluate(
-    icon_output,
-    model_type,
-    work_dir,
-    # diagnostics=["portrait_plot"],
-)
+    # icon_output = (
+    #   "/mnt/d/data/icon/ag_atm_amip_r2b5_auto_tuned_baseline_20yrs"
+    # )
+    icon_output = (
+        "/work/bd1179/b309170/icon-ml_models/icon-a-ml/experiments/"
+        "ag_atm_amip_r2b5_auto_tuned_baseline_20yrs"
+    )
+    model_type: Literal["icon"] = "icon"
+    # work_dir = "/home/manuel/tmp/hybridesmbench"
+    work_dir = "/scratch/b/b309141/hybridesmbench_output"
 
-for diag_name, diag_output in output.items():
-    print(diag_name)
-    if diag_output is None:
-        print("No output")
+    output = evaluate(
+        icon_output,
+        model_type,
+        work_dir,
+        # diagnostics=["portrait_plot"],
+    )
+
+    for diag_name, diag_output in output.items():
+        print(diag_name)
+        if diag_output is None:
+            print("No output")
+            print()
+            continue
+        print(list(diag_output.rglob("*.png")))
         print()
-        continue
-    print(list(diag_output.rglob("*.png")))
-    print()
+
+
+if __name__ == "__main__":
+    main()
