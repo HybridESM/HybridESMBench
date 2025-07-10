@@ -136,17 +136,8 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
         metadata: dict[str, Any],
     ) -> dict[str, Any]:
         """Update hybrid ESM output metadata (in-place)."""
-        if var_id == "asr":
-            metadata["title"] = "Global Mean Absorbed Shortwave Radiation"
-        elif var_id == "clt":
-            metadata["title"] = "Global Mean Total Cloud Cover"
-        elif var_id == "rtmt":
-            metadata["title"] = "Global Mean TOA Net Downward Total Radiation"
-        elif var_id == metadata["short_name"]:
-            metadata["title"] = f"Global Mean {metadata['long_name']}"
-        else:
-            level = int(int(var_id.replace(metadata["short_name"], "")) / 100)
-            metadata["title"] = (
-                f"Global Mean {metadata['long_name']} at {level} hPa"
-            )
+        better_long_name = self._get_better_long_name(
+            var_id, metadata["short_name"], metadata["long_name"]
+        )
+        metadata["title"] = f"Global Mean {better_long_name}"
         return metadata

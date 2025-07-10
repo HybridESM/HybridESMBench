@@ -84,6 +84,27 @@ class Diagnostic:
         """Get output directory."""
         return self._session_dir
 
+    def _get_better_long_name(
+        self,
+        var_id: str,
+        short_name: str,
+        long_name: str,
+    ) -> str:
+        """Get better variable long name that can be used for plots"""
+        special_names = {
+            "asr": "Absorbed Shortwave Radiation",
+            "clt": "Total Cloud Cover",
+            "rtmt": "TOA Net Downward Total Radiation",
+        }
+        better_long_name = special_names.get(short_name, long_name)
+
+        # Handle variable IDs with vertical level information, e.g., ta20000
+        if var_id != short_name:
+            level = int(int(var_id.replace(short_name, "")) / 100)
+            better_long_name += f" at {level} hPa"
+
+        return better_long_name
+
     def _get_session_dir(self, work_dir: Path) -> Path:
         """Get session directory."""
         now = datetime.datetime.now(datetime.UTC).strftime("%Y%m%d_%H%M%S")

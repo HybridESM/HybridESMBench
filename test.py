@@ -36,7 +36,7 @@ def main():
         icon_output,
         model_type,
         work_dir,
-        diagnostics=["timeseries"],
+        # diagnostics=["timeseries"],
     )
 
     for diag_name, diag_output in output.items():
