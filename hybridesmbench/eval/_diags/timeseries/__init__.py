@@ -127,7 +127,9 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
             "linewidth": 1.25,
             "zorder": 2.5,
         }
-        cfg["plots"]["timeseries"]["plot_kwargs"][loader.alias] = plot_kwargs
+        cfg["plots"]["timeseries"]["plot_kwargs"][
+            loader.model_name
+        ] = plot_kwargs
         return cfg
 
     def _update_metadata(

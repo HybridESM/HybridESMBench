@@ -30,14 +30,17 @@ class Loader:
     _DATASET: str
     _PROJECT: str
 
-    def __init__(self, path: Path) -> None:
+    def __init__(self, path: Path, model_name: str | None = None) -> None:
         """Initialize class instance."""
         self._root_file = Path(inspect.getfile(self.__class__))
         self._path = path
         self._exp = path.name
+        if model_name is None:
+            model_name = self.model_type.upper()
+        self._model_name = model_name
         logger.debug(
-            f"Initialized loader for '{self.model_type}' data located at "
-            f"{path}"
+            f"Initialized loader for model '{self.model_name}' of type "
+            f"'{self.model_type}' located at {path}"
         )
 
     def get_metadata(self, var_name: str, mip_table: str) -> dict[str, Any]:
@@ -63,7 +66,7 @@ class Loader:
         msg = f"Invalid variable: '{var_name}' (MIP table: {mip_table})"
         assert cmor_var_info is not None, msg
 
-        metadata["alias"] = self.alias
+        metadata["alias"] = self.model_name
         metadata["dataset"] = self._DATASET
         metadata["exp"] = self.exp
         metadata["frequency"] = cmor_var_info.frequency
@@ -103,9 +106,9 @@ class Loader:
         return cube
 
     @property
-    def alias(self) -> str:
-        """Get model alias."""
-        return self.model_type.upper()
+    def model_name(self) -> str:
+        """Get model name."""
+        return self._model_name
 
     @property
     def exp(self) -> str:
@@ -154,9 +157,14 @@ class BaseICONLoader(Loader):
     _PROJECT = "ICON"
     _VAR_TYPES: dict[str, str]
 
-    def __init__(self, path: Path) -> None:
+    def __init__(self, path: Path, model_name: str | None = None) -> None:
         """Initialize class instance."""
-        super().__init__(path)
+        super().__init__(path, model_name=model_name)
+
+        # ICON model name
+        if model_name is None:
+            model_name = f"{self._DATASET} ({self.exp})"
+        self._model_name = model_name
 
         # ICON grid file
         grid_file_pattern = "icon_grid_*.nc"
@@ -175,11 +183,6 @@ class BaseICONLoader(Loader):
             )
             warnings.warn(msg, HybridESMBenchWarning, stacklevel=2)
         self._grid_file = grid_files[0]
-
-    @property
-    def alias(self) -> str:
-        """Get model alias."""
-        return f"{self._DATASET} ({self.exp})"
 
     @property
     def grid_file(self) -> Path:

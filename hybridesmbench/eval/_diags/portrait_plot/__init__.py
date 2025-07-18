@@ -21,7 +21,7 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
 
     _DIAG_CFG = {
         "x_by": "alias",
-        "y_by": "variable",
+        "y_by": "variable_group",
         "group_by": "project",
         "normalize": "centered_median",
         "nan_color": None,
@@ -84,13 +84,3 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
         """Run ESMValTool diagnostic."""
         return main(cfg)
-
-    def _update_metadata(
-        self,
-        var_id: str,
-        metadata: dict[str, Any],
-    ) -> dict[str, Any]:
-        """Update hybrid ESM output metadata (in-place)."""
-        metadata["alias"] = metadata["dataset"]
-        metadata["variable"] = var_id
-        return metadata

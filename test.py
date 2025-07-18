@@ -36,6 +36,7 @@ def main():
         icon_output,
         model_type,
         work_dir,
+        model_name="My ICON",
         # diagnostics=["timeseries"],
     )
 

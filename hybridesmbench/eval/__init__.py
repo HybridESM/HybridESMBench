@@ -19,6 +19,7 @@ def evaluate(
     model_type: ModelType,
     work_dir: str | Path,
     *,
+    model_name: str | None = None,
     diagnostics: Iterable[DiagnosticName] | None = None,
     fail_on_diag_error: bool = True,
 ) -> dict[str, Path | None]:
@@ -29,9 +30,13 @@ def evaluate(
     path:
         Path to hybrid Earth system model output.
     model_type:
-        _description_
+        Hybrid Earth system model type.
     work_dir:
-        _description_
+        Work directory where files created by the diagnostics are stored.
+    model_name:
+        Custom name for the hybrid Earth system model used to identify the
+        model in the output. By default, use a name infered from `model_type`
+        and `path`.
     diagnostics:
         Diagnostics to run. If `None`, run all available diagnostics.
     fail_on_diag_error:
@@ -54,7 +59,7 @@ def evaluate(
             f"{list(LOADERS)}"
         )
         raise ValueError(msg)
-    loader = LOADERS[model_type](path)
+    loader = LOADERS[model_type](path, model_name=model_name)
 
     if diagnostics is None:
         diagnostics = list(DIAGS)
