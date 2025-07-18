@@ -2,6 +2,7 @@
 
 import datetime
 import inspect
+import warnings
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +13,10 @@ from loguru import logger
 
 from hybridesmbench._utils import get_timerange
 from hybridesmbench.eval._loaders import Loader
+from hybridesmbench.exceptions import (
+    HybridESMBenchException,
+    HybridESMBenchWarning,
+)
 
 
 class Diagnostic:
@@ -26,11 +31,16 @@ class Diagnostic:
 
     _VARS: dict[str, dict[str, str]]
 
-    def __init__(self, work_dir: Path) -> None:
+    def __init__(
+        self,
+        work_dir: Path,
+        fail_on_missing_variable: bool = True,
+    ) -> None:
         """Initialize class instance."""
         self._root_dir = Path(inspect.getfile(self.__class__)).parent
         self._data_dir = self._root_dir / "data"
         self._session_dir = self._get_session_dir(work_dir)
+        self._fail_on_missing_variable = fail_on_missing_variable
         logger.debug(f"Initialized diagnostic '{self.name}'")
 
     def run(self, loader: Loader, **kwargs: Any) -> Path:
@@ -166,7 +176,17 @@ class ESMValToolDiagnostic(Diagnostic):
             f"Using variables {list(self._VARS)} for diagnostic '{self.name}'"
         )
         for var_id, var_dict in self._VARS.items():
-            cube = loader.load_variable(**var_dict)
+            try:
+                cube = loader.load_variable(**var_dict)
+            except Exception as exc:
+                msg = (
+                    f"Failed to extract variable '{var_id}' from {loader.path}"
+                )
+                if self._fail_on_missing_variable:
+                    raise HybridESMBenchException(msg)
+                msg = f"{msg}: {exc}"
+                warnings.warn(msg, HybridESMBenchWarning, stacklevel=2)
+                continue
             logger.debug(
                 f"Running preprocessor on variable '{var_id}' for diagnostic "
                 f"'{self.name}'"

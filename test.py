@@ -38,6 +38,8 @@ def main():
         work_dir,
         model_name="My ICON",
         # diagnostics=["timeseries"],
+        # fail_on_diag_error=False,
+        fail_on_missing_variable=False,
     )
 
     for diag_name, diag_output in output.items():

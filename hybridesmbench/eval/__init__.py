@@ -6,7 +6,10 @@ from pathlib import Path
 
 from hybridesmbench.eval._diags import DIAGS
 from hybridesmbench.eval._loaders import LOADERS
-from hybridesmbench.exceptions import HybridESMBenchWarning
+from hybridesmbench.exceptions import (
+    HybridESMBenchException,
+    HybridESMBenchWarning,
+)
 from hybridesmbench.typing import DiagnosticName, ModelType
 
 __all__ = [
@@ -22,6 +25,7 @@ def evaluate(
     model_name: str | None = None,
     diagnostics: Iterable[DiagnosticName] | None = None,
     fail_on_diag_error: bool = True,
+    fail_on_missing_variable: bool = True,
 ) -> dict[str, Path | None]:
     """Evaluate hybrid Earth system model output.
 
@@ -42,6 +46,10 @@ def evaluate(
     fail_on_diag_error:
         If `True`, raise exception if a diagnostic returns an error. If
         `False`, only raise a warning.
+    fail_on_missing_variable:
+        If `True`, raise exception if a variable is not available. If `False`,
+        only raise a warning.
+
 
     Returns
     -------
@@ -58,7 +66,7 @@ def evaluate(
             f"Got invalid model_type '{model_type}', must be one of "
             f"{list(LOADERS)}"
         )
-        raise ValueError(msg)
+        raise HybridESMBenchException(msg)
     loader = LOADERS[model_type](path, model_name=model_name)
 
     if diagnostics is None:
@@ -69,20 +77,23 @@ def evaluate(
                 f"Got invalid diagnostic '{diag_name}', must be one of "
                 f"{list(DIAGS)}"
             )
-            raise ValueError(msg)
+            raise HybridESMBenchException(msg)
 
     output: dict[str, Path | None] = {}
     for diag_name in diagnostics:
-        diagnostic = DIAGS[diag_name](work_dir)
+        diagnostic = DIAGS[diag_name](
+            work_dir, fail_on_missing_variable=fail_on_missing_variable
+        )
         try:
             output_dir: Path | None = diagnostic.run(loader)
         except Exception as exc:
-            if fail_on_diag_error:
-                raise
             msg = (
-                f"Diagnostic '{diag_name}' failed to run on '{model_type}' "
-                f"data located at {path}: {exc}"
+                f"Diagnostic '{diag_name}' failed to run on model "
+                f"'{loader.model_name}' of type '{loader.model_type}'"
             )
+            if fail_on_diag_error:
+                raise HybridESMBenchException(msg) from exc
+            msg = f"{msg}: {exc}"
             warnings.warn(msg, HybridESMBenchWarning, stacklevel=2)
             output_dir = None
         output[diag_name] = output_dir

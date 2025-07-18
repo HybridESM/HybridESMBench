@@ -14,7 +14,10 @@ from iris.warnings import IrisUserWarning
 from loguru import logger
 from ncdata.iris_xarray import cubes_from_xarray
 
-from hybridesmbench.exceptions import HybridESMBenchWarning
+from hybridesmbench.exceptions import (
+    HybridESMBenchException,
+    HybridESMBenchWarning,
+)
 
 
 class Loader:
@@ -174,7 +177,7 @@ class BaseICONLoader(Loader):
                 f"No ICON grid file available (searched for "
                 f"{self.path / grid_file_pattern})"
             )
-            raise ValueError(msg)
+            raise HybridESMBenchException(msg)
         if len(grid_files) > 1:
             msg = (
                 f"Multiple ICON grid files available (searched for "

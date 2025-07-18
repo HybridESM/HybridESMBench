@@ -14,6 +14,7 @@ from iris.cube import Cube
 
 from hybridesmbench._utils import extract_vertical_level
 from hybridesmbench.eval._diags.base import ESMValToolDiagnostic
+from hybridesmbench.exceptions import HybridESMBenchException
 
 
 class PortraiPlotDiagnostic(ESMValToolDiagnostic):
@@ -40,18 +41,18 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
         "plot_legend": False,
     }
     _VARS = {
-        # "asr": {"var_name": "asr", "mip_table": "Amon"},
+        "asr": {"var_name": "asr", "mip_table": "Amon"},
         "clivi": {"var_name": "clivi", "mip_table": "Amon"},
         "clwvi": {"var_name": "clwvi", "mip_table": "Amon"},
         "clt": {"var_name": "clt", "mip_table": "Amon"},
         "hus40000": {"var_name": "hus", "mip_table": "Amon"},
-        # "lwcre": {"var_name": "lwcre", "mip_table": "Amon"},
-        # "lwp": {"var_name": "lwp", "mip_table": "Amon"},
+        "lwcre": {"var_name": "lwcre", "mip_table": "Amon"},
+        "lwp": {"var_name": "lwp", "mip_table": "Amon"},
         "pr": {"var_name": "pr", "mip_table": "Amon"},
         "prw": {"var_name": "prw", "mip_table": "Amon"},
         "rlut": {"var_name": "rlut", "mip_table": "Amon"},
         "rsut": {"var_name": "rsut", "mip_table": "Amon"},
-        # "swcre": {"var_name": "swcre", "mip_table": "Amon"},
+        "swcre": {"var_name": "swcre", "mip_table": "Amon"},
         "ta20000": {"var_name": "ta", "mip_table": "Amon"},
         "ta85000": {"var_name": "ta", "mip_table": "Amon"},
         "tas": {"var_name": "tas", "mip_table": "Amon"},
@@ -65,7 +66,7 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
         ref_dir = self._data_dir / "references" / var_id
         ref_paths = list(ref_dir.glob("*.nc"))
         if len(ref_paths) != 1:
-            raise ValueError(
+            raise HybridESMBenchException(
                 f"Expected exactly 1 reference dataset for variable "
                 f"'{var_id}' located at {ref_dir}/*.nc, got {len(ref_paths)}"
             )

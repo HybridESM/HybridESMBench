@@ -10,6 +10,8 @@ from esmvalcore.preprocessor import extract_levels
 from iris.cube import Cube
 from loguru import logger
 
+from hybridesmbench.exceptions import HybridESMBenchException
+
 
 def extract_vertical_level(var_id: str, cube: Cube, **kwargs: Any) -> Cube:
     """Extract vertical level of cube based on `var_id`.
@@ -70,7 +72,7 @@ def extract_vertical_level(var_id: str, cube: Cube, **kwargs: Any) -> Cube:
             f"Variable ID '{var_id}' for variable '{cube.var_name}' does not "
             f"describe a valid level"
         )
-        raise ValueError(msg) from exc
+        raise HybridESMBenchException(msg) from exc
 
     logger.debug(f"Extracting level {level} for variable '{var_id}'")
     kwargs.setdefault("scheme", "linear")

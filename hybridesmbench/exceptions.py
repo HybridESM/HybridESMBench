@@ -3,3 +3,7 @@
 
 class HybridESMBenchWarning(UserWarning):
     """Provide base class for HybridESMBench warnings."""
+
+
+class HybridESMBenchException(Exception):
+    """Provide base class for HybridESMBench exceptions."""
