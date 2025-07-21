@@ -50,7 +50,7 @@ def main():
             model_output,
             model_type,
             work_dir,
-            # model_name="MPI-ESM1-2-LR historical r1i1p1f1",
+            model_name="MPI-ESM1-2-LR historical r1i1p1f1",
             # diagnostics=["timeseries"],
             # fail_on_diag_error=False,
             fail_on_missing_variable=False,

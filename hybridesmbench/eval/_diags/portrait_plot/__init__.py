@@ -75,6 +75,13 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
+        time = cube.coord("time")
+        final_20_years = sorted(
+            set(c.year for c in time.units.num2date(time.points))
+        )[-20:]
+        cube = cube.extract(
+            Constraint(time=lambda c: c.point.year in final_20_years)
+        )
         cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = climate_statistics(cube, operator="mean", period="month")
