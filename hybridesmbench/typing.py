@@ -7,4 +7,7 @@ DiagnosticName = Literal[
     "timeseries",
 ]
 
-ModelType = Literal["icon"]
+ModelType = Literal[
+    "cmip",
+    "icon",
+]

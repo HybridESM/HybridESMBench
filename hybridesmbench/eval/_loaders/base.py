@@ -10,7 +10,6 @@ import xarray as xr
 from esmvalcore.cmor.fix import fix_data, fix_metadata
 from esmvalcore.cmor.table import get_var_info
 from iris.cube import Cube
-from iris.warnings import IrisUserWarning
 from loguru import logger
 from ncdata.iris_xarray import cubes_from_xarray
 
@@ -205,9 +204,7 @@ class BaseICONLoader(Loader):
         file_pattern = str(self.path / f"{self.exp}_{var_type}_*.nc")
         logger.debug(f"Loading files {file_pattern}")
         xr_ds = self._load_files(file_pattern).copy()
-        with warnings.catch_warnings():
-            warnings.filterwarnings("ignore", category=IrisUserWarning)
-            cubes = cubes_from_xarray(xr_ds)
+        cubes = cubes_from_xarray(xr_ds)
 
         # Remove lat/lon information from cubes (we will use the ones given by
         # the grid file which is much safer)
@@ -221,25 +218,23 @@ class BaseICONLoader(Loader):
         extra_facets: dict[str, Any] = {
             "horizontal_grid": self.grid_file,
         }
-        with warnings.catch_warnings():
-            warnings.filterwarnings("ignore", category=IrisUserWarning)
-            cube = fix_metadata(
-                cubes,
-                short_name=var_name,
-                project=self._PROJECT,
-                dataset=self._DATASET,
-                mip=mip_table,
-                frequency=cmor_var_info.frequency,
-                **extra_facets,
-            )[0]
-            cube = fix_data(
-                cube,
-                short_name=var_name,
-                project=self._PROJECT,
-                dataset=self._DATASET,
-                mip=mip_table,
-                frequency=cmor_var_info.frequency,
-                **extra_facets,
-            )
+        cube = fix_metadata(
+            cubes,
+            short_name=var_name,
+            project=self._PROJECT,
+            dataset=self._DATASET,
+            mip=mip_table,
+            frequency=cmor_var_info.frequency,
+            **extra_facets,
+        )[0]
+        cube = fix_data(
+            cube,
+            short_name=var_name,
+            project=self._PROJECT,
+            dataset=self._DATASET,
+            mip=mip_table,
+            frequency=cmor_var_info.frequency,
+            **extra_facets,
+        )
 
         return cube
