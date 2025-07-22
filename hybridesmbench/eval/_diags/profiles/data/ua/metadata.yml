@@ -1,0 +1,31 @@
+? /home/b/b309141/scratch/esmvaltool_output/recipe_profiles_20250722_110248/preproc/zonal_mean_profiles/ua/native6_ERA5_reanaly_v1_Amon_ua_19790101-19990101.nc
+: alias: ERA5
+  automatic_regrid: true
+  dataset: ERA5
+  diagnostic: zonal_mean_profiles
+  end_year: 1999
+  family: E5
+  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_profiles_20250722_110248/preproc/zonal_mean_profiles/ua/native6_ERA5_reanaly_v1_Amon_ua_19790101-19990101.nc
+  frequency: mon
+  grib_id: '131'
+  level: pl
+  long_name: Eastward Wind
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_zonal_mean_profile
+  project: native6
+  recipe_dataset_index: 0
+  reference_for_monitor_diags: true
+  short_name: ua
+  standard_name: eastward_wind
+  start_year: 1979
+  tier: 3
+  timerange: 19790101/19990101
+  title: Eastward Wind
+  tres: 1M
+  type: reanaly
+  typeid: '00'
+  units: m s-1
+  variable_group: ua
+  version: v1

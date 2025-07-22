@@ -4,7 +4,6 @@ import warnings
 from pprint import pprint
 
 from distributed import Client
-from iris.warnings import IrisUserWarning
 from loguru import logger
 
 from hybridesmbench.eval import evaluate
@@ -26,32 +25,32 @@ def main():
     client = Client(**cluster_kwargs)
     print("Dask dashboard:", client.dashboard_link)
 
-    # icon_output = (
+    # modeL_output = (
     #   "/mnt/d/data/icon/ag_atm_amip_r2b5_auto_tuned_baseline_20yrs"
     # )
-    # model_output = (
-    #     "/work/bd1179/b309170/icon-ml_models/icon-a-ml/experiments/"
-    #     "ag_atm_amip_r2b5_auto_tuned_baseline_20yrs"
-    # )
     model_output = (
-        "/work/bd0854/DATA/ESMValTool2/CMIP6_DKRZ/CMIP/MPI-M/MPI-ESM1-2-LR/"
-        "historical/r1i1p1f1/Amon"
+        "/work/bd1179/b309170/icon-ml_models/icon-a-ml/experiments/"
+        "ag_atm_amip_r2b5_auto_tuned_baseline_20yrs"
     )
+    # model_output = (
+    #     "/work/bd0854/DATA/ESMValTool2/CMIP6_DKRZ/CMIP/MPI-M/MPI-ESM1-2-LR/"
+    #     "historical/r1i1p1f1/Amon"
+    # )
 
-    # model_type: ModelType = "icon"
-    model_type: ModelType = "cmip"
+    model_type: ModelType = "icon"
+    # model_type: ModelType = "cmip"
 
     # work_dir = "/home/manuel/tmp/hybridesmbench"
     work_dir = "/scratch/b/b309141/hybridesmbench_output"
 
     with warnings.catch_warnings():
-        warnings.filterwarnings("ignore", category=IrisUserWarning)
+        warnings.filterwarnings("ignore", category=UserWarning)
         output = evaluate(
             model_output,
             model_type,
             work_dir,
-            model_name="MPI-ESM1-2-LR historical r1i1p1f1",
-            # diagnostics=["timeseries"],
+            # model_name="MPI-ESM1-2-LR historical r1i1p1f1",
+            # diagnostics=["profiles"],
             # fail_on_diag_error=False,
             fail_on_missing_variable=False,
         )

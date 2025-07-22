@@ -1,0 +1,80 @@
+documentation:
+  title: HybridESMBench
+  description: HybridESMBench
+  authors:
+  - schlund_manuel
+
+preprocessors:
+  create_zonal_mean_profile:
+    custom_order: true
+    extract_levels:
+      levels:
+        cmor_table: CMIP6
+        coordinate: plev19
+      scheme: linear
+      coordinate: air_pressure
+    regrid:
+      scheme:
+        reference: esmf_regrid.schemes:ESMFAreaWeighted
+      target_grid: 2x2
+    zonal_statistics:
+      operator: mean
+    climate_statistics:
+      operator: mean
+      period: full
+
+diagnostics:
+  zonal_mean_profiles:
+    variables:
+      hus:
+        mip: Amon
+        preprocessor: create_zonal_mean_profile
+        title: Specific Humidity
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 19790101/19990101
+      ta:
+        mip: Amon
+        preprocessor: create_zonal_mean_profile
+        title: Air Temperature
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 19790101/19990101
+      ua:
+        mip: Amon
+        preprocessor: create_zonal_mean_profile
+        title: Eastward Wind
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 19790101/19990101
+    scripts:
+      plot:
+        script: monitor/multi_datasets.py
+        facet_used_for_labels: alias
+        group_variables_by: variable_group
+        plot_filename: '{plot_type}_{exp}_{real_name}_{dataset}_{mip}'
+        plot_folder: '{plot_dir}'
+        plots:
+          zonal_mean_profile:
+            common_cbar: true
+            fontsize: 8
+            pyplot_kwargs:
+              suptitle: '{title}'

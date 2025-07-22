@@ -7,10 +7,59 @@ from pathlib import Path
 from typing import Any
 
 from esmvalcore.preprocessor import extract_levels
+from iris import Constraint
 from iris.cube import Cube
 from loguru import logger
 
 from hybridesmbench.exceptions import HybridESMBenchException
+
+PLEV_19_LEVELS: list[float] = [
+    100000.0,
+    92500.0,
+    85000.0,
+    70000.0,
+    60000.0,
+    50000.0,
+    40000.0,
+    30000.0,
+    25000.0,
+    20000.0,
+    15000.0,
+    10000.0,
+    7000.0,
+    5000.0,
+    3000.0,
+    2000.0,
+    1000.0,
+    500.0,
+    100.0,
+]
+
+
+def extract_final_20_years(cube: Cube) -> Cube:
+    """Extract final 20 years of dataset.
+
+    If data covers less than 20 years, return data as is.
+
+    Parameters
+    ----------
+    cube:
+        Input data.
+
+    Returns
+    -------
+    Cube
+        Final 20 years of data.
+
+    """
+    time_coord = cube.coord("time")
+    final_20_years = sorted(
+        set(c.year for c in time_coord.units.num2date(time_coord.points))
+    )[-20:]
+    cube = cube.extract(
+        Constraint(time=lambda c: c.point.year in final_20_years)
+    )
+    return cube
 
 
 def extract_vertical_level(var_id: str, cube: Cube, **kwargs: Any) -> Cube:

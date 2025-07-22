@@ -37,7 +37,6 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
         "plot_folder": "{plot_dir}",
         "plots": {
             "timeseries": {
-                "annual_mean_kwargs": False,
                 "legend_kwargs": {
                     "loc": "upper center",
                     "bbox_to_anchor": [0.5, -0.2],
@@ -135,6 +134,7 @@ class TimeSeriesDiagnostic(ESMValToolDiagnostic):
     def _update_metadata(
         self,
         var_id: str,
+        loader: Loader,
         metadata: dict[str, Any],
     ) -> dict[str, Any]:
         """Update hybrid ESM output metadata (in-place)."""

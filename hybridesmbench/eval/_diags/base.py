@@ -216,7 +216,7 @@ class ESMValToolDiagnostic(Diagnostic):
                 metadata["start_year"] = timerange.split("/")[0][:4]
                 metadata["end_year"] = timerange.split("/")[1][:4]
 
-            metadata = self._update_metadata(var_id, metadata)
+            metadata = self._update_metadata(var_id, loader, metadata)
 
             metadata_dict[str(path)] = metadata
             file_idx += 1
@@ -289,6 +289,7 @@ class ESMValToolDiagnostic(Diagnostic):
     def _update_metadata(
         self,
         var_id: str,
+        loader: Loader,
         metadata: dict[str, Any],
     ) -> dict[str, Any]:
         """Update hybrid ESM output metadata (in-place)."""
