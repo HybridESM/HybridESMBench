@@ -136,4 +136,4 @@ class ProfileDiagnostic(ESMValToolDiagnostic):
     @staticmethod
     def _get_alias(loader: Loader, var_id: str):
         """Get alias"""
-        return f"{loader.model_name} ({var_id})"
+        return f"{loader.model_name} [{var_id}]"

@@ -1,11 +1,11 @@
-? /home/b/b309141/scratch/esmvaltool_output/recipe_profiles_20250722_110248/preproc/zonal_mean_profiles/hus/native6_ERA5_reanaly_v1_Amon_hus_19790101-19990101.nc
+? hus/native6_ERA5_reanaly_v1_Amon_hus_20000101-20191231.nc
 : alias: ERA5
   automatic_regrid: true
   dataset: ERA5
   diagnostic: zonal_mean_profiles
-  end_year: 1999
+  end_year: 2019
   family: E5
-  filename: /home/b/b309141/scratch/esmvaltool_output/recipe_profiles_20250722_110248/preproc/zonal_mean_profiles/hus/native6_ERA5_reanaly_v1_Amon_hus_19790101-19990101.nc
+  filename: hus/native6_ERA5_reanaly_v1_Amon_hus_20000101-20191231.nc
   frequency: mon
   grib_id: '133'
   level: pl
@@ -19,9 +19,9 @@
   reference_for_monitor_diags: true
   short_name: hus
   standard_name: specific_humidity
-  start_year: 1979
+  start_year: 2000
   tier: 3
-  timerange: 19790101/19990101
+  timerange: 20000101/20191231
   title: Specific Humidity
   tres: 1M
   type: reanaly
