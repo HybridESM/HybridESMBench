@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<prov:document xmlns:author="https://www.esmvaltool.org/author" xmlns:software="https://www.esmvaltool.org/software" xmlns:preprocessor="https://www.esmvaltool.org/preprocessor" xmlns:task="https://www.esmvaltool.org/task" xmlns:project="https://www.esmvaltool.org/project" xmlns:recipe="https://www.esmvaltool.org/recipe" xmlns:attribute="https://www.esmvaltool.org/attribute" xmlns:file="https://www.esmvaltool.org/file" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200901-200912.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:51 Created on 2024-03-07 07:26:52 Created on 2024-03-07 07:26:53 Created on 2024-03-07 07:26:54</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200801-200812.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:48 Created on 2024-03-07 07:26:49 Created on 2024-03-07 07:26:50</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201101-201112.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201401-201412.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:27:07 Created on 2024-03-07 07:27:08 Created on 2024-03-07 07:27:09</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201701-201712.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:agent prov:id="author:Schlund, Manuel">
+    <attribute:email>manuel.schlund@dlr.de</attribute:email>
+    <attribute:github>schlunma</attribute:github>
+    <attribute:institute>DLR, Germany</attribute:institute>
+    <attribute:orcid>https://orcid.org/0000-0001-5251-0158</attribute:orcid>
+  </prov:agent>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200701-200712.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:45 Created on 2024-03-07 07:26:46 Created on 2024-03-07 07:26:48</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201101-201112.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:57 Created on 2024-03-07 07:26:58 Created on 2024-03-07 07:26:59 Created on 2024-03-07 07:27:00</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201701-201712.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:27:14 Created on 2024-03-07 07:27:15 Created on 2024-03-07 07:27:18</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200801-200812.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201301-201312.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:activity prov:id="software:esmvaltool==2.12.0"/>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200301-200312.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201501-201512.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201401-201412.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200901-200912.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201601-201612.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:27:12 Created on 2024-03-07 07:27:13 Created on 2024-03-07 07:27:14</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:activity prov:id="task:maps/prw"/>
+  <prov:entity prov:id="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc">
+    <attribute:alias>ESACCI-WATERVAPOUR</attribute:alias>
+    <attribute:dataset>ESACCI-WATERVAPOUR</attribute:dataset>
+    <attribute:diagnostic>maps</attribute:diagnostic>
+    <attribute:end_year>2017</attribute:end_year>
+    <attribute:filename>/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc</attribute:filename>
+    <attribute:frequency>mon</attribute:frequency>
+    <attribute:long_name>Water Vapor Path</attribute:long_name>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>['atmos']</attribute:modeling_realm>
+    <attribute:original_short_name>prw</attribute:original_short_name>
+    <attribute:preprocessor>create_map</attribute:preprocessor>
+    <attribute:project>OBS6</attribute:project>
+    <attribute:recipe_dataset_index>0</attribute:recipe_dataset_index>
+    <attribute:reference_for_monitor_diags>True</attribute:reference_for_monitor_diags>
+    <attribute:short_name>prw</attribute:short_name>
+    <attribute:standard_name>atmosphere_mass_content_of_water_vapor</attribute:standard_name>
+    <attribute:start_year>2003</attribute:start_year>
+    <attribute:tier>3</attribute:tier>
+    <attribute:timerange>20030101/20171231</attribute:timerange>
+    <attribute:title>Water Vapor Path</attribute:title>
+    <attribute:type>sat</attribute:type>
+    <attribute:units>kg m-2</attribute:units>
+    <attribute:variable_group>prw</attribute:variable_group>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+    <preprocessor:climate_statistics>{'operator': 'mean', 'period': 'full'}</preprocessor:climate_statistics>
+    <preprocessor:regrid>{'target_grid': '2x2', 'scheme': {'reference': 'esmf_regrid.schemes:ESMFAreaWeighted'}}</preprocessor:regrid>
+    <preprocessor:remove_supplementary_variables>{}</preprocessor:remove_supplementary_variables>
+    <preprocessor:save>{'compress': False, 'compute': False, 'filename': PosixPath('/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc')}</preprocessor:save>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201501-201512.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:27:10 Created on 2024-03-07 07:27:11</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:entity prov:id="recipe:recipe_maps.yml">
+    <attribute:description>HybridESMBench</attribute:description>
+    <attribute:references>[]</attribute:references>
+  </prov:entity>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="task:maps/prw"/>
+    <prov:trigger prov:ref="recipe:recipe_maps.yml"/>
+    <prov:starter prov:ref="software:esmvaltool==2.12.0"/>
+  </prov:wasStartedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201601-201612.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:wasAttributedTo>
+    <prov:entity prov:ref="recipe:recipe_maps.yml"/>
+    <prov:agent prov:ref="author:Schlund, Manuel"/>
+  </prov:wasAttributedTo>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200501-200512.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200501-200512.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:35 Created on 2024-03-07 07:26:36 Created on 2024-03-07 07:26:39 Created on 2024-03-07 07:26:40</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200401-200412.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201201-201212.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200401-200412.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:33 Created on 2024-03-07 07:26:34 Created on 2024-03-07 07:26:35</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201001-201012.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200701-200712.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200301-200312.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:28 Created on 2024-03-07 07:26:29 Created on 2024-03-07 07:26:30</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201201-201212.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:27:01 Created on 2024-03-07 07:27:04 Created on 2024-03-07 07:27:05</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200601-200612.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:40 Created on 2024-03-07 07:26:41 Created on 2024-03-07 07:26:44</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_200601-200612.nc"/>
+    <prov:activity prov:ref="task:maps/prw"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201301-201312.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:27:05 Created on 2024-03-07 07:27:06 Created on 2024-03-07 07:27:07</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier3/ESACCI-WATERVAPOUR/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_201001-201012.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment>This CMORizer is for the CDR2 version of dataset (global coverage). Download is possible after registration and ordering of the data.</attribute:comment>
+    <attribute:history>Created on 2024-03-07 07:26:55 Created on 2024-03-07 07:26:56 Created on 2024-03-07 07:26:57</attribute:history>
+    <attribute:host>levante1.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:project_id>OBS6</attribute:project_id>
+    <attribute:reference>doi:CCIWV.REP.015</attribute:reference>
+    <attribute:source>https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=COMBI_V001</attribute:source>
+    <attribute:tier>3</attribute:tier>
+    <attribute:title>ESACCI-WATERVAPOUR data reformatted for ESMValTool v2.11.0.dev60+g6d05a82bc</attribute:title>
+    <attribute:user>b309059</attribute:user>
+    <attribute:version>CDR2-L3-COMBI-05deg-fv3.1</attribute:version>
+  </prov:entity>
+</prov:document>

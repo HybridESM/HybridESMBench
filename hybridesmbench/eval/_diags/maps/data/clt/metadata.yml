@@ -1,0 +1,25 @@
+? clt/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clt_19970101-20161231.nc
+: alias: ESACCI-CLOUD
+  dataset: ESACCI-CLOUD
+  diagnostic: maps
+  end_year: 2016
+  filename: clt/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clt_19970101-20161231.nc
+  frequency: mon
+  long_name: Total Cloud Fraction
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_map
+  project: OBS
+  recipe_dataset_index: 0
+  reference_for_monitor_diags: true
+  short_name: clt
+  standard_name: cloud_area_fraction
+  start_year: 1997
+  tier: 2
+  timerange: 19970101/20161231
+  title: Total Cloud Cover
+  type: sat
+  units: '%'
+  variable_group: clt
+  version: AVHRR-AMPM-fv3.0

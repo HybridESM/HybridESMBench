@@ -18,8 +18,8 @@ from hybridesmbench.eval._diags import ESMValToolDiagnostic
 from hybridesmbench.eval._loaders import Loader
 
 
-class ProfileDiagnostic(ESMValToolDiagnostic):
-    """Run profile diagnostic."""
+class ProfilesDiagnostic(ESMValToolDiagnostic):
+    """Run profiles diagnostic."""
 
     _DIAG_CFG = {
         "facet_used_for_labels": "alias",

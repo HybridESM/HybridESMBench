@@ -1,0 +1,26 @@
+? lwp/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_lwp_19970101-20161231.nc
+: alias: ESACCI-CLOUD
+  dataset: ESACCI-CLOUD
+  derive: true
+  diagnostic: maps
+  end_year: 2016
+  filename: lwp/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_lwp_19970101-20161231.nc
+  frequency: mon
+  long_name: Liquid Water Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_map
+  project: OBS
+  recipe_dataset_index: 0
+  reference_for_monitor_diags: true
+  short_name: lwp
+  standard_name: ''
+  start_year: 1997
+  tier: 2
+  timerange: 19970101/20161231
+  title: Liquid Water Path
+  type: sat
+  units: kg m-2
+  variable_group: lwp
+  version: AVHRR-AMPM-fv3.0

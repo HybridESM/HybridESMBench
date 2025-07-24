@@ -1,0 +1,31 @@
+? ta20000/native6_ERA5_reanaly_v1_Amon_ta_20000101-20191231.nc
+: alias: ERA5
+  automatic_regrid: true
+  dataset: ERA5
+  diagnostic: maps
+  end_year: 2019
+  family: E5
+  filename: ta20000/native6_ERA5_reanaly_v1_Amon_ta_20000101-20191231.nc
+  frequency: mon
+  grib_id: '130'
+  level: pl
+  long_name: Air Temperature
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_map_200hpa
+  project: native6
+  recipe_dataset_index: 0
+  reference_for_monitor_diags: true
+  short_name: ta
+  standard_name: air_temperature
+  start_year: 2000
+  tier: 3
+  timerange: 20000101/20191231
+  title: Air Temperature at 200 hPa
+  tres: 1M
+  type: reanaly
+  typeid: '00'
+  units: K
+  variable_group: ta20000
+  version: v1

@@ -1,0 +1,329 @@
+documentation:
+  title: HybridESMBench
+  description: HybridESMBench
+  authors:
+  - schlund_manuel
+
+preprocessors:
+  create_map:
+    custom_order: true
+    regrid:
+      target_grid: 2x2
+      scheme:
+        reference: esmf_regrid.schemes:ESMFAreaWeighted
+    climate_statistics:
+      operator: mean
+      period: full
+  create_map_pr:
+    custom_order: true
+    regrid:
+      target_grid: 2x2
+      scheme:
+        reference: esmf_regrid.schemes:ESMFAreaWeighted
+    climate_statistics:
+      operator: mean
+      period: full
+    convert_units:
+      units: mm day-1
+  create_map_200hpa:
+    custom_order: true
+    extract_levels:
+      levels: 20000
+      scheme: linear
+      coordinate: air_pressure
+    regrid:
+      target_grid: 2x2
+      scheme:
+        reference: esmf_regrid.schemes:ESMFAreaWeighted
+    climate_statistics:
+      operator: mean
+      period: full
+  create_map_400hpa:
+    custom_order: true
+    extract_levels:
+      levels: 40000
+      scheme: linear
+      coordinate: air_pressure
+    regrid:
+      target_grid: 2x2
+      scheme:
+        reference: esmf_regrid.schemes:ESMFAreaWeighted
+    climate_statistics:
+      operator: mean
+      period: full
+  create_map_850hpa:
+    custom_order: true
+    extract_levels:
+      levels: 85000
+      scheme: linear
+      coordinate: air_pressure
+    regrid:
+      target_grid: 2x2
+      scheme:
+        reference: esmf_regrid.schemes:ESMFAreaWeighted
+    climate_statistics:
+      operator: mean
+      period: full
+
+diagnostics:
+  maps:
+    variables:
+      asr:
+        mip: Amon
+        derive: true
+        force_derivation: true
+        preprocessor: create_map
+        title: Absorbed Shortwave Radiation
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: CERES-EBAF
+          timerange: 20030101/20221231
+      clivi:
+        mip: Amon
+        preprocessor: create_map
+        title: Ice Water Path
+        additional_datasets:
+        - project: OBS
+          dataset: ESACCI-CLOUD
+          type: sat
+          version: AVHRR-AMPM-fv3.0
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: ESACCI-CLOUD
+          timerange: 19970101/20161231
+      clt:
+        mip: Amon
+        preprocessor: create_map
+        title: Total Cloud Cover
+        additional_datasets:
+        - project: OBS
+          dataset: ESACCI-CLOUD
+          type: sat
+          version: AVHRR-AMPM-fv3.0
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: ESACCI-CLOUD
+          timerange: 19970101/20161231
+      clwvi:
+        mip: Amon
+        preprocessor: create_map
+        title: Condensed Water Path
+        additional_datasets:
+        - project: OBS
+          dataset: ESACCI-CLOUD
+          type: sat
+          version: AVHRR-AMPM-fv3.0
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: ESACCI-CLOUD
+          timerange: 19970101/20161231
+      hus40000:
+        short_name: hus
+        mip: Amon
+        preprocessor: create_map_400hpa
+        title: Specific Humidity at 400 hPa
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 20000101/20191231
+      lwcre:
+        mip: Amon
+        derive: true
+        force_derivation: true
+        preprocessor: create_map
+        title: TOA Longwave Cloud Radiative Effect
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: CERES-EBAF
+          timerange: 20030101/20221231
+      lwp:
+        mip: Amon
+        derive: true
+        preprocessor: create_map
+        title: Liquid Water Path
+        additional_datasets:
+        - project: OBS
+          dataset: ESACCI-CLOUD
+          type: sat
+          version: AVHRR-AMPM-fv3.0
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: ESACCI-CLOUD
+          timerange: 19970101/20161231
+      pr:
+        mip: Amon
+        preprocessor: create_map_pr
+        title: Precipitation
+        additional_datasets:
+        - project: OBS
+          dataset: GPCP-SG
+          type: atmos
+          version: 2.3
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: GPCP-SG
+          timerange: 20030101/20221231
+      prw:
+        mip: Amon
+        preprocessor: create_map
+        title: Water Vapor Path
+        additional_datasets:
+        - project: OBS6
+          dataset: ESACCI-WATERVAPOUR
+          type: sat
+          version: CDR2-L3-COMBI-05deg-fv3.1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ESACCI-WATERVAPOUR
+          timerange: 20030101/20171231
+      rlut:
+        mip: Amon
+        preprocessor: create_map
+        title: TOA Outgoing Longwave Radiation
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: CERES-EBAF
+          timerange: 20030101/20221231
+      rsut:
+        mip: Amon
+        preprocessor: create_map
+        title: TOA Outgoing Shortwave Radiation
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: CERES-EBAF
+          timerange: 20030101/20221231
+      swcre:
+        mip: Amon
+        derive: true
+        force_derivation: true
+        preprocessor: create_map
+        title: TOA Shortwave Cloud Radiative Effect
+        additional_datasets:
+        - project: OBS
+          dataset: CERES-EBAF
+          type: sat
+          version: Ed4.2
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: CERES-EBAF
+          timerange: 20030101/20221231
+      ta20000:
+        short_name: ta
+        mip: Amon
+        preprocessor: create_map_200hpa
+        title: Air Temperature at 200 hPa
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 20000101/20191231
+      ta85000:
+        short_name: ta
+        mip: Amon
+        preprocessor: create_map_850hpa
+        title: Air Temperature at 850 hPa
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 20000101/20191231
+      tas:
+        mip: Amon
+        preprocessor: create_map
+        title: Near-Surface Air Temperature
+        additional_datasets:
+        - project: OBS
+          dataset: HadCRUT5
+          type: ground
+          version: 5.0.1.0-analysis
+          tier: 2
+          reference_for_monitor_diags: true
+          alias: HadCRUT5
+          timerange: 20020101/20211231
+      tauu:
+        mip: Amon
+        preprocessor: create_map
+        title: Surface Downward Eastward Wind Stress
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 20000101/20191231
+      ua20000:
+        short_name: ua
+        mip: Amon
+        preprocessor: create_map_200hpa
+        title: Eastward Wind at 200 hPa
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 20000101/20191231
+      ua85000:
+        short_name: ua
+        mip: Amon
+        preprocessor: create_map_850hpa
+        title: Eastward Wind at 850 hPa
+        additional_datasets:
+        - project: native6
+          dataset: ERA5
+          type: reanaly
+          version: v1
+          tier: 3
+          reference_for_monitor_diags: true
+          alias: ERA5
+          timerange: 20000101/20191231
+    scripts:
+      plot:
+        script: monitor/multi_datasets.py
+        facet_used_for_labels: alias
+        group_variables_by: variable_group
+        plot_filename: '{plot_type}_{exp}_{real_name}_{dataset}_{mip}'
+        plot_folder: '{plot_dir}'
+        plots:
+          map:
+            common_cbar: true
+            fontsize: 8
+            pyplot_kwargs:
+              suptitle: '{title}'

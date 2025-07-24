@@ -1,0 +1,25 @@
+? prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc
+: alias: ESACCI-WATERVAPOUR
+  dataset: ESACCI-WATERVAPOUR
+  diagnostic: maps
+  end_year: 2017
+  filename: prw/OBS6_ESACCI-WATERVAPOUR_sat_CDR2-L3-COMBI-05deg-fv3.1_Amon_prw_20030101-20171231.nc
+  frequency: mon
+  long_name: Water Vapor Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_map
+  project: OBS6
+  recipe_dataset_index: 0
+  reference_for_monitor_diags: true
+  short_name: prw
+  standard_name: atmosphere_mass_content_of_water_vapor
+  start_year: 2003
+  tier: 3
+  timerange: 20030101/20171231
+  title: Water Vapor Path
+  type: sat
+  units: kg m-2
+  variable_group: prw
+  version: CDR2-L3-COMBI-05deg-fv3.1

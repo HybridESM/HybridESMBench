@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<prov:document xmlns:author="https://www.esmvaltool.org/author" xmlns:software="https://www.esmvaltool.org/software" xmlns:preprocessor="https://www.esmvaltool.org/preprocessor" xmlns:task="https://www.esmvaltool.org/task" xmlns:project="https://www.esmvaltool.org/project" xmlns:recipe="https://www.esmvaltool.org/recipe" xmlns:attribute="https://www.esmvaltool.org/attribute" xmlns:file="https://www.esmvaltool.org/file" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="task:maps/clwvi"/>
+    <prov:trigger prov:ref="recipe:recipe_maps.yml"/>
+    <prov:starter prov:ref="software:esmvaltool==2.12.0"/>
+  </prov:wasStartedBy>
+  <prov:activity prov:id="software:esmvaltool==2.12.0"/>
+  <prov:entity prov:id="recipe:recipe_maps.yml">
+    <attribute:description>HybridESMBench</attribute:description>
+    <attribute:references>[]</attribute:references>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/clwvi/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clwvi_19970101-20161231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier2/ESACCI-CLOUD/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clwvi_198201-201612.nc"/>
+    <prov:activity prov:ref="task:maps/clwvi"/>
+  </prov:wasDerivedFrom>
+  <prov:agent prov:id="author:Schlund, Manuel">
+    <attribute:email>manuel.schlund@dlr.de</attribute:email>
+    <attribute:github>schlunma</attribute:github>
+    <attribute:institute>DLR, Germany</attribute:institute>
+    <attribute:orcid>https://orcid.org/0000-0001-5251-0158</attribute:orcid>
+  </prov:agent>
+  <prov:entity prov:id="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/clwvi/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clwvi_19970101-20161231.nc">
+    <attribute:alias>ESACCI-CLOUD</attribute:alias>
+    <attribute:dataset>ESACCI-CLOUD</attribute:dataset>
+    <attribute:diagnostic>maps</attribute:diagnostic>
+    <attribute:end_year>2016</attribute:end_year>
+    <attribute:filename>/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/clwvi/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clwvi_19970101-20161231.nc</attribute:filename>
+    <attribute:frequency>mon</attribute:frequency>
+    <attribute:long_name>Condensed Water Path</attribute:long_name>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>['atmos']</attribute:modeling_realm>
+    <attribute:original_short_name>clwvi</attribute:original_short_name>
+    <attribute:preprocessor>create_map</attribute:preprocessor>
+    <attribute:project>OBS</attribute:project>
+    <attribute:recipe_dataset_index>0</attribute:recipe_dataset_index>
+    <attribute:reference_for_monitor_diags>True</attribute:reference_for_monitor_diags>
+    <attribute:short_name>clwvi</attribute:short_name>
+    <attribute:standard_name>atmosphere_cloud_condensed_water_content</attribute:standard_name>
+    <attribute:start_year>1997</attribute:start_year>
+    <attribute:tier>2</attribute:tier>
+    <attribute:timerange>19970101/20161231</attribute:timerange>
+    <attribute:title>Condensed Water Path</attribute:title>
+    <attribute:type>sat</attribute:type>
+    <attribute:units>kg m-2</attribute:units>
+    <attribute:variable_group>clwvi</attribute:variable_group>
+    <attribute:version>AVHRR-AMPM-fv3.0</attribute:version>
+    <preprocessor:climate_statistics>{'operator': 'mean', 'period': 'full'}</preprocessor:climate_statistics>
+    <preprocessor:regrid>{'target_grid': '2x2', 'scheme': {'reference': 'esmf_regrid.schemes:ESMFAreaWeighted'}}</preprocessor:regrid>
+    <preprocessor:remove_supplementary_variables>{}</preprocessor:remove_supplementary_variables>
+    <preprocessor:save>{'compress': False, 'compute': False, 'filename': PosixPath('/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/clwvi/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clwvi_19970101-20161231.nc')}</preprocessor:save>
+  </prov:entity>
+  <prov:wasAttributedTo>
+    <prov:entity prov:ref="recipe:recipe_maps.yml"/>
+    <prov:agent prov:ref="author:Schlund, Manuel"/>
+  </prov:wasAttributedTo>
+  <prov:activity prov:id="task:maps/clwvi"/>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier2/ESACCI-CLOUD/OBS_ESACCI-CLOUD_sat_AVHRR-AMPM-fv3.0_Amon_clwvi_198201-201612.nc">
+    <attribute:conventions>CF/CMOR</attribute:conventions>
+    <attribute:history>Created on Thu Mar 21 15:05:09 CET 2024</attribute:history>
+    <attribute:host>l10390.lvt.dkrz.de</attribute:host>
+    <attribute:reference>Stengel et al., Earth Syst. Sci. Data, doi:10.5194/essd-9-881-2017, 2017</attribute:reference>
+    <attribute:source>https://public.satproj.klima.dwd.de/data/ESA_Cloud_CCI/CLD_PRODUCTS/v3.0/</attribute:source>
+    <attribute:tier>2</attribute:tier>
+    <attribute:title>ESACCI-CLOUD data reformatted for the ESMValTool v2.0</attribute:title>
+    <attribute:user>b380103</attribute:user>
+  </prov:entity>
+</prov:document>

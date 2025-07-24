@@ -1,0 +1,25 @@
+? pr/OBS_GPCP-SG_atmos_2.3_Amon_pr_20030101-20221231.nc
+: alias: GPCP-SG
+  dataset: GPCP-SG
+  diagnostic: maps
+  end_year: 2022
+  filename: pr/OBS_GPCP-SG_atmos_2.3_Amon_pr_20030101-20221231.nc
+  frequency: mon
+  long_name: Precipitation
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_map_pr
+  project: OBS
+  recipe_dataset_index: 0
+  reference_for_monitor_diags: true
+  short_name: pr
+  standard_name: lwe_precipitation_rate
+  start_year: 2003
+  tier: 2
+  timerange: 20030101/20221231
+  title: Precipitation
+  type: atmos
+  units: mm day-1
+  variable_group: pr
+  version: 2.3

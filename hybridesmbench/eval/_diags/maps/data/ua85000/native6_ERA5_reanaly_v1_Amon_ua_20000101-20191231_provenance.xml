@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<prov:document xmlns:author="https://www.esmvaltool.org/author" xmlns:software="https://www.esmvaltool.org/software" xmlns:preprocessor="https://www.esmvaltool.org/preprocessor" xmlns:task="https://www.esmvaltool.org/task" xmlns:project="https://www.esmvaltool.org/project" xmlns:recipe="https://www.esmvaltool.org/recipe" xmlns:attribute="https://www.esmvaltool.org/attribute" xmlns:file="https://www.esmvaltool.org/file" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2013_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:24:27 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2013, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:22:18 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data3/adaptor.mars.internal-1671038532.161709-25874-4-542273d7-c05d-49c2-bf6d-2e77de6e051a.nc /cache/tmp/542273d7-c05d-49c2-bf6d-2e77de6e051a-adaptor.mars.internal-1671038503.5200295-25874-6-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2012_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+    <prov:trigger prov:ref="recipe:recipe_maps.yml"/>
+    <prov:starter prov:ref="software:esmvaltool==2.12.0"/>
+  </prov:wasStartedBy>
+  <prov:agent prov:id="author:Schlund, Manuel">
+    <attribute:email>manuel.schlund@dlr.de</attribute:email>
+    <attribute:github>schlunma</attribute:github>
+    <attribute:institute>DLR, Germany</attribute:institute>
+    <attribute:orcid>https://orcid.org/0000-0001-5251-0158</attribute:orcid>
+  </prov:agent>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2014_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc">
+    <attribute:alias>ERA5</attribute:alias>
+    <attribute:automatic_regrid>True</attribute:automatic_regrid>
+    <attribute:dataset>ERA5</attribute:dataset>
+    <attribute:diagnostic>maps</attribute:diagnostic>
+    <attribute:end_year>2019</attribute:end_year>
+    <attribute:family>E5</attribute:family>
+    <attribute:filename>/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc</attribute:filename>
+    <attribute:frequency>mon</attribute:frequency>
+    <attribute:grib_id>131</attribute:grib_id>
+    <attribute:level>pl</attribute:level>
+    <attribute:long_name>Eastward Wind</attribute:long_name>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>['atmos']</attribute:modeling_realm>
+    <attribute:original_short_name>ua</attribute:original_short_name>
+    <attribute:preprocessor>create_map_850hpa</attribute:preprocessor>
+    <attribute:project>native6</attribute:project>
+    <attribute:recipe_dataset_index>0</attribute:recipe_dataset_index>
+    <attribute:reference_for_monitor_diags>True</attribute:reference_for_monitor_diags>
+    <attribute:short_name>ua</attribute:short_name>
+    <attribute:standard_name>eastward_wind</attribute:standard_name>
+    <attribute:start_year>2000</attribute:start_year>
+    <attribute:tier>3</attribute:tier>
+    <attribute:timerange>20000101/20191231</attribute:timerange>
+    <attribute:title>Eastward Wind at 850 hPa</attribute:title>
+    <attribute:tres>1M</attribute:tres>
+    <attribute:type>reanaly</attribute:type>
+    <attribute:typeid>00</attribute:typeid>
+    <attribute:units>m s-1</attribute:units>
+    <attribute:variable_group>ua85000</attribute:variable_group>
+    <attribute:version>v1</attribute:version>
+    <preprocessor:climate_statistics>{'operator': 'mean', 'period': 'full'}</preprocessor:climate_statistics>
+    <preprocessor:extract_levels>{'levels': 85000, 'scheme': 'linear', 'coordinate': 'air_pressure'}</preprocessor:extract_levels>
+    <preprocessor:regrid>{'target_grid': '2x2', 'scheme': {'reference': 'esmf_regrid.schemes:ESMFAreaWeighted'}}</preprocessor:regrid>
+    <preprocessor:remove_supplementary_variables>{}</preprocessor:remove_supplementary_variables>
+    <preprocessor:save>{'compress': False, 'compute': False, 'filename': PosixPath('/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc')}</preprocessor:save>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2008_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:45:38 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2008, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:42:07 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data8/adaptor.mars.internal-1671039721.326683-32300-3-707bd6df-2854-456b-8a3f-118a91cefaf4.nc /cache/tmp/707bd6df-2854-456b-8a3f-118a91cefaf4-adaptor.mars.internal-1671039694.2474084-32300-5-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2007_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2000_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:16:13 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2000, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:14:25 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data3/adaptor.mars.internal-1671038057.7376428-13893-18-057722ef-6543-44cc-b827-742c661e9976.nc /cache/tmp/057722ef-6543-44cc-b827-742c661e9976-adaptor.mars.internal-1671038033.7506237-13893-13-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2007_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:32:59 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2007, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:29:52 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data4/adaptor.mars.internal-1671038984.8457205-20517-16-4031c54e-ed89-40a5-8df6-1485339d540c.nc /cache/tmp/4031c54e-ed89-40a5-8df6-1485339d540c-adaptor.mars.internal-1671038959.2205195-20517-21-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2013_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2014_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:26:56 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2014, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:25:17 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data4/adaptor.mars.internal-1671038710.3900678-32448-2-a84f9a95-0c4f-4eeb-9553-7a9c677dbad3.nc /cache/tmp/a84f9a95-0c4f-4eeb-9553-7a9c677dbad3-adaptor.mars.internal-1671038681.5082405-32448-3-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2012_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:40:39 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2012, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:38:11 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data3/adaptor.mars.internal-1671039485.3156946-30359-9-6282315a-69b5-4404-8b2c-86988405eeb2.nc /cache/tmp/6282315a-69b5-4404-8b2c-86988405eeb2-adaptor.mars.internal-1671039458.115276-30359-12-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:activity prov:id="software:esmvaltool==2.12.0"/>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2016_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:34:44 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2016, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:32:11 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data5/adaptor.mars.internal-1671039124.9373066-5910-17-89ccb6e1-0454-4414-8dc5-34cf69e76636.nc /cache/tmp/89ccb6e1-0454-4414-8dc5-34cf69e76636-adaptor.mars.internal-1671039097.1947353-5910-20-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2006_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:34:33 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2006, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:33:38 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data5/adaptor.mars.internal-1671039211.5094059-27101-14-abdacf75-3369-4e12-9dd5-cd596d83f303.nc /cache/tmp/abdacf75-3369-4e12-9dd5-cd596d83f303-adaptor.mars.internal-1671039185.493046-27101-15-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2009_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:39:18 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2009, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:37:27 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data9/adaptor.mars.internal-1671039435.603424-3563-15-67b84d8a-e39f-4f49-bd4b-098b95de18bf.nc /cache/tmp/67b84d8a-e39f-4f49-bd4b-098b95de18bf-adaptor.mars.internal-1671039405.6168551-3563-17-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2001_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2009_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2010_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:44:39 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2010, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:42:50 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data1/adaptor.mars.internal-1671039764.336201-14756-14-26bee472-a922-4388-a325-71801dfe5ea2.nc /cache/tmp/26bee472-a922-4388-a325-71801dfe5ea2-adaptor.mars.internal-1671039736.6931787-14756-18-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:entity prov:id="recipe:recipe_maps.yml">
+    <attribute:description>HybridESMBench</attribute:description>
+    <attribute:references>[]</attribute:references>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2017_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:19:03 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2017, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:17:40 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data5/adaptor.mars.internal-1671038247.2939608-31025-3-2cae536c-e009-478a-bafe-0521e9785e09.nc /cache/tmp/2cae536c-e009-478a-bafe-0521e9785e09-adaptor.mars.internal-1671038219.786745-31025-5-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2011_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:17:59 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2011, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:15:16 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data2/adaptor.mars.internal-1671038109.5744646-27536-2-5e57ca26-dbcd-474c-8f03-b1b7ccc5001a.nc /cache/tmp/5e57ca26-dbcd-474c-8f03-b1b7ccc5001a-adaptor.mars.internal-1671038075.0238998-27536-2-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasAttributedTo>
+    <prov:entity prov:ref="recipe:recipe_maps.yml"/>
+    <prov:agent prov:ref="author:Schlund, Manuel"/>
+  </prov:wasAttributedTo>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2019_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2004_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:31:37 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2004, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:28:15 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data4/adaptor.mars.internal-1671038888.233044-27749-13-6501cc55-e5c6-4312-aaa0-47a32f709efe.nc /cache/tmp/6501cc55-e5c6-4312-aaa0-47a32f709efe-adaptor.mars.internal-1671038859.739093-27749-16-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2011_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2002_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:42:39 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2002, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:40:33 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data9/adaptor.mars.internal-1671039627.0761652-16861-10-4d7f5db9-4d57-4ee4-98ab-0ef64cf4f072.nc /cache/tmp/4d7f5db9-4d57-4ee4-98ab-0ef64cf4f072-adaptor.mars.internal-1671039599.2967408-16861-12-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2005_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:activity prov:id="task:maps/ua85000"/>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2010_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2015_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:20:49 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2015, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:18:27 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data4/adaptor.mars.internal-1671038300.702527-14405-2-14c8c5b1-4b49-4376-9a79-b3fa6992ee77.nc /cache/tmp/14c8c5b1-4b49-4376-9a79-b3fa6992ee77-adaptor.mars.internal-1671038274.061776-14405-2-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2017_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2015_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2001_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:14:48 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2001, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:13:43 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data6/adaptor.mars.internal-1671038015.745259-14858-1-3e9938e6-3dd0-43d7-8a1a-091eb563e2ff.nc /cache/tmp/3e9938e6-3dd0-43d7-8a1a-091eb563e2ff-adaptor.mars.internal-1671037986.354351-14858-1-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2008_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2006_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2005_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:42:58 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2005, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:41:22 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data8/adaptor.mars.internal-1671039671.7439446-2530-2-778e29dc-b5eb-4c81-be9c-9ebddab310a2.nc /cache/tmp/778e29dc-b5eb-4c81-be9c-9ebddab310a2-adaptor.mars.internal-1671039642.5675368-2530-2-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2000_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2003_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2002_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2016_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2018_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:23:12 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2018, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:20:45 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data1/adaptor.mars.internal-1671038439.0766468-28987-4-23b325e2-b947-49c7-912d-5fa0b132e33b.nc /cache/tmp/23b325e2-b947-49c7-912d-5fa0b132e33b-adaptor.mars.internal-1671038408.688627-28987-6-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2003_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:36:14 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2003, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:35:09 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data2/adaptor.mars.internal-1671039303.0046966-2996-5-99a5da12-4c9e-4ff9-8ea3-09543c4dd8fc.nc /cache/tmp/99a5da12-4c9e-4ff9-8ea3-09543c4dd8fc-adaptor.mars.internal-1671039275.374379-2996-6-tmp.grib</attribute:history>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2018_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/ua85000/native6_ERA5_reanaly_v1_Amon_ua_20000101-20191231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2004_monthly.nc"/>
+    <prov:activity prov:ref="task:maps/ua85000"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/RAWOBS/Tier3/ERA5/v1/mon/ua/era5_u_component_of_wind_2019_monthly.nc">
+    <attribute:Conventions>CF-1.6</attribute:Conventions>
+    <attribute:history>2022-12-14 17:15:11 UTC by era5cli 1.3.1: reanalysis-era5-pressure-levels-monthly-means {'variable': 'u_component_of_wind', 'year': 2019, 'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], 'time': ['00:00'], 'format': 'netcdf', 'pressure_level': [1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000], 'product_type': 'monthly_averaged_reanalysis'}
+2022-12-14 17:12:57 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data5/adaptor.mars.internal-1671037969.3470626-16905-9-514d01ea-1350-4439-8d6f-2913cf8a8334.nc /cache/tmp/514d01ea-1350-4439-8d6f-2913cf8a8334-adaptor.mars.internal-1671037941.3382397-16905-8-tmp.grib</attribute:history>
+  </prov:entity>
+</prov:document>

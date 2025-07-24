@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<prov:document xmlns:author="https://www.esmvaltool.org/author" xmlns:software="https://www.esmvaltool.org/software" xmlns:preprocessor="https://www.esmvaltool.org/preprocessor" xmlns:task="https://www.esmvaltool.org/task" xmlns:project="https://www.esmvaltool.org/project" xmlns:recipe="https://www.esmvaltool.org/recipe" xmlns:attribute="https://www.esmvaltool.org/attribute" xmlns:file="https://www.esmvaltool.org/file" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier2/CERES-EBAF/OBS_CERES-EBAF_sat_Ed4.2_Amon_rsut_200003-202311.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment></attribute:comment>
+    <attribute:history>Created on 2024-03-08 10:54:33</attribute:history>
+    <attribute:host>levante2.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:positive>up</attribute:positive>
+    <attribute:project_id>OBS</attribute:project_id>
+    <attribute:reference>doi:10.1175/jcli-d-17-0208.1</attribute:reference>
+    <attribute:source>https://ceres-tool.larc.nasa.gov/ord-tool/jsp/EBAFTOA42Selection.jsp</attribute:source>
+    <attribute:tier>2</attribute:tier>
+    <attribute:title>CERES-EBAF data reformatted for ESMValTool v2.11.0.dev34+g9a8f66d6e.d20240123</attribute:title>
+    <attribute:user>b309141</attribute:user>
+    <attribute:version>Ed4.2</attribute:version>
+  </prov:entity>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="task:maps/swcre"/>
+    <prov:trigger prov:ref="recipe:recipe_maps.yml"/>
+    <prov:starter prov:ref="software:esmvaltool==2.12.0"/>
+  </prov:wasStartedBy>
+  <prov:activity prov:id="software:esmvaltool==2.12.0"/>
+  <prov:entity prov:id="recipe:recipe_maps.yml">
+    <attribute:description>HybridESMBench</attribute:description>
+    <attribute:references>[]</attribute:references>
+  </prov:entity>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20030101-20221231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier2/CERES-EBAF/OBS_CERES-EBAF_sat_Ed4.2_Amon_rsut_200003-202311.nc"/>
+    <prov:activity prov:ref="task:maps/swcre"/>
+  </prov:wasDerivedFrom>
+  <prov:agent prov:id="author:Schlund, Manuel">
+    <attribute:email>manuel.schlund@dlr.de</attribute:email>
+    <attribute:github>schlunma</attribute:github>
+    <attribute:institute>DLR, Germany</attribute:institute>
+    <attribute:orcid>https://orcid.org/0000-0001-5251-0158</attribute:orcid>
+  </prov:agent>
+  <prov:entity prov:id="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20030101-20221231.nc">
+    <attribute:alias>CERES-EBAF</attribute:alias>
+    <attribute:dataset>CERES-EBAF</attribute:dataset>
+    <attribute:derive>True</attribute:derive>
+    <attribute:diagnostic>maps</attribute:diagnostic>
+    <attribute:end_year>2022</attribute:end_year>
+    <attribute:filename>/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20030101-20221231.nc</attribute:filename>
+    <attribute:force_derivation>True</attribute:force_derivation>
+    <attribute:frequency>mon</attribute:frequency>
+    <attribute:long_name>TOA Shortwave Cloud Radiative Effect</attribute:long_name>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>['atmos']</attribute:modeling_realm>
+    <attribute:original_short_name>swcre</attribute:original_short_name>
+    <attribute:preprocessor>create_map</attribute:preprocessor>
+    <attribute:project>OBS</attribute:project>
+    <attribute:recipe_dataset_index>0</attribute:recipe_dataset_index>
+    <attribute:reference_for_monitor_diags>True</attribute:reference_for_monitor_diags>
+    <attribute:short_name>swcre</attribute:short_name>
+    <attribute:standard_name></attribute:standard_name>
+    <attribute:start_year>2003</attribute:start_year>
+    <attribute:tier>2</attribute:tier>
+    <attribute:timerange>20030101/20221231</attribute:timerange>
+    <attribute:title>TOA Shortwave Cloud Radiative Effect</attribute:title>
+    <attribute:type>sat</attribute:type>
+    <attribute:units>W m-2</attribute:units>
+    <attribute:variable_group>swcre</attribute:variable_group>
+    <attribute:version>Ed4.2</attribute:version>
+    <preprocessor:climate_statistics>{'operator': 'mean', 'period': 'full'}</preprocessor:climate_statistics>
+    <preprocessor:derive>{'short_name': 'swcre', 'standard_name': '', 'long_name': 'TOA Shortwave Cloud Radiative Effect', 'units': 'W m-2'}</preprocessor:derive>
+    <preprocessor:regrid>{'target_grid': '2x2', 'scheme': {'reference': 'esmf_regrid.schemes:ESMFAreaWeighted'}}</preprocessor:regrid>
+    <preprocessor:remove_supplementary_variables>{}</preprocessor:remove_supplementary_variables>
+    <preprocessor:save>{'compress': False, 'compute': False, 'filename': PosixPath('/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20030101-20221231.nc')}</preprocessor:save>
+  </prov:entity>
+  <prov:activity prov:id="task:maps/swcre"/>
+  <prov:wasAttributedTo>
+    <prov:entity prov:ref="recipe:recipe_maps.yml"/>
+    <prov:agent prov:ref="author:Schlund, Manuel"/>
+  </prov:wasAttributedTo>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="file:/home/b/b309141/scratch/esmvaltool_output/recipe_maps_20250724_120609/preproc/maps/swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20030101-20221231.nc"/>
+    <prov:usedEntity prov:ref="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier2/CERES-EBAF/OBS_CERES-EBAF_sat_Ed4.2_Amon_rsutcs_200003-202311.nc"/>
+    <prov:activity prov:ref="task:maps/swcre"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="file:/work/bd0854/DATA/ESMValTool2/OBS/Tier2/CERES-EBAF/OBS_CERES-EBAF_sat_Ed4.2_Amon_rsutcs_200003-202311.nc">
+    <attribute:Conventions>CF-1.7</attribute:Conventions>
+    <attribute:comment></attribute:comment>
+    <attribute:history>Created on 2024-03-08 10:54:34</attribute:history>
+    <attribute:host>levante2.lvt.dkrz.de</attribute:host>
+    <attribute:mip>Amon</attribute:mip>
+    <attribute:modeling_realm>sat</attribute:modeling_realm>
+    <attribute:positive>up</attribute:positive>
+    <attribute:project_id>OBS</attribute:project_id>
+    <attribute:reference>doi:10.1175/jcli-d-17-0208.1</attribute:reference>
+    <attribute:source>https://ceres-tool.larc.nasa.gov/ord-tool/jsp/EBAFTOA42Selection.jsp</attribute:source>
+    <attribute:tier>2</attribute:tier>
+    <attribute:title>CERES-EBAF data reformatted for ESMValTool v2.11.0.dev34+g9a8f66d6e.d20240123</attribute:title>
+    <attribute:user>b309141</attribute:user>
+    <attribute:version>Ed4.2</attribute:version>
+  </prov:entity>
+</prov:document>

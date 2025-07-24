@@ -1,0 +1,25 @@
+? rlut/OBS_CERES-EBAF_sat_Ed4.2_Amon_rlut_20030101-20221231.nc
+: alias: CERES-EBAF
+  dataset: CERES-EBAF
+  diagnostic: maps
+  end_year: 2022
+  filename: rlut/OBS_CERES-EBAF_sat_Ed4.2_Amon_rlut_20030101-20221231.nc
+  frequency: mon
+  long_name: TOA Outgoing Longwave Radiation
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_map
+  project: OBS
+  recipe_dataset_index: 0
+  reference_for_monitor_diags: true
+  short_name: rlut
+  standard_name: toa_outgoing_longwave_flux
+  start_year: 2003
+  tier: 2
+  timerange: 20030101/20221231
+  title: TOA Outgoing Longwave Radiation
+  type: sat
+  units: W m-2
+  variable_group: rlut
+  version: Ed4.2

@@ -1,0 +1,25 @@
+? tas/OBS_HadCRUT5_ground_5.0.1.0-analysis_Amon_tas_20020101-20211231.nc
+: alias: HadCRUT5
+  dataset: HadCRUT5
+  diagnostic: maps
+  end_year: 2021
+  filename: tas/OBS_HadCRUT5_ground_5.0.1.0-analysis_Amon_tas_20020101-20211231.nc
+  frequency: mon
+  long_name: Near-Surface Air Temperature
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_map
+  project: OBS
+  recipe_dataset_index: 0
+  reference_for_monitor_diags: true
+  short_name: tas
+  standard_name: air_temperature
+  start_year: 2002
+  tier: 2
+  timerange: 20020101/20211231
+  title: Near-Surface Air Temperature
+  type: ground
+  units: K
+  variable_group: tas
+  version: 5.0.1.0-analysis
