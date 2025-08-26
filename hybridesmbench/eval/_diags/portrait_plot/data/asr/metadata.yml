@@ -1,6 +1,6 @@
 ? asr/CMIP6_ACCESS-CM2_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_ACCESS-CM2
+  alias: ACCESS-CM2
   dataset: ACCESS-CM2
   derive: true
   diagnostic: portrait_plot
@@ -29,7 +29,7 @@
   version: v20191108
 ? asr/CMIP6_ACCESS-ESM1-5_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_ACCESS-ESM1-5
+  alias: ACCESS-ESM1-5
   dataset: ACCESS-ESM1-5
   derive: true
   diagnostic: portrait_plot
@@ -58,7 +58,7 @@
   version: v20191115
 ? asr/CMIP6_AWI-CM-1-1-MR_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_AWI-CM-1-1-MR
+  alias: AWI-CM-1-1-MR
   dataset: AWI-CM-1-1-MR
   derive: true
   diagnostic: portrait_plot
@@ -87,7 +87,7 @@
   version: v20200511
 ? asr/CMIP6_AWI-ESM-1-1-LR_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_AWI-ESM-1-1-LR
+  alias: AWI-ESM-1-1-LR
   dataset: AWI-ESM-1-1-LR
   derive: true
   diagnostic: portrait_plot
@@ -116,7 +116,7 @@
   version: v20200212
 ? asr/CMIP6_AWI-ESM-1-REcoM_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_AWI-ESM-1-REcoM
+  alias: AWI-ESM-1-REcoM
   dataset: AWI-ESM-1-REcoM
   derive: true
   diagnostic: portrait_plot
@@ -145,7 +145,7 @@
   version: v20230314
 ? asr/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_BCC-CSM2-MR
+  alias: BCC-CSM2-MR
   dataset: BCC-CSM2-MR
   derive: true
   diagnostic: portrait_plot
@@ -174,7 +174,7 @@
   version: v20181126
 ? asr/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_BCC-ESM1
+  alias: BCC-ESM1
   dataset: BCC-ESM1
   derive: true
   diagnostic: portrait_plot
@@ -203,7 +203,7 @@
   version: v20181214
 ? asr/CMIP6_CAMS-CSM1-0_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CAMS-CSM1-0
+  alias: CAMS-CSM1-0
   dataset: CAMS-CSM1-0
   derive: true
   diagnostic: portrait_plot
@@ -232,7 +232,7 @@
   version: v20190708
 ? asr/CMIP6_CAS-ESM2-0_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CAS-ESM2-0
+  alias: CAS-ESM2-0
   dataset: CAS-ESM2-0
   derive: true
   diagnostic: portrait_plot
@@ -263,7 +263,7 @@
   - v20200522
 ? asr/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CESM2-FV2
+  alias: CESM2-FV2
   dataset: CESM2-FV2
   derive: true
   diagnostic: portrait_plot
@@ -292,7 +292,7 @@
   version: v20191120
 ? asr/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CESM2-WACCM-FV2
+  alias: CESM2-WACCM-FV2
   dataset: CESM2-WACCM-FV2
   derive: true
   diagnostic: portrait_plot
@@ -321,7 +321,7 @@
   version: v20191120
 ? asr/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CESM2-WACCM
+  alias: CESM2-WACCM
   dataset: CESM2-WACCM
   derive: true
   diagnostic: portrait_plot
@@ -350,7 +350,7 @@
   version: v20190227
 ? asr/CMIP6_CESM2_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CESM2
+  alias: CESM2
   dataset: CESM2
   derive: true
   diagnostic: portrait_plot
@@ -379,7 +379,7 @@
   version: v20190308
 ? asr/CMIP6_CIESM_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CIESM
+  alias: CIESM
   dataset: CIESM
   derive: true
   diagnostic: portrait_plot
@@ -410,7 +410,7 @@
   - v20200806
 ? asr/CMIP6_CMCC-CM2-HR4_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CMCC-CM2-HR4
+  alias: CMCC-CM2-HR4
   dataset: CMCC-CM2-HR4
   derive: true
   diagnostic: portrait_plot
@@ -439,7 +439,7 @@
   version: v20200904
 ? asr/CMIP6_CMCC-CM2-SR5_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CMCC-CM2-SR5
+  alias: CMCC-CM2-SR5
   dataset: CMCC-CM2-SR5
   derive: true
   diagnostic: portrait_plot
@@ -468,7 +468,7 @@
   version: v20200616
 ? asr/CMIP6_CMCC-ESM2_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CMCC-ESM2
+  alias: CMCC-ESM2
   dataset: CMCC-ESM2
   derive: true
   diagnostic: portrait_plot
@@ -497,7 +497,7 @@
   version: v20210114
 ? asr/CMIP6_CanESM5_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CanESM5
+  alias: CanESM5
   dataset: CanESM5
   derive: true
   diagnostic: portrait_plot
@@ -526,7 +526,7 @@
   version: v20190429
 ? asr/CMIP6_E3SM-1-0_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_E3SM-1-0
+  alias: E3SM-1-0
   dataset: E3SM-1-0
   derive: true
   diagnostic: portrait_plot
@@ -555,7 +555,7 @@
   version: v20190913
 ? asr/CMIP6_E3SM-1-1-ECA_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_E3SM-1-1-ECA
+  alias: E3SM-1-1-ECA
   dataset: E3SM-1-1-ECA
   derive: true
   diagnostic: portrait_plot
@@ -584,7 +584,7 @@
   version: v20200623
 ? asr/CMIP6_E3SM-1-1_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_E3SM-1-1
+  alias: E3SM-1-1
   dataset: E3SM-1-1
   derive: true
   diagnostic: portrait_plot
@@ -613,7 +613,7 @@
   version: v20191211
 ? asr/CMIP6_EC-Earth3-AerChem_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_EC-Earth3-AerChem
+  alias: EC-Earth3-AerChem
   dataset: EC-Earth3-AerChem
   derive: true
   diagnostic: portrait_plot
@@ -642,7 +642,7 @@
   version: v20200624
 ? asr/CMIP6_EC-Earth3-CC_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_EC-Earth3-CC
+  alias: EC-Earth3-CC
   dataset: EC-Earth3-CC
   derive: true
   diagnostic: portrait_plot
@@ -671,7 +671,7 @@
   version: v20210113
 ? asr/CMIP6_EC-Earth3-Veg-LR_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_EC-Earth3-Veg-LR
+  alias: EC-Earth3-Veg-LR
   dataset: EC-Earth3-Veg-LR
   derive: true
   diagnostic: portrait_plot
@@ -700,7 +700,7 @@
   version: v20200217
 ? asr/CMIP6_EC-Earth3-Veg_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_EC-Earth3-Veg
+  alias: EC-Earth3-Veg
   dataset: EC-Earth3-Veg
   derive: true
   diagnostic: portrait_plot
@@ -729,7 +729,7 @@
   version: v20200225
 ? asr/CMIP6_EC-Earth3_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_EC-Earth3
+  alias: EC-Earth3
   dataset: EC-Earth3
   derive: true
   diagnostic: portrait_plot
@@ -758,7 +758,7 @@
   version: v20200310
 ? asr/CMIP6_FGOALS-f3-L_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_FGOALS-f3-L
+  alias: FGOALS-f3-L
   dataset: FGOALS-f3-L
   derive: true
   diagnostic: portrait_plot
@@ -787,7 +787,7 @@
   version: v20190927
 ? asr/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_FGOALS-g3
+  alias: FGOALS-g3
   dataset: FGOALS-g3
   derive: true
   diagnostic: portrait_plot
@@ -816,7 +816,7 @@
   version: v20190818
 ? asr/CMIP6_FIO-ESM-2-0_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_FIO-ESM-2-0
+  alias: FIO-ESM-2-0
   dataset: FIO-ESM-2-0
   derive: true
   diagnostic: portrait_plot
@@ -847,7 +847,7 @@
   - v20200922
 ? asr/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_asr_gr1_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_GFDL-CM4
+  alias: GFDL-CM4
   dataset: GFDL-CM4
   derive: true
   diagnostic: portrait_plot
@@ -876,7 +876,7 @@
   version: v20180701
 ? asr/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_asr_gr1_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_GFDL-ESM4
+  alias: GFDL-ESM4
   dataset: GFDL-ESM4
   derive: true
   diagnostic: portrait_plot
@@ -905,7 +905,7 @@
   version: v20190726
 ? asr/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_GISS-E2-1-G
+  alias: GISS-E2-1-G
   dataset: GISS-E2-1-G
   derive: true
   diagnostic: portrait_plot
@@ -934,7 +934,7 @@
   version: v20180827
 ? asr/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_GISS-E2-1-H
+  alias: GISS-E2-1-H
   dataset: GISS-E2-1-H
   derive: true
   diagnostic: portrait_plot
@@ -963,7 +963,7 @@
   version: v20190403
 ? asr/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_ICON-ESM-LR
+  alias: ICON-ESM-LR
   dataset: ICON-ESM-LR
   derive: true
   diagnostic: portrait_plot
@@ -992,7 +992,7 @@
   version: v20210215
 ? asr/CMIP6_IITM-ESM_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_IITM-ESM
+  alias: IITM-ESM
   dataset: IITM-ESM
   derive: true
   diagnostic: portrait_plot
@@ -1021,7 +1021,7 @@
   version: v20191226
 ? asr/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_asr_gr1_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_INM-CM4-8
+  alias: INM-CM4-8
   dataset: INM-CM4-8
   derive: true
   diagnostic: portrait_plot
@@ -1050,7 +1050,7 @@
   version: v20190530
 ? asr/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_asr_gr1_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_INM-CM5-0
+  alias: INM-CM5-0
   dataset: INM-CM5-0
   derive: true
   diagnostic: portrait_plot
@@ -1079,7 +1079,7 @@
   version: v20190610
 ? asr/CMIP6_IPSL-CM5A2-INCA_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_IPSL-CM5A2-INCA
+  alias: IPSL-CM5A2-INCA
   dataset: IPSL-CM5A2-INCA
   derive: true
   diagnostic: portrait_plot
@@ -1108,7 +1108,7 @@
   version: v20200729
 ? asr/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_IPSL-CM6A-LR
+  alias: IPSL-CM6A-LR
   dataset: IPSL-CM6A-LR
   derive: true
   diagnostic: portrait_plot
@@ -1137,7 +1137,7 @@
   version: v20180803
 ? asr/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_asr_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_KACE-1-0-G
+  alias: KACE-1-0-G
   dataset: KACE-1-0-G
   derive: true
   diagnostic: portrait_plot
@@ -1166,7 +1166,7 @@
   version: v20190910
 ? asr/CMIP6_KIOST-ESM_Amon_historical_r1i1p1f1_asr_gr1_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_KIOST-ESM
+  alias: KIOST-ESM
   dataset: KIOST-ESM
   derive: true
   diagnostic: portrait_plot
@@ -1195,7 +1195,7 @@
   version: v20201016
 ? asr/CMIP6_MIROC6_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MIROC6
+  alias: MIROC6
   dataset: MIROC6
   derive: true
   diagnostic: portrait_plot
@@ -1224,7 +1224,7 @@
   version: v20190311
 ? asr/CMIP6_MPI-ESM-1-2-HAM_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MPI-ESM-1-2-HAM
+  alias: MPI-ESM-1-2-HAM
   dataset: MPI-ESM-1-2-HAM
   derive: true
   diagnostic: portrait_plot
@@ -1253,7 +1253,7 @@
   version: v20190627
 ? asr/CMIP6_MPI-ESM1-2-HR_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MPI-ESM1-2-HR
+  alias: MPI-ESM1-2-HR
   dataset: MPI-ESM1-2-HR
   derive: true
   diagnostic: portrait_plot
@@ -1282,7 +1282,7 @@
   version: v20190710
 ? asr/CMIP6_MPI-ESM1-2-LR_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MPI-ESM1-2-LR
+  alias: MPI-ESM1-2-LR
   dataset: MPI-ESM1-2-LR
   derive: true
   diagnostic: portrait_plot
@@ -1311,7 +1311,7 @@
   version: v20190710
 ? asr/CMIP6_MRI-ESM2-0_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MRI-ESM2-0
+  alias: MRI-ESM2-0
   dataset: MRI-ESM2-0
   derive: true
   diagnostic: portrait_plot
@@ -1340,7 +1340,7 @@
   version: v20190222
 ? asr/CMIP6_NESM3_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_NESM3
+  alias: NESM3
   dataset: NESM3
   derive: true
   diagnostic: portrait_plot
@@ -1369,7 +1369,7 @@
   version: v20190630
 ? asr/CMIP6_NorCPM1_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_NorCPM1
+  alias: NorCPM1
   dataset: NorCPM1
   derive: true
   diagnostic: portrait_plot
@@ -1398,7 +1398,7 @@
   version: v20200724
 ? asr/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_NorESM2-LM
+  alias: NorESM2-LM
   dataset: NorESM2-LM
   derive: true
   diagnostic: portrait_plot
@@ -1427,7 +1427,7 @@
   version: v20190815
 ? asr/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_NorESM2-MM
+  alias: NorESM2-MM
   dataset: NorESM2-MM
   derive: true
   diagnostic: portrait_plot
@@ -1456,7 +1456,7 @@
   version: v20191108
 ? asr/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_SAM0-UNICON
+  alias: SAM0-UNICON
   dataset: SAM0-UNICON
   derive: true
   diagnostic: portrait_plot
@@ -1485,7 +1485,7 @@
   version: v20190323
 ? asr/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_asr_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_TaiESM1
+  alias: TaiESM1
   dataset: TaiESM1
   derive: true
   diagnostic: portrait_plot
