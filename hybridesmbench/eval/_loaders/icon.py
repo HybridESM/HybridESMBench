@@ -23,6 +23,7 @@ class ICONLoader(BaseICONLoader):
         "lwcre": "atm_2d_ml",
         "lwp": "atm_2d_ml",
         "pr": "atm_2d_ml",
+        "ps": "atm_2d_ml",
         "prw": "atm_2d_ml",
         "rlut": "atm_2d_ml",
         "rsut": "atm_2d_ml",

@@ -18,6 +18,10 @@ Only last 20 years of data is used. No data from years prior to 1979 is used.
 
 Only last 20 years of data is used. No data from years prior to 1979 is used.
 
+### Sanity checks
+
+Only last 20 years of data is used. No data from years prior to 1979 is used.
+
 ### Time series
 
 Shown is the global mean of the data. No data from years prior to 1979 is used.
