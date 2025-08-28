@@ -11,12 +11,17 @@ from esmvalcore.preprocessor import (
     regrid,
 )
 from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
+import copy
+import iris
+import yaml
 from iris import Constraint
 from iris.cube import Cube
+from loguru import logger
 
 from hybridesmbench._utils import (
     extract_final_20_years,
     extract_vertical_level,
+    get_timerange,
 )
 from hybridesmbench.eval._diags import ESMValToolDiagnostic
 from hybridesmbench.eval._loaders import Loader
@@ -55,8 +60,8 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                     },
                 },
                 "hlines": [
-                    {"y": 1.420688e+16, "color": "red", "linewidth": 2},
-                    {"y": 1.128716e+16, "color": "red", "linewidth": 2},
+                    {"y": 0.46, "color": "red", "linewidth": 2},
+                    {"y": 0., "color": "red", "linewidth": 2},
                 ],
             },
         },
@@ -84,16 +89,166 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         # "tauv": {"var_name": "tauu", "mip_table": "Amon"},
     }
 
+    def _get_cfg(
+        self,
+        loader: Loader,
+        **additional_cfg: Any,
+    ) -> dict[str, Any]:
+        """Get configuration dictionary for ESMValTool diagnostic."""
+        cfg: dict[str, Any] = {
+            **self._BASE_CFG,
+            **self._DIAG_CFG,
+        }
+
+        # Create input/output directories
+        aux_dir = self.input_dir / "aux"
+        plot_dir = self.output_dir / "plots"
+        run_dir = self.output_dir / "run"
+        work_dir = self.output_dir / "work"
+        for dir_ in (aux_dir, plot_dir, run_dir, work_dir):
+            dir_.mkdir(parents=True, exist_ok=True)
+            logger.debug(f"Created directory {dir_}")
+
+        # Setup input data
+        metadata_dict: dict[str, dict] = {}
+        file_idx = 0
+
+        # Hybrid ESM input data
+        logger.debug(
+            f"Using variables {list(self._VARS)} for diagnostic '{self.name}'"
+        )
+        for var_id, var_dict in self._VARS.items():
+            try:
+                cube = loader.load_variable(**var_dict)
+            except Exception as exc:
+                msg = (
+                    f"Failed to extract variable '{var_id}' from {loader.path}"
+                )
+                if self._fail_on_missing_variable:
+                    raise HybridESMBenchException(msg)
+                msg = f"{msg}: {exc}"
+                warnings.warn(msg, HybridESMBenchWarning, stacklevel=2)
+                continue
+            logger.debug(
+                f"Running preprocessor on variable '{var_id}' for diagnostic "
+                f"'{self.name}'"
+            )
+            cube_min = copy.deepcopy(cube)
+            cube_max = copy.deepcopy(cube)
+            cube = self._preprocess(var_id, cube)
+            cube_min = self._preprocess_min(var_id, cube_min)
+            cube_max = self._preprocess_max(var_id, cube_max)
+            path = self.input_dir / f"{var_id}_{loader.path.name}.nc"
+            path_min = self.input_dir / f"{var_id}_{loader.path.name}_min.nc"
+            path_max = self.input_dir / f"{var_id}_{loader.path.name}_max.nc"
+            logger.debug(f"Saving {path}")
+            iris.save(cube, path)
+            iris.save(cube_min, path_min)
+            iris.save(cube_max, path_max)
+            logger.debug(f"Saved {path}")
+
+            # Setup metadata for hybrid ESM output
+            metadata = loader.get_metadata(**var_dict)
+            metadata["diagnostic"] = self.name
+            metadata["filename"] = str(path)
+            metadata["preprocessor"] = f"{self.name}_preprocessor"
+            metadata["recipe_dataset_index"] = file_idx
+            metadata["variable_group"] = var_id
+
+            # Data-specific metadata
+            metadata["long_name"] = cube.long_name
+            metadata["short_name"] = cube.var_name
+            metadata["standard_name"] = cube.standard_name
+            metadata["units"] = str(cube.units)
+            timerange = get_timerange(cube)
+            if timerange is not None:
+                metadata["timerange"] = timerange
+                metadata["start_year"] = timerange.split("/")[0][:4]
+                metadata["end_year"] = timerange.split("/")[1][:4]
+
+            metadata = self._update_metadata(var_id, loader, metadata)
+
+            metadata_dict[str(path)] = metadata
+            file_idx += 1
+
+            # Adding metadata for min and max
+            metadata_min = copy.deepcopy(metadata)
+            metadata_min["alias"] = "global_min"
+            metadata_min["filename"] = str(path_min)
+            metadata_min["recipe_dataset_index"] = file_idx
+            metadata_dict[str(path_min)] = metadata_min
+            file_idx += 1
+            metadata_max = copy.deepcopy(metadata)
+            metadata_max["alias"] = "global_max"
+            metadata_max["filename"] = str(path_max)
+            metadata_max["recipe_dataset_index"] = file_idx
+            metadata_dict[str(path_max)] = metadata_max
+            file_idx += 1
+
+
+        # Other input data
+        for metadata_file in self._data_dir.rglob("metadata.yml"):
+            with metadata_file.open("r", encoding="utf-8") as file:
+                metadata = yaml.safe_load(file)
+                logger.debug(f"Loaded metadata file {metadata_file}")
+
+            for filename in metadata:
+                filepath = str(self._data_dir / filename)
+                metadata_dict[filepath] = metadata[filename]
+                metadata_dict[filepath]["filename"] = filepath
+                metadata_dict[filepath]["recipe_dataset_index"] = file_idx
+                file_idx += 1
+
+        new_metadata_file = self.input_dir / "metadata.yml"
+        with new_metadata_file.open("w", encoding="utf-8") as file:
+            yaml.safe_dump(metadata_dict, file)
+            logger.debug(f"Wrote metadata file {new_metadata_file}")
+
+        # Add directories to cfg
+        cfg.update(
+            {
+                "auxiliary_data_dir": str(aux_dir),
+                "input_data": metadata_dict,
+                "input_files": [str(new_metadata_file)],
+                "plot_dir": str(plot_dir),
+                "run_dir": str(run_dir),
+                "work_dir": str(work_dir),
+            },
+        )
+
+        # Additional options from child diagnostics
+        cfg = self._update_cfg(cfg, loader)
+
+        # Additional options from user
+        cfg.update(additional_cfg)
+
+        return cfg
+    
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
-        #cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
-        #if cube.var_name == "ps":
-        #    cube = convert_units(cube, "kg m-2")
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = area_statistics(cube, "mean")
-        #cube = annual_statistics(cube, "mean")
-        #cube = anomalies(cube, "full")
+        if cube.var_name == "pr":
+            cube = convert_units(cube, "mm day-1")
+        
+        return cube
+    
+    def _preprocess_min(self, var_id: str, cube: Cube) -> Cube:
+        """Preprocess input data."""
+        cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
+        cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
+        cube = area_statistics(cube, "min")
+        if cube.var_name == "pr":
+            cube = convert_units(cube, "mm day-1")
+        
+        return cube
+    
+    def _preprocess_max(self, var_id: str, cube: Cube) -> Cube:
+        """Preprocess input data."""
+        cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
+        cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
+        cube = area_statistics(cube, "max")
         if cube.var_name == "pr":
             cube = convert_units(cube, "mm day-1")
         
@@ -110,6 +265,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                 category=UserWarning,
                 module="iris",
             )
+            print(cfg)
             MultiDatasets(cfg).compute()
 
     def _update_cfg(
@@ -124,11 +280,23 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
             "linewidth": 1.25,
             "zorder": 2.5,
         }
+        plot_kwargs_minmax = {
+            "color": "C0",
+            #"label": "{alias}",
+            "label": None,
+            "linewidth": 1.25,
+            "zorder": 2.3,
+            "linestyle": "--",
+        }
         cfg["plots"]["timeseries"]["plot_kwargs"][
             loader.model_name
         ] = plot_kwargs
-        # cfg["plots"]["timeseries"]["hline"
-        # ] = [{"y": 1.420688e+16, "color": "red"}]
+        cfg["plots"]["timeseries"]["plot_kwargs"][
+            "global_min"
+        ] = plot_kwargs_minmax
+        cfg["plots"]["timeseries"]["plot_kwargs"][
+            "global_max"
+        ] = plot_kwargs_minmax
         return cfg
 
     def _update_metadata(
@@ -141,5 +309,5 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         better_long_name = self._get_better_long_name(
             var_id, metadata["short_name"], metadata["long_name"]
         )
-        metadata["title"] = f"Global Sum of {better_long_name}"
+        metadata["title"] = f"Global Mean of {better_long_name}"
         return metadata
