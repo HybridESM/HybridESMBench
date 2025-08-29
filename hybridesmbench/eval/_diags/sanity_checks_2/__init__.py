@@ -60,16 +60,16 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                     },
                 },
                 "hlines": [
-                    {'y': 0.092597, 'color': 'red', 'linewidth': 2},
-                    {"y": 0.0290555, "color": "red", "linewidth": 2},
+                    {'y': 58.7, 'color': 'red', 'linewidth': 2, "zorder": 1.0},
+                    {"y": 74.9, "color": "red", "linewidth": 2, "zorder": 2.6},
                 ],
             },
         },
     }
     _VARS = {
         # "asr": {"var_name": "asr", "mip_table": "Amon"},
-        "clivi": {"var_name": "clivi", "mip_table": "Amon"},
-        # "clt": {"var_name": "clt", "mip_table": "Amon"},
+        #"clivi": {"var_name": "clivi", "mip_table": "Amon"},
+        "clt": {"var_name": "clt", "mip_table": "Amon"},
         # "hfls": {"var_name": "hfls", "mip_table": "Amon"},
         # "hfss": {"var_name": "hfss", "mip_table": "Amon"},
         # # "lwcre": {"var_name": "lwcre", "mip_table": "Amon"},
@@ -87,6 +87,9 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         # "tas": {"var_name": "tas", "mip_table": "Amon"},
         # "tauu": {"var_name": "tauu", "mip_table": "Amon"},
         # "tauv": {"var_name": "tauu", "mip_table": "Amon"},
+    }
+    _VARS_RANGES = {
+        "clivi": {"global_min": 0.092597, "global_max": 0.0290555},
     }
 
     def _get_cfg(
@@ -217,7 +220,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         )
 
         # Additional options from child diagnostics
-        cfg = self._update_cfg(cfg, loader)
+        cfg = self._update_cfg(cfg, loader, cube.var_name)
 
         # Additional options from user
         cfg.update(additional_cfg)
@@ -272,6 +275,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         self,
         cfg: dict[str, Any],
         loader: Loader,
+        var_name: str
     ) -> dict[str, Any]:
         """Update diagnostic configuration settings (in-place)."""
         plot_kwargs = {
@@ -296,10 +300,14 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cfg["plots"]["timeseries"]["plot_kwargs"][
             "global_max"
         ] = plot_kwargs_minmax
-        cfg["plots"]["timeseries"]["hlines"] = [
-                    {'y': 0.092597, 'color': 'red', 'linewidth': 2},
-                    {"y": 0.0290555, "color": "red", "linewidth": 2},
-                ]
+        # print(loader)
+        # print(cfg)
+        # print(var_name)
+        # print(self._VARS_RANGES[var_name]["global_min"])
+        # cfg["plots"]["timeseries"]["hlines"] = [
+        #     {"y": self._VARS_RANGES[var_name]["global_min"], "color": "red", "linewidth": 2, "zorder": 1.0},
+        #     {"y": 0.0290555, "color": "red", "linewidth": 2, "zorder": 1.0},
+        # ],
         return cfg
 
     def _update_metadata(

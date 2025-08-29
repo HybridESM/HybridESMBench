@@ -55,8 +55,8 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                     },
                 },
                 "hlines": [
-                    {"y": 1.420688e+16, "color": "red", "linewidth": 2},
-                    {"y": 1.128716e+16, "color": "red", "linewidth": 2},
+                    {"y": 1.420688e+16, "color": "red", "linewidth": 2, "zorder": 1.0},
+                    {"y": 1.128716e+16, "color": "red", "linewidth": 2, "zorder": 1.0},
                 ],
             },
         },
