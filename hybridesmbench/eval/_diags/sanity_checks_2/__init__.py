@@ -60,8 +60,8 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                     },
                 },
                 "hlines": [
-                    {"y": 0.46, "color": "red", "linewidth": 2},
-                    {"y": 0., "color": "red", "linewidth": 2},
+                    {'y': 0.092597, 'color': 'red', 'linewidth': 2},
+                    {"y": 0.0290555, "color": "red", "linewidth": 2},
                 ],
             },
         },
@@ -282,9 +282,8 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         }
         plot_kwargs_minmax = {
             "color": "C0",
-            #"label": "{alias}",
             "label": None,
-            "linewidth": 1.25,
+            "linewidth": 0.75,
             "zorder": 2.3,
             "linestyle": "--",
         }
@@ -297,6 +296,10 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cfg["plots"]["timeseries"]["plot_kwargs"][
             "global_max"
         ] = plot_kwargs_minmax
+        cfg["plots"]["timeseries"]["hlines"] = [
+                    {'y': 0.092597, 'color': 'red', 'linewidth': 2},
+                    {"y": 0.0290555, "color": "red", "linewidth": 2},
+                ]
         return cfg
 
     def _update_metadata(
