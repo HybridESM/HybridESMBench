@@ -1,19 +1,19 @@
 """Run santiy checks diagnostic."""
 
+import copy
 import warnings
 from typing import Any
 
+import iris
+import yaml
 from esmvalcore.preprocessor import (
-    area_statistics,
     anomalies,
+    area_statistics,
     climate_statistics,
     convert_units,
     regrid,
 )
 from esmvaltool.diag_scripts.monitor.multi_datasets import MultiDatasets
-import copy
-import iris
-import yaml
 from iris import Constraint
 from iris.cube import Cube
 from loguru import logger
@@ -39,7 +39,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
             "timeseries": {
                 "pyplot_kwargs": {
                     "title": "{title}",
-                }, 
+                },
                 "plot_kwargs": {
                     "default": {
                         "color": "red",
@@ -174,7 +174,6 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
             metadata_dict[str(path_max)] = metadata_max
             file_idx += 1
 
-
         # Other input data
         for metadata_file in self._data_dir.rglob("metadata.yml"):
             with metadata_file.open("r", encoding="utf-8") as file:
@@ -183,7 +182,9 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                 # update title in metadata
                 for mfile in metadata.keys():
                     var = metadata[mfile]["short_name"]
-                    metadata[mfile] = self._update_metadata(var, loader, metadata[mfile])
+                    metadata[mfile] = self._update_metadata(
+                        var, loader, metadata[mfile]
+                    )
 
             for filename in metadata:
                 filepath = str(self._data_dir / filename)
@@ -216,7 +217,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cfg.update(additional_cfg)
 
         return cfg
-    
+
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
@@ -224,9 +225,9 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cube = area_statistics(cube, "mean")
         if cube.var_name == "pr":
             cube = convert_units(cube, "mm day-1")
-        
+
         return cube
-    
+
     def _preprocess_min(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
@@ -234,9 +235,9 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cube = area_statistics(cube, "min")
         if cube.var_name == "pr":
             cube = convert_units(cube, "mm day-1")
-        
+
         return cube
-    
+
     def _preprocess_max(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
@@ -244,7 +245,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cube = area_statistics(cube, "max")
         if cube.var_name == "pr":
             cube = convert_units(cube, "mm day-1")
-        
+
         return cube
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
@@ -284,7 +285,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         plot_kwargs_ranges = {
             "color": "red",
             "label": None,
-            "linewidth": 2.,
+            "linewidth": 2.0,
             "zorder": 1.0,
         }
         cfg["plots"]["timeseries"]["plot_kwargs"][
@@ -302,10 +303,11 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cfg["plots"]["timeseries"]["plot_kwargs"][
             "MultiModelMax"
         ] = plot_kwargs_ranges
-        cfg["plots"]["timeseries"]["pyplot_kwargs"][
-            "xlim" 
-        ] = [start_date, end_date]
-        
+        cfg["plots"]["timeseries"]["pyplot_kwargs"]["xlim"] = [
+            start_date,
+            end_date,
+        ]
+
         return cfg
 
     def _update_metadata(
