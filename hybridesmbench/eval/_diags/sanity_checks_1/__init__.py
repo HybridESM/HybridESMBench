@@ -47,10 +47,6 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                         "zorder": 1.0,
                     },
                 },
-                # "hlines": [
-                #     {"y": 1.420688e+16, "color": "red", "linewidth": 2, "zorder": 1.0},
-                #     {"y": 1.128716e+16, "color": "red", "linewidth": 2, "zorder": 1.0},
-                # ],
             },
         },
     }
@@ -188,12 +184,8 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
     def _preprocess_anom(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
-        #cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
-        #if cube.var_name == "ps":
-        #    cube = convert_units(cube, "kg m-2")
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = area_statistics(cube, "sum")
-        #cube = annual_statistics(cube, "mean")
         cube = anomalies(cube, "full")
         
         return cube
@@ -201,15 +193,10 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
     def _preprocess_sum(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
-        #cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
         if cube.var_name == "ps":
            cube = convert_units(cube, "kg m-2")
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = area_statistics(cube, "sum")
-        #cube = annual_statistics(cube, "mean")
-        #cube = anomalies(cube, "full")
-        #if cube.var_name == "pr":
-        #    cube = convert_units(cube, "mm day-1")
         
         return cube
 
