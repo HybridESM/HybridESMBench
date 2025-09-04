@@ -102,6 +102,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         logger.debug(
             f"Using variables {list(self._VARS)} for diagnostic '{self.name}'"
         )
+        var_list = []
         for var_id, var_dict in self._VARS.items():
             try:
                 cube = loader.load_variable(**var_dict)
@@ -109,6 +110,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                 time_coord = cube.coord("time")
                 start_date = time_coord.cell(0).point
                 end_date = time_coord.cell(-1).point
+                var_list.append(var_id)
             except Exception as exc:
                 msg = (
                     f"Failed to extract variable '{var_id}' from {loader.path}"
@@ -179,12 +181,19 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
             with metadata_file.open("r", encoding="utf-8") as file:
                 metadata = yaml.safe_load(file)
                 logger.debug(f"Loaded metadata file {metadata_file}")
-                # update title in metadata
-                for mfile in metadata.keys():
-                    var = metadata[mfile]["short_name"]
+
+            # update title in metadata or remove if no model data available
+            data_to_remove = []
+            for mfile in metadata.keys():
+                var = metadata[mfile]["short_name"]
+                if var in var_list:
                     metadata[mfile] = self._update_metadata(
                         var, loader, metadata[mfile]
                     )
+                else:
+                    data_to_remove.append(mfile)          
+            for data in data_to_remove:
+                del metadata[data]
 
             for filename in metadata:
                 filepath = str(self._data_dir / filename)
