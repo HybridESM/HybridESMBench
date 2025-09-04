@@ -30,12 +30,6 @@ from hybridesmbench.eval._loaders import Loader
 class SanityChecksDiagnostic(ESMValToolDiagnostic):
     """Run sanity checks diagnostic."""
 
-    # _OBS_PLOT_KWARGS = {
-    #     "color": "black",
-    #     "label": "{dataset}",
-    #     "linewidth": 1.0,
-    #     "zorder": 2.4,
-    # }
     _DIAG_CFG = {
         "facet_used_for_labels": "alias",
         "group_variables_by": "variable_group",
@@ -43,11 +37,6 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         "plot_folder": "{plot_dir}",
         "plots": {
             "timeseries": {
-                # "legend_kwargs": {
-                #     "loc": "upper center",
-                #     "bbox_to_anchor": [0.5, -0.2],
-                #     "borderaxespad": 0.0,
-                # },
                 "pyplot_kwargs": {
                     "title": "{title}",
                 }, 
@@ -59,10 +48,6 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                         "zorder": 1.0,
                     },
                 },
-                # "hlines": [
-                #     # {'y': 58.7, 'color': 'red', 'linewidth': 2, "zorder": 1.0},
-                #     # {"y": 74.9, "color": "red", "linewidth": 2, "zorder": 2.6},
-                # ],
             },
         },
     }
@@ -225,7 +210,6 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         )
 
         # Additional options from child diagnostics
-        #cfg = self._update_cfg(cfg, loader, cube.var_name)
         cfg = self._update_cfg(cfg, loader, start_date, end_date)
 
         # Additional options from user
