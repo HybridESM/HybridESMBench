@@ -1,4 +1,4 @@
-"""Run santiy checks diagnostic."""
+"""Run sanity checks diagnostic."""
 
 import warnings
 from typing import Any

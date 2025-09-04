@@ -1,4 +1,4 @@
-"""Run santiy checks diagnostic."""
+"""Run sanity checks diagnostic for global means."""
 
 import copy
 import warnings
