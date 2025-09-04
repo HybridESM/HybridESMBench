@@ -260,7 +260,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
             var_id, metadata["short_name"], metadata["long_name"]
         )
         if var_id == "ps":
-            metadata["title"] = f"Anomaly of Global Air Mass"
+            metadata["title"] = "Anomaly of Global Air Mass"
         else:
             metadata["title"] = f"Global Sum of {better_long_name}"
         return metadata
