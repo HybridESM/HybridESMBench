@@ -191,7 +191,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                         var, loader, metadata[mfile]
                     )
                 else:
-                    data_to_remove.append(mfile)          
+                    data_to_remove.append(mfile)
             for data in data_to_remove:
                 del metadata[data]
 
