@@ -8,7 +8,6 @@ import yaml
 from esmvalcore.preprocessor import (
     anomalies,
     area_statistics,
-    climate_statistics,
     convert_units,
     regrid,
 )
@@ -18,12 +17,14 @@ from iris.cube import Cube
 from loguru import logger
 
 from hybridesmbench._utils import (
-    extract_final_20_years,
-    extract_vertical_level,
     get_timerange,
 )
 from hybridesmbench.eval._diags import ESMValToolDiagnostic
 from hybridesmbench.eval._loaders import Loader
+from hybridesmbench.exceptions import (
+    HybridESMBenchException,
+    HybridESMBenchWarning,
+)
 
 
 class SanityChecksDiagnostic(ESMValToolDiagnostic):
