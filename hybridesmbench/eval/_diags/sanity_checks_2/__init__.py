@@ -53,43 +53,40 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                 }, 
                 "plot_kwargs": {
                     "default": {
-                        "color": "lightgray",
+                        "color": "red",
                         "label": None,
-                        "linewidth": 0.75,
+                        "linewidth": 2.0,
                         "zorder": 1.0,
                     },
                 },
-                "hlines": [
-                    {'y': 58.7, 'color': 'red', 'linewidth': 2, "zorder": 1.0},
-                    {"y": 74.9, "color": "red", "linewidth": 2, "zorder": 2.6},
-                ],
+                # "hlines": [
+                #     # {'y': 58.7, 'color': 'red', 'linewidth': 2, "zorder": 1.0},
+                #     # {"y": 74.9, "color": "red", "linewidth": 2, "zorder": 2.6},
+                # ],
             },
         },
     }
     _VARS = {
         # "asr": {"var_name": "asr", "mip_table": "Amon"},
-        #"clivi": {"var_name": "clivi", "mip_table": "Amon"},
+        "clivi": {"var_name": "clivi", "mip_table": "Amon"},
         "clt": {"var_name": "clt", "mip_table": "Amon"},
-        # "hfls": {"var_name": "hfls", "mip_table": "Amon"},
-        # "hfss": {"var_name": "hfss", "mip_table": "Amon"},
-        # # "lwcre": {"var_name": "lwcre", "mip_table": "Amon"},
-        # # "lwp": {"var_name": "lwp", "mip_table": "Amon"},
-        # # "netcre": {"var_name": "netcre", "mip_table": "Amon"},
-        # "pr": {"var_name": "pr", "mip_table": "Amon"},
-        # "prc": {"var_name": "pr", "mip_table": "Amon"},
-        # "prw": {"var_name": "prw", "mip_table": "Amon"},
+        "hfls": {"var_name": "hfls", "mip_table": "Amon"},
+        "hfss": {"var_name": "hfss", "mip_table": "Amon"},
+        # "lwcre": {"var_name": "lwcre", "mip_table": "Amon"},
+        # "lwp": {"var_name": "lwp", "mip_table": "Amon"},
+        # "netcre": {"var_name": "netcre", "mip_table": "Amon"},
+        "pr": {"var_name": "pr", "mip_table": "Amon"},
+        # "prc": {"var_name": "prc", "mip_table": "Amon"},
+        "prw": {"var_name": "prw", "mip_table": "Amon"},
         # "rlds": {"var_name": "rlds", "mip_table": "Amon"},
-        # "rlut": {"var_name": "rlut", "mip_table": "Amon"},
-        # "rsds": {"var_name": "rlds", "mip_table": "Amon"},
-        # "rsut": {"var_name": "rsut", "mip_table": "Amon"},
-        # # "rtnt": {"var_name": "rtnt", "mip_table": "Amon"},
-        # # "swcre": {"var_name": "swcre", "mip_table": "Amon"},
-        # "tas": {"var_name": "tas", "mip_table": "Amon"},
-        # "tauu": {"var_name": "tauu", "mip_table": "Amon"},
-        # "tauv": {"var_name": "tauu", "mip_table": "Amon"},
-    }
-    _VARS_RANGES = {
-        "clivi": {"global_min": 0.092597, "global_max": 0.0290555},
+        "rlut": {"var_name": "rlut", "mip_table": "Amon"},
+        # "rsds": {"var_name": "rsds", "mip_table": "Amon"},
+        "rsut": {"var_name": "rsut", "mip_table": "Amon"},
+        # "rtnt": {"var_name": "rtnt", "mip_table": "Amon"},
+        # "swcre": {"var_name": "swcre", "mip_table": "Amon"},
+        "tas": {"var_name": "tas", "mip_table": "Amon"},
+        "tauu": {"var_name": "tauu", "mip_table": "Amon"},
+        # "tauv": {"var_name": "tauv", "mip_table": "Amon"},
     }
 
     def _get_cfg(
@@ -123,6 +120,10 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         for var_id, var_dict in self._VARS.items():
             try:
                 cube = loader.load_variable(**var_dict)
+                # get time range for the plot
+                time_coord = cube.coord("time")
+                start_date = time_coord.cell(0).point
+                end_date = time_coord.cell(-1).point
             except Exception as exc:
                 msg = (
                     f"Failed to extract variable '{var_id}' from {loader.path}"
@@ -194,6 +195,10 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
             with metadata_file.open("r", encoding="utf-8") as file:
                 metadata = yaml.safe_load(file)
                 logger.debug(f"Loaded metadata file {metadata_file}")
+                # update title in metadata
+                for mfile in metadata.keys():
+                    var = metadata[mfile]["short_name"]
+                    metadata[mfile] = self._update_metadata(var, loader, metadata[mfile])
 
             for filename in metadata:
                 filepath = str(self._data_dir / filename)
@@ -220,7 +225,8 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         )
 
         # Additional options from child diagnostics
-        cfg = self._update_cfg(cfg, loader, cube.var_name)
+        #cfg = self._update_cfg(cfg, loader, cube.var_name)
+        cfg = self._update_cfg(cfg, loader, start_date, end_date)
 
         # Additional options from user
         cfg.update(additional_cfg)
@@ -268,14 +274,14 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
                 category=UserWarning,
                 module="iris",
             )
-            print(cfg)
             MultiDatasets(cfg).compute()
 
     def _update_cfg(
         self,
         cfg: dict[str, Any],
         loader: Loader,
-        var_name: str
+        start_date,
+        end_date,
     ) -> dict[str, Any]:
         """Update diagnostic configuration settings (in-place)."""
         plot_kwargs = {
@@ -291,6 +297,12 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
             "zorder": 2.3,
             "linestyle": "--",
         }
+        plot_kwargs_ranges = {
+            "color": "red",
+            "label": None,
+            "linewidth": 2.,
+            "zorder": 1.0,
+        }
         cfg["plots"]["timeseries"]["plot_kwargs"][
             loader.model_name
         ] = plot_kwargs
@@ -300,14 +312,16 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cfg["plots"]["timeseries"]["plot_kwargs"][
             "global_max"
         ] = plot_kwargs_minmax
-        # print(loader)
-        # print(cfg)
-        # print(var_name)
-        # print(self._VARS_RANGES[var_name]["global_min"])
-        # cfg["plots"]["timeseries"]["hlines"] = [
-        #     {"y": self._VARS_RANGES[var_name]["global_min"], "color": "red", "linewidth": 2, "zorder": 1.0},
-        #     {"y": 0.0290555, "color": "red", "linewidth": 2, "zorder": 1.0},
-        # ],
+        cfg["plots"]["timeseries"]["plot_kwargs"][
+            "MultiModelMin"
+        ] = plot_kwargs_ranges
+        cfg["plots"]["timeseries"]["plot_kwargs"][
+            "MultiModelMax"
+        ] = plot_kwargs_ranges
+        cfg["plots"]["timeseries"]["pyplot_kwargs"][
+            "xlim" 
+        ] = [start_date, end_date]
+        
         return cfg
 
     def _update_metadata(

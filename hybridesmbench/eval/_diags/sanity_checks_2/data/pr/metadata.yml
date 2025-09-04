@@ -1,0 +1,38 @@
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/pr/MultiModelMin_Amon_pr_1979-2022.nc
+: alias: MultiModelMin
+  dataset: MultiModelMin
+  diagnostic: pr
+  end_year: 2022
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/pr/MultiModelMin_Amon_pr_1979-2022.nc
+  frequency: mon
+  long_name: Precipitation
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMin
+  preprocessor: pp_min_pr
+  short_name: pr
+  standard_name: lwe_precipitation_rate
+  start_year: 1979
+  timerange: 1979/2022
+  units: mm day-1
+  variable_group: pr
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/pr/MultiModelMax_Amon_pr_1979-2022.nc
+: alias: MultiModelMax
+  dataset: MultiModelMax
+  diagnostic: pr
+  end_year: 2022
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/pr/MultiModelMax_Amon_pr_1979-2022.nc
+  frequency: mon
+  long_name: Precipitation
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMax
+  preprocessor: pp_max_pr
+  short_name: pr
+  standard_name: lwe_precipitation_rate
+  start_year: 1979
+  timerange: 1979/2022
+  units: mm day-1
+  variable_group: pr
