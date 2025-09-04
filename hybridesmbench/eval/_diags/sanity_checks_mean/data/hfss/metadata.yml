@@ -1,9 +1,9 @@
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/hfss/OBS6_MERRA2_MultiModelMin_Amon_hfss_1980-2021.nc
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/hfss/OBS6_MERRA2_MultiModelMin_Amon_hfss_1980-2021.nc
 : alias: MERRA2
   dataset: MERRA2
   diagnostic: hfss
   end_year: 2021
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/hfss/OBS6_MERRA2_MultiModelMin_Amon_hfss_1980-2021.nc
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/hfss/OBS6_MERRA2_MultiModelMin_Amon_hfss_1980-2021.nc
   frequency: mon
   long_name: Surface Upward Sensible Heat Flux
   mip: Amon
@@ -22,12 +22,12 @@
   units: W m-2
   variable_group: hfss
   version: 5.12.4
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/hfss/OBS6_MERRA2_MultiModelMax_Amon_hfss_1980-2021.nc
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/hfss/OBS6_MERRA2_MultiModelMax_Amon_hfss_1980-2021.nc
 : alias: MERRA2
   dataset: MERRA2
   diagnostic: hfss
   end_year: 2021
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/hfss/OBS6_MERRA2_MultiModelMax_Amon_hfss_1980-2021.nc
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/hfss/OBS6_MERRA2_MultiModelMax_Amon_hfss_1980-2021.nc
   frequency: mon
   long_name: Surface Upward Sensible Heat Flux
   mip: Amon

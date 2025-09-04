@@ -1,9 +1,9 @@
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/pr/MultiModelMin_Amon_pr_1979-2022.nc
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/pr/MultiModelMin_Amon_pr_1979-2022.nc
 : alias: MultiModelMin
   dataset: MultiModelMin
   diagnostic: pr
   end_year: 2022
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/pr/MultiModelMin_Amon_pr_1979-2022.nc
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/pr/MultiModelMin_Amon_pr_1979-2022.nc
   frequency: mon
   long_name: Precipitation
   mip: Amon
@@ -17,12 +17,12 @@
   timerange: 1979/2022
   units: mm day-1
   variable_group: pr
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/pr/MultiModelMax_Amon_pr_1979-2022.nc
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/pr/MultiModelMax_Amon_pr_1979-2022.nc
 : alias: MultiModelMax
   dataset: MultiModelMax
   diagnostic: pr
   end_year: 2022
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/pr/MultiModelMax_Amon_pr_1979-2022.nc
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/pr/MultiModelMax_Amon_pr_1979-2022.nc
   frequency: mon
   long_name: Precipitation
   mip: Amon

@@ -1,9 +1,9 @@
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/clt/MultiModelMax_Amon_clt_1982-2018.nc
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/clt/MultiModelMax_Amon_clt_1982-2018.nc
 : alias: MultiModelMax
   dataset: MultiModelMax
   diagnostic: clt
   end_year: 2018
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/clt/MultiModelMax_Amon_clt_1982-2018.nc
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/clt/MultiModelMax_Amon_clt_1982-2018.nc
   frequency: mon
   long_name: Total Cloud Cover Percentage
   mip: Amon
@@ -17,12 +17,12 @@
   timerange: 1982/2018
   units: '%'
   variable_group: clt
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/clt/MultiModelMin_Amon_clt_1982-2018.nc
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/clt/MultiModelMin_Amon_clt_1982-2018.nc
 : alias: MultiModelMin
   dataset: MultiModelMin
   diagnostic: clt
   end_year: 2018
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_2/data/clt/MultiModelMin_Amon_clt_1982-2018.nc
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/clt/MultiModelMin_Amon_clt_1982-2018.nc
   frequency: mon
   long_name: Total Cloud Cover Percentage
   mip: Amon

@@ -6,8 +6,8 @@ DiagnosticName = Literal[
     "maps",
     "portrait_plot",
     "profiles",
-    "sanity_checks_1",
-    "sanity_checks_2",
+    "sanity_checks_sum",
+    "sanity_checks_mean",
     "timeseries",
 ]
 
