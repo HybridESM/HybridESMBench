@@ -6,8 +6,8 @@ from typing import Any
 import iris
 import yaml
 from esmvalcore.preprocessor import (
-    area_statistics,
     anomalies,
+    area_statistics,
     climate_statistics,
     convert_units,
     regrid,
@@ -38,7 +38,7 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
             "timeseries": {
                 "pyplot_kwargs": {
                     "title": "{title}",
-                }, 
+                },
                 "plot_kwargs": {
                     "default": {
                         "color": "red",
@@ -180,24 +180,24 @@ class SanityChecksDiagnostic(ESMValToolDiagnostic):
         cfg.update(additional_cfg)
 
         return cfg
-    
+
     def _preprocess_anom(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = area_statistics(cube, "sum")
         cube = anomalies(cube, "full")
-        
+
         return cube
-    
+
     def _preprocess_sum(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
         if cube.var_name == "ps":
-           cube = convert_units(cube, "kg m-2")
+            cube = convert_units(cube, "kg m-2")
         cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
         cube = area_statistics(cube, "sum")
-        
+
         return cube
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
