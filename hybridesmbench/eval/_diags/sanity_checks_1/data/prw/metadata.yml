@@ -1,0 +1,40 @@
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_1/data/prw/MultiModelMax_Amon_prw_1980-2021.nc
+: alias: MultiModelMax
+  dataset: MultiModelMax
+  diagnostic: prw_global
+  end_year: 2021
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_1/data/prw/MultiModelMax_Amon_prw_1980-2021.nc
+  frequency: mon
+  long_name: Water Vapor Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMax
+  preprocessor: pp_max_sum
+  short_name: prw
+  standard_name: atmosphere_mass_content_of_water_vapor
+  start_year: 1980
+  tier: 3
+  timerange: 1980/2021
+  units: kg
+  variable_group: prw
+? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_1/data/prw/MultiModelMin_Amon_prw_1980-2021.nc
+: alias: MultiModelMin
+  dataset: MultiModelMin
+  diagnostic: prw_global
+  end_year: 2021
+  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_1/data/prw/MultiModelMin_Amon_prw_1980-2021.nc
+  frequency: mon
+  long_name: Water Vapor Path
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMin
+  preprocessor: pp_min_sum
+  short_name: prw
+  standard_name: atmosphere_mass_content_of_water_vapor
+  start_year: 1980
+  tier: 3
+  timerange: 1980/2021
+  units: kg
+  variable_group: prw
