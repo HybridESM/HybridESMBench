@@ -27,7 +27,7 @@ from hybridesmbench.exceptions import (
 )
 
 
-class SanityChecksDiagnostic(ESMValToolDiagnostic):
+class SanityChecksSumDiagnostic(ESMValToolDiagnostic):
     """Run sanity checks diagnostic."""
 
     _DIAG_CFG = {
