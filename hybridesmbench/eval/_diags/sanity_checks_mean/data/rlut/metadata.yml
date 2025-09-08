@@ -1,9 +1,9 @@
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/rlut/MultiModelMin_Amon_rlut_1982-2022.nc
+? rlut/MultiModelMin_Amon_rlut_1982-2022.nc
 : alias: MultiModelMin
   dataset: MultiModelMin
   diagnostic: rlut
   end_year: 2022
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/rlut/MultiModelMin_Amon_rlut_1982-2022.nc
+  filename: rlut/MultiModelMin_Amon_rlut_1982-2022.nc
   frequency: mon
   long_name: TOA Outgoing Longwave Radiation
   mip: Amon
@@ -17,12 +17,12 @@
   timerange: 1982/2022
   units: W m-2
   variable_group: rlut
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/rlut/MultiModelMax_Amon_rlut_1982-2022.nc
+? rlut/MultiModelMax_Amon_rlut_1982-2022.nc
 : alias: MultiModelMax
   dataset: MultiModelMax
   diagnostic: rlut
   end_year: 2022
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/rlut/MultiModelMax_Amon_rlut_1982-2022.nc
+  filename: rlut/MultiModelMax_Amon_rlut_1982-2022.nc
   frequency: mon
   long_name: TOA Outgoing Longwave Radiation
   mip: Amon

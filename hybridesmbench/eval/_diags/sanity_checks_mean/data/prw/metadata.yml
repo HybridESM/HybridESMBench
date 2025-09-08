@@ -1,9 +1,9 @@
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/prw/MultiModelMax_Amon_prw_1980-2021.nc
+? prw/MultiModelMax_Amon_prw_1980-2021.nc
 : alias: MultiModelMax
   dataset: MultiModelMax
   diagnostic: prw
   end_year: 2021
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/prw/MultiModelMax_Amon_prw_1980-2021.nc
+  filename: prw/MultiModelMax_Amon_prw_1980-2021.nc
   frequency: mon
   long_name: Water Vapor Path
   mip: Amon
@@ -18,12 +18,12 @@
   timerange: 1980/2021
   units: kg m-2
   variable_group: prw
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/prw/MultiModelMin_Amon_prw_1980-2021.nc
+? prw/MultiModelMin_Amon_prw_1980-2021.nc
 : alias: MultiModelMin
   dataset: MultiModelMin
   diagnostic: prw
   end_year: 2021
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/prw/MultiModelMin_Amon_prw_1980-2021.nc
+  filename: prw/MultiModelMin_Amon_prw_1980-2021.nc
   frequency: mon
   long_name: Water Vapor Path
   mip: Amon

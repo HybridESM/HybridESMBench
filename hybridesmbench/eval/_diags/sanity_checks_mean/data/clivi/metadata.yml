@@ -1,9 +1,9 @@
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/clivi/MultiModelMax_Amon_clivi_1982-2018.nc
+? clivi/MultiModelMax_Amon_clivi_1982-2018.nc
 : alias: MultiModelMax
   dataset: MultiModelMax
   diagnostic: clivi
   end_year: 2018
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/clivi/MultiModelMax_Amon_clivi_1982-2018.nc
+  filename: clivi/MultiModelMax_Amon_clivi_1982-2018.nc
   frequency: mon
   long_name: Ice Water Path
   mip: Amon
@@ -18,12 +18,12 @@
   type: sat
   units: kg m-2
   variable_group: clivi
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/clivi/MultiModelMin_Amon_clivi_1982-2018.nc
+? clivi/MultiModelMin_Amon_clivi_1982-2018.nc
 : alias: MultiModelMin
   dataset: MultiModelMin
   diagnostic: clivi
   end_year: 2018
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/clivi/MultiModelMin_Amon_clivi_1982-2018.nc
+  filename: clivi/MultiModelMin_Amon_clivi_1982-2018.nc
   frequency: mon
   long_name: Ice Water Path
   mip: Amon

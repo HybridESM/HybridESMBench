@@ -1,9 +1,9 @@
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/rsut/MultiModelMax_Amon_rsut_1982-2022.nc
+? rsut/MultiModelMax_Amon_rsut_1982-2022.nc
 : alias: MultiModelMax
   dataset: MultiModelMax
   diagnostic: rsut
   end_year: 2022
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/rsut/MultiModelMax_Amon_rsut_1982-2022.nc
+  filename: rsut/MultiModelMax_Amon_rsut_1982-2022.nc
   frequency: mon
   long_name: TOA Outgoing Shortwave Radiation
   mip: Amon
@@ -19,12 +19,12 @@
   type: sat
   units: W m-2
   variable_group: rsut
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/rsut/MultiModelMin_Amon_rsut_1982-2022.nc
+? rsut/MultiModelMin_Amon_rsut_1982-2022.nc
 : alias: MultiModelMin
   dataset: MultiModelMin
   diagnostic: rsut
   end_year: 2022
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/rsut/MultiModelMin_Amon_rsut_1982-2022.nc
+  filename: rsut/MultiModelMin_Amon_rsut_1982-2022.nc
   frequency: mon
   long_name: TOA Outgoing Shortwave Radiation
   mip: Amon

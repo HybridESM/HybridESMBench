@@ -1,9 +1,9 @@
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/tas/MultiModelMax_Amon_tas_1980-2021.nc
+? tas/MultiModelMax_Amon_tas_1980-2021.nc
 : alias: MultiModelMax
   dataset: MultiModelMax
   diagnostic: tas
   end_year: 2021
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/tas/MultiModelMax_Amon_tas_1980-2021.nc
+  filename: tas/MultiModelMax_Amon_tas_1980-2021.nc
   frequency: mon
   long_name: Near-Surface Air Temperature
   mip: Amon
@@ -17,12 +17,12 @@
   timerange: 1980/2021
   units: K
   variable_group: tas
-? /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/tas/MultiModelMin_Amon_tas_1980-2021.nc
+? tas/MultiModelMin_Amon_tas_1980-2021.nc
 : alias: MultiModelMin
   dataset: MultiModelMin
   diagnostic: tas
   end_year: 2021
-  filename: /home/b/b309059/HybridESMBench/hybridesmbench/eval/_diags/sanity_checks_mean/data/tas/MultiModelMin_Amon_tas_1980-2021.nc
+  filename: tas/MultiModelMin_Amon_tas_1980-2021.nc
   frequency: mon
   long_name: Near-Surface Air Temperature
   mip: Amon
