@@ -1,0 +1,42 @@
+? tauu/OBS6_MultiModelMin_Amon_tauu_1871-2021.nc
+: alias: MultiModelMin
+  dataset: MultiModelMin
+  diagnostic: tauu
+  end_year: 2021
+  filename: tauu/OBS6_MultiModelMin_Amon_tauu_1871-2021.nc
+  frequency: mon
+  long_name: Surface Downward Eastward Wind Stress
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMin
+  preprocessor: pp_min
+  project: OBS6
+  short_name: tauu
+  standard_name: surface_downward_eastward_stress
+  start_year: 1871
+  timerange: 1871/2021
+  type: reanaly
+  units: Pa
+  variable_group: tauu
+? tauu/OBS6_MultiModelMax_Amon_tauu_1871-2021.nc
+: alias: MultiModelMax
+  dataset: MultiModelMax
+  diagnostic: tauu
+  end_year: 2021
+  filename: tauu/OBS6_MultiModelMax_Amon_tauu_1871-2021.nc
+  frequency: mon
+  long_name: Surface Downward Eastward Wind Stress
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMax
+  preprocessor: pp_max
+  project: OBS6
+  short_name: tauu
+  standard_name: surface_downward_eastward_stress
+  start_year: 1871
+  timerange: 1871/2021
+  type: reanaly
+  units: Pa
+  variable_group: tauu

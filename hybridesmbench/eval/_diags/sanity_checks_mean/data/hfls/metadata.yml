@@ -1,0 +1,48 @@
+? hfls/OBS6_MERRA2_MultiModelMin_Amon_hfls_1980-2021.nc
+: alias: MERRA2
+  dataset: MERRA2
+  diagnostic: hfls
+  end_year: 2021
+  filename: hfls/OBS6_MERRA2_MultiModelMin_Amon_hfls_1980-2021.nc
+  frequency: mon
+  long_name: Surface Upward Latent Heat Flux
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMin
+  preprocessor: pp_min
+  project: OBS6
+  recipe_dataset_index: 0
+  short_name: hfls
+  standard_name: surface_upward_latent_heat_flux
+  start_year: 1980
+  tier: 3
+  timerange: 1980/2021
+  type: reanaly
+  units: W m-2
+  variable_group: hfls
+  version: 5.12.4
+? hfls/OBS6_MERRA2_MultiModelMax_Amon_hfls_1980-2021.nc
+: alias: MERRA2
+  dataset: MERRA2
+  diagnostic: hfls
+  end_year: 2021
+  filename: hfls/OBS6_MERRA2_MultiModelMax_Amon_hfls_1980-2021.nc
+  frequency: mon
+  long_name: Surface Upward Latent Heat Flux
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMax
+  preprocessor: pp_max
+  project: OBS6
+  recipe_dataset_index: 0
+  short_name: hfls
+  standard_name: surface_upward_latent_heat_flux
+  start_year: 1980
+  tier: 3
+  timerange: 1980/2021
+  type: reanaly
+  units: W m-2
+  variable_group: hfls
+  version: 5.12.4

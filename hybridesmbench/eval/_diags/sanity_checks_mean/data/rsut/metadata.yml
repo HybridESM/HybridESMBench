@@ -1,0 +1,42 @@
+? rsut/MultiModelMax_Amon_rsut_1982-2022.nc
+: alias: MultiModelMax
+  dataset: MultiModelMax
+  diagnostic: rsut
+  end_year: 2022
+  filename: rsut/MultiModelMax_Amon_rsut_1982-2022.nc
+  frequency: mon
+  long_name: TOA Outgoing Shortwave Radiation
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMax
+  preprocessor: pp_max
+  short_name: rsut
+  standard_name: toa_outgoing_shortwave_flux
+  start_year: 1982
+  tier: 2
+  timerange: 1982/2022
+  type: sat
+  units: W m-2
+  variable_group: rsut
+? rsut/MultiModelMin_Amon_rsut_1982-2022.nc
+: alias: MultiModelMin
+  dataset: MultiModelMin
+  diagnostic: rsut
+  end_year: 2022
+  filename: rsut/MultiModelMin_Amon_rsut_1982-2022.nc
+  frequency: mon
+  long_name: TOA Outgoing Shortwave Radiation
+  mip: Amon
+  modeling_realm:
+  - atmos
+  multi_model_statistics: MultiModelMin
+  preprocessor: pp_min
+  short_name: rsut
+  standard_name: toa_outgoing_shortwave_flux
+  start_year: 1982
+  tier: 2
+  timerange: 1982/2022
+  type: sat
+  units: W m-2
+  variable_group: rsut
