@@ -238,3 +238,97 @@ class BaseICONLoader(Loader):
         )
 
         return cube
+
+
+class BaseE3SMLoader(Loader):
+    """Load E3SM hybrid Earth system model output (base class).
+
+    Parameters
+    ----------
+    path:
+        Path to E3SM output.
+
+    """
+
+    _PROJECT = "E3SM"
+    _VAR_LIST: dict[str, str]
+
+    def __init__(self, path: Path, model_name: str | None = None) -> None:
+        """Initialize class instance."""
+        super().__init__(path, model_name=model_name)
+
+        # E3SM model name
+        if model_name is None:
+            model_name = f"{self._DATASET} ({self.exp})"
+        self._model_name = model_name
+
+        # # ICON grid file
+        # grid_file_pattern = "icon_grid_*.nc"
+        # grid_files = list(self.path.glob(grid_file_pattern))
+        # if not grid_files:
+        #     msg = (
+        #         f"No ICON grid file available (searched for "
+        #         f"{self.path / grid_file_pattern})"
+        #     )
+        #     raise HybridESMBenchException(msg)
+        # if len(grid_files) > 1:
+        #     msg = (
+        #         f"Multiple ICON grid files available (searched for "
+        #         f"{self.path / grid_file_pattern}), choosing first one: "
+        #         f"{grid_files[0]}"
+        #     )
+        #     warnings.warn(msg, HybridESMBenchWarning, stacklevel=2)
+        # self._grid_file = grid_files[0]
+
+    # @property
+    # def grid_file(self) -> Path:
+    #     """Get path to ICON grid file."""
+    #     return self._grid_file
+
+    @functools.lru_cache
+    def _load_single_variable(self, var_name: str, mip_table: str) -> Cube:
+        """Load single variable."""
+        msg = (
+            f"Invalid variable '{var_name}' for model type '{self.model_type}'"
+        )
+        assert var_name in self._VAR_LIST, msg
+        raw_name = self._VAR_LIST[var_name]
+
+        # Load xarray.Dataset and convert to iris.cube.CubeList
+        file_pattern = str(self.path / f"{self.exp}*.nc")
+        logger.debug(f"Loading files {file_pattern}")
+        xr_ds = self._load_files(file_pattern).copy()
+        cubes = cubes_from_xarray(xr_ds)
+
+        # # Remove lat/lon information from cubes (we will use the ones given by
+        # # the grid file which is much safer)
+        # for cube in cubes:
+        #     for coord_name in ("latitude", "longitude"):
+        #         if cube.coords(coord_name):
+        #             cube.remove_coord(coord_name)
+
+        # Run ESMValCore fixes on the data to "CMORize" it
+        cmor_var_info = get_var_info(self._PROJECT, mip_table, var_name)
+        # extra_facets: dict[str, Any] = {
+        #     "horizontal_grid": self.grid_file,
+        # }
+        cube = fix_metadata(
+            cubes,
+            short_name=var_name,
+            project=self._PROJECT,
+            dataset=self._DATASET,
+            mip=mip_table,
+            frequency=cmor_var_info.frequency,
+            # **extra_facets,
+        )[0]
+        cube = fix_data(
+            cube,
+            short_name=var_name,
+            project=self._PROJECT,
+            dataset=self._DATASET,
+            mip=mip_table,
+            frequency=cmor_var_info.frequency,
+            # **extra_facets,
+        )
+
+        return cube
