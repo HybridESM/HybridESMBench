@@ -4,12 +4,13 @@ import inspect
 from typing import Any
 
 from hybridesmbench._utils import get_classes
-from hybridesmbench.eval._loaders.base import BaseICONLoader, Loader
+from hybridesmbench.eval._loaders.base import BaseICONLoader, BaseClimSimLoader, Loader
 from hybridesmbench.typing import ModelType
 
 __all__ = [
     "LOADERS",
     "BaseICONLoader",
+    "BaseClimSimLoader",
     "Loader",
 ]
 
@@ -21,6 +22,7 @@ def _is_loader(obj: Any):
         and issubclass(obj, Loader)
         and obj is not Loader
         and obj is not BaseICONLoader
+        and obj is not BaseClimSimLoader
     )
 
 

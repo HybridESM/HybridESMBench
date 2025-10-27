@@ -7,6 +7,9 @@ from pathlib import Path
 from typing import Any
 
 import xarray as xr
+import numpy as np
+import cf_units
+#from datetime import datetime
 from esmvalcore.cmor.fix import fix_data, fix_metadata
 from esmvalcore.cmor.table import get_var_info
 from iris.cube import Cube
@@ -101,7 +104,13 @@ class Loader:
         logger.debug(
             f"Loading variable '{var_name}' from MIP table '{mip_table}'"
         )
+        logger.debug(
+            f"I am here in the BaseLoader. self.__class__ is {self.__class__}"
+        )
         cube = self._load_single_variable(var_name, mip_table).copy()
+        logger.debug(
+            f"I reached this step."
+        )
         logger.debug(
             f"Loaded variable '{var_name}' from MIP table' {mip_table}'"
         )
@@ -135,7 +144,8 @@ class Loader:
 
         """
         kwargs.setdefault("chunks", "auto")
-        return xr.open_mfdataset(path, **kwargs)
+        # return xr.open_mfdataset(path, **kwargs)
+        return xr.open_mfdataset(path)
 
     def _load_single_variable(self, var_name: str, mip_table: str) -> Cube:
         """Load single variable.
@@ -143,6 +153,9 @@ class Loader:
         Should be implemented by child classes.
 
         """
+        logger.debug(
+            f"I am here in the BaseLoader _load_single_variable."
+        )
         raise NotImplementedError()
 
 
@@ -200,6 +213,10 @@ class BaseICONLoader(Loader):
         assert var_name in self._VAR_TYPES, msg
         var_type = self._VAR_TYPES[var_name]
 
+        logger.debug(
+            f"I am here in the BaseICONLoader."
+        )
+
         # Load xarray.Dataset and convert to iris.cube.CubeList
         file_pattern = str(self.path / f"{self.exp}_{var_type}_*.nc")
         logger.debug(f"Loading files {file_pattern}")
@@ -240,24 +257,24 @@ class BaseICONLoader(Loader):
         return cube
 
 
-class BaseE3SMLoader(Loader):
-    """Load E3SM hybrid Earth system model output (base class).
+class BaseClimSimLoader(Loader):
+    """Load ClimSim hybrid Earth system model output (base class).
 
     Parameters
     ----------
     path:
-        Path to E3SM output.
+        Path to ClimSim output.
 
     """
 
-    _PROJECT = "E3SM"
+    _PROJECT = "ClimSim"
     _VAR_LIST: dict[str, str]
 
     def __init__(self, path: Path, model_name: str | None = None) -> None:
         """Initialize class instance."""
         super().__init__(path, model_name=model_name)
 
-        # E3SM model name
+        # ClimSim model name
         if model_name is None:
             model_name = f"{self._DATASET} ({self.exp})"
         self._model_name = model_name
@@ -291,15 +308,54 @@ class BaseE3SMLoader(Loader):
         msg = (
             f"Invalid variable '{var_name}' for model type '{self.model_type}'"
         )
-        assert var_name in self._VAR_LIST, msg
-        raw_name = self._VAR_LIST[var_name]
+        assert var_name in self._VAR_NAMES, msg
+        raw_name = self._VAR_NAMES[var_name]
+
+        logger.debug(
+            f"I am here in the CLimSimLoader  with {var_name}."
+        )
 
         # Load xarray.Dataset and convert to iris.cube.CubeList
-        file_pattern = str(self.path / f"{self.exp}*.nc")
+        file_pattern = str(self.path / f"{self.model_name}*.nc")
         logger.debug(f"Loading files {file_pattern}")
         xr_ds = self._load_files(file_pattern).copy()
-        cubes = cubes_from_xarray(xr_ds)
+        print("xarray loaded")
+        _Fill_Value = 1.e20
+        for var in xr_ds.data_vars:
+            xr_ds[var] = xr_ds[var].where(xr_ds[var].notnull(), _Fill_Value)
+        print("Fill_Value set")
+        ndtype = np.float64
+        for var in xr_ds.data_vars:
+            xr_ds[var] = xr_ds[var].astype(ndtype)
+        print("datatype set")
 
+        new_time = cf_units.date2num(xr_ds['time'], 'hours since 0001-01-01 00:00:00', cf_units.CALENDAR_STANDARD)
+
+        time_array = xr.DataArray(
+            data=new_time,
+            dims=['time'],
+            coords={'time': new_time},
+            attrs={
+                'standard_name': 'time',
+                'long_name': 'time',
+                'units': 'hours since 0001-01-01 00:00:00',
+                'calendar': cf_units.CALENDAR_STANDARD
+            }
+        )
+
+        xr_ds['time'] = time_array
+
+        xr_ds.lon.attrs["standard_name"] = "longitude"
+        xr_ds.lat.attrs["standard_name"] = "latitude"
+
+        logger.debug(
+            f"I reached this step before cube_from_xarray."
+        )
+        cubes = cubes_from_xarray(xr_ds)
+        print(cubes)
+        logger.debug(
+            f"I reached this step after cube_from_xarray."
+        )
         # # Remove lat/lon information from cubes (we will use the ones given by
         # # the grid file which is much safer)
         # for cube in cubes:
@@ -314,21 +370,27 @@ class BaseE3SMLoader(Loader):
         # }
         cube = fix_metadata(
             cubes,
-            short_name=var_name,
-            project=self._PROJECT,
+            short_name=raw_name,
+            project='ICON', #self._PROJECT,
             dataset=self._DATASET,
             mip=mip_table,
             frequency=cmor_var_info.frequency,
             # **extra_facets,
         )[0]
+        logger.debug(
+            f"I reached this step after fix_metadata."
+        )
         cube = fix_data(
             cube,
-            short_name=var_name,
+            short_name=raw_name,
             project=self._PROJECT,
             dataset=self._DATASET,
             mip=mip_table,
             frequency=cmor_var_info.frequency,
             # **extra_facets,
+        )
+        logger.debug(
+            f"I reached this step after fix_data."
         )
 
         return cube
