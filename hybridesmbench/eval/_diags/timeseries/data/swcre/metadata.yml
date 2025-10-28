@@ -1,133 +1,17 @@
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ACCESS-CM2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+? swcre/CMIP6_ACCESS-CM2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_ACCESS-CM2_amip
+  alias: CMIP6_ACCESS-CM2
   dataset: ACCESS-CM2
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ACCESS-CM2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_ACCESS-CM2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
   institute: CSIRO-ARCCSS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 64
-  short_name: swcre
-  standard_name: ''
-  start_year: 1995
-  timerange: 19950101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191108
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ACCESS-CM2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_ACCESS-CM2_historical
-  dataset: ACCESS-CM2
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ACCESS-CM2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CSIRO-ARCCSS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 53
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191108
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ACCESS-ESM1-5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_ACCESS-ESM1-5_amip
-  dataset: ACCESS-ESM1-5
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ACCESS-ESM1-5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CSIRO
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 65
-  short_name: swcre
-  standard_name: ''
-  start_year: 1995
-  timerange: 19950101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191114
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ACCESS-ESM1-5_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_ACCESS-ESM1-5_historical
-  dataset: ACCESS-ESM1-5
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ACCESS-ESM1-5_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CSIRO
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 52
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191115
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_AWI-CM-1-1-MR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_AWI-CM-1-1-MR
-  dataset: AWI-CM-1-1-MR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_AWI-CM-1-1-MR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: AWI
   long_name: TOA Shortwave Cloud Radiative Effect
   mip: Amon
   modeling_realm:
@@ -137,26 +21,26 @@
   recipe_dataset_index: 12
   short_name: swcre
   standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
+  start_year: 1995
+  timerange: 19950101/20141231
   title: Global Mean TOA Shortwave Cloud Radiative Effect
   units: W m-2
   variable_group: swcre
-  version: v20200511
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_AWI-ESM-1-1-LR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+  version: v20191108
+? swcre/CMIP6_ACCESS-ESM1-5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_AWI-ESM-1-1-LR
-  dataset: AWI-ESM-1-1-LR
+  alias: CMIP6_ACCESS-ESM1-5
+  dataset: ACCESS-ESM1-5
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_AWI-ESM-1-1-LR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+  exp: amip
+  filename: swcre/CMIP6_ACCESS-ESM1-5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
-  institute: AWI
+  institute: CSIRO
   long_name: TOA Shortwave Cloud Radiative Effect
   mip: Amon
   modeling_realm:
@@ -166,80 +50,22 @@
   recipe_dataset_index: 13
   short_name: swcre
   standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
+  start_year: 1995
+  timerange: 19950101/20141231
   title: Global Mean TOA Shortwave Cloud Radiative Effect
   units: W m-2
   variable_group: swcre
-  version: v20200212
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_AWI-ESM-1-REcoM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+  version: v20191114
+? swcre/CMIP6_BCC-CSM2-MR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_AWI-ESM-1-REcoM
-  dataset: AWI-ESM-1-REcoM
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_AWI-ESM-1-REcoM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: AWI
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 51
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20230314
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_BCC-CSM2-MR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_BCC-CSM2-MR_amip
+  alias: CMIP6_BCC-CSM2-MR
   dataset: BCC-CSM2-MR
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_BCC-CSM2-MR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: BCC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 66
-  short_name: swcre
-  standard_name: ''
-  start_year: 1995
-  timerange: 19950101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20200720
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_BCC-CSM2-MR_historical
-  dataset: BCC-CSM2-MR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_BCC-CSM2-MR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+  filename: swcre/CMIP6_BCC-CSM2-MR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -253,51 +79,22 @@
   recipe_dataset_index: 14
   short_name: swcre
   standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
+  start_year: 1995
+  timerange: 19950101/20141231
   title: Global Mean TOA Shortwave Cloud Radiative Effect
   units: W m-2
   variable_group: swcre
-  version: v20181126
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_BCC-ESM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  version: v20200720
+? swcre/CMIP6_BCC-ESM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_BCC-ESM1_amip
+  alias: CMIP6_BCC-ESM1
   dataset: BCC-ESM1
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_BCC-ESM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: BCC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 67
-  short_name: swcre
-  standard_name: ''
-  start_year: 1995
-  timerange: 19950101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190202
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_BCC-ESM1_historical
-  dataset: BCC-ESM1
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_BCC-ESM1_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+  filename: swcre/CMIP6_BCC-ESM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -311,53 +108,22 @@
   recipe_dataset_index: 15
   short_name: swcre
   standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
+  start_year: 1995
+  timerange: 19950101/20141231
   title: Global Mean TOA Shortwave Cloud Radiative Effect
   units: W m-2
   variable_group: swcre
-  version: v20181214
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  version: v20190202
+? swcre/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CAMS-CSM1-0_amip
+  alias: CMIP6_CAMS-CSM1-0
   dataset: CAMS-CSM1-0
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CAMS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 68
-  short_name: swcre
-  standard_name: ''
-  start_year: 1995
-  timerange: 19950101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version:
-  - v20190708
-  - v20190916
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CAMS-CSM1-0_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CAMS-CSM1-0_historical
-  dataset: CAMS-CSM1-0
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CAMS-CSM1-0_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+  filename: swcre/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -371,55 +137,24 @@
   recipe_dataset_index: 16
   short_name: swcre
   standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
+  start_year: 1995
+  timerange: 19950101/20141231
   title: Global Mean TOA Shortwave Cloud Radiative Effect
   units: W m-2
   variable_group: swcre
   version:
   - v20190708
   - v20190916
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CAS-ESM2-0_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CAS-ESM2-0
-  dataset: CAS-ESM2-0
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CAS-ESM2-0_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CAS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 17
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version:
-  - v20201227
-  - v20210205
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CESM2-FV2_amip
+  alias: CMIP6_CESM2-FV2
   dataset: CESM2-FV2
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -439,45 +174,16 @@
   units: W m-2
   variable_group: swcre
   version: v20200305
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CESM2-FV2_historical
-  dataset: CESM2-FV2
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-FV2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NCAR
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 57
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191120
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CESM2-WACCM-FV2_amip
+  alias: CMIP6_CESM2-WACCM-FV2
   dataset: CESM2-WACCM-FV2
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -497,45 +203,16 @@
   units: W m-2
   variable_group: swcre
   version: v20200305
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CESM2-WACCM-FV2_historical
-  dataset: CESM2-WACCM-FV2
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-WACCM-FV2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NCAR
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 59
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191120
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CESM2-WACCM_amip
+  alias: CMIP6_CESM2-WACCM
   dataset: CESM2-WACCM
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -546,7 +223,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 70
+  recipe_dataset_index: 18
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -555,45 +232,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190220
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_CESM2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CESM2-WACCM_historical
-  dataset: CESM2-WACCM
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2-WACCM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NCAR
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 58
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190227
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CESM2_amip
+  alias: CMIP6_CESM2
   dataset: CESM2
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_CESM2_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -604,7 +252,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 69
+  recipe_dataset_index: 17
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -613,105 +261,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190218
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_CMCC-CM2-SR5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CESM2_historical
-  dataset: CESM2
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CESM2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NCAR
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 44
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190308
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CIESM_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CIESM_historical
-  dataset: CIESM
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CIESM_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: THU
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 50
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version:
-  - v20200417
-  - v20200806
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CMCC-CM2-HR4_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CMCC-CM2-HR4_historical
-  dataset: CMCC-CM2-HR4
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CMCC-CM2-HR4_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CMCC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 22
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20200904
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CMCC-CM2-SR5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CMCC-CM2-SR5_amip
+  alias: CMIP6_CMCC-CM2-SR5
   dataset: CMCC-CM2-SR5
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CMCC-CM2-SR5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_CMCC-CM2-SR5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -722,7 +281,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 71
+  recipe_dataset_index: 19
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -731,76 +290,16 @@
   units: W m-2
   variable_group: swcre
   version: v20200717
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CMCC-CM2-SR5_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_CanESM5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CMCC-CM2-SR5_historical
-  dataset: CMCC-CM2-SR5
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CMCC-CM2-SR5_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CMCC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 23
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version:
-  - v20200616
-  - v20200717
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CMCC-ESM2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CMCC-ESM2
-  dataset: CMCC-ESM2
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CMCC-ESM2_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CMCC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 24
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20210114
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CanESM5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_CanESM5_amip
+  alias: CMIP6_CanESM5
   dataset: CanESM5
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CanESM5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_CanESM5_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -820,45 +319,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190429
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CanESM5_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_E3SM-1-0_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_CanESM5_historical
-  dataset: CanESM5
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_CanESM5_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CCCma
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 21
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190429
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_E3SM-1-0_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_E3SM-1-0_amip
+  alias: CMIP6_E3SM-1-0
   dataset: E3SM-1-0
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_E3SM-1-0_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
+  filename: swcre/CMIP6_E3SM-1-0_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gr
@@ -869,7 +339,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 72
+  recipe_dataset_index: 20
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -878,190 +348,16 @@
   units: W m-2
   variable_group: swcre
   version: v20191014
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_E3SM-1-0_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
+? swcre/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_E3SM-1-0_historical
-  dataset: E3SM-1-0
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_E3SM-1-0_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: E3SM-Project
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 25
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190913
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_E3SM-1-1-ECA_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_E3SM-1-1-ECA
-  dataset: E3SM-1-1-ECA
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_E3SM-1-1-ECA_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: E3SM-Project
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 55
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20200623
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_E3SM-1-1_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_E3SM-1-1
-  dataset: E3SM-1-1
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_E3SM-1-1_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: E3SM-Project
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 54
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191211
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-AerChem_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_EC-Earth3-AerChem_historical
-  dataset: EC-Earth3-AerChem
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-AerChem_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: EC-Earth-Consortium
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 27
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20200624
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-CC_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_EC-Earth3-CC_historical
-  dataset: EC-Earth3-CC
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-CC_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: EC-Earth-Consortium
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 28
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20210113
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-Veg-LR_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_EC-Earth3-Veg-LR
-  dataset: EC-Earth3-Veg-LR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-Veg-LR_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: EC-Earth-Consortium
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 30
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20200217
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_EC-Earth3-Veg_amip
+  alias: CMIP6_EC-Earth3-Veg
   dataset: EC-Earth3-Veg
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
+  filename: swcre/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gr
@@ -1081,47 +377,16 @@
   units: W m-2
   variable_group: swcre
   version: v20200225
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-Veg_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
+? swcre/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_EC-Earth3-Veg_historical
-  dataset: EC-Earth3-Veg
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3-Veg_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: EC-Earth-Consortium
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 29
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version:
-  - v20200225
-  - v20211207
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_EC-Earth3_amip
+  alias: CMIP6_EC-Earth3
   dataset: EC-Earth3
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
+  filename: swcre/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gr
@@ -1141,45 +406,16 @@
   units: W m-2
   variable_group: swcre
   version: v20200203
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
+? swcre/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_EC-Earth3_historical
-  dataset: EC-Earth3
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_EC-Earth3_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: EC-Earth-Consortium
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 26
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20200310
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_FGOALS-f3-L_amip
+  alias: CMIP6_FGOALS-f3-L
   dataset: FGOALS-f3-L
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
+  filename: swcre/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gr
@@ -1190,7 +426,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 73
+  recipe_dataset_index: 21
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -1199,45 +435,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190422
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_FGOALS-f3-L_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
+? swcre/CMIP6_FGOALS-g3_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_FGOALS-f3-L_historical
-  dataset: FGOALS-f3-L
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_FGOALS-f3-L_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: CAS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 18
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190927
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_FGOALS-g3_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_FGOALS-g3_amip
+  alias: CMIP6_FGOALS-g3
   dataset: FGOALS-g3
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_FGOALS-g3_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_FGOALS-g3_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -1248,7 +455,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 74
+  recipe_dataset_index: 22
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -1257,45 +464,16 @@
   units: W m-2
   variable_group: swcre
   version: v20191108
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_FGOALS-g3_historical
-  dataset: FGOALS-g3
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_FGOALS-g3_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CAS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 19
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190818
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_GFDL-CM4_amip
+  alias: CMIP6_GFDL-CM4
   dataset: GFDL-CM4
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
+  filename: swcre/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
   force_derivation: true
   frequency: monC
   grid: gr1
@@ -1315,161 +493,16 @@
   units: W m-2
   variable_group: swcre
   version: v20180701
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
+? swcre/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_GFDL-CM4_historical
-  dataset: GFDL-CM4
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GFDL-CM4_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
-  force_derivation: true
-  frequency: monC
-  grid: gr1
-  institute: NOAA-GFDL
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 46
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20180701
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_GFDL-ESM4_historical
-  dataset: GFDL-ESM4
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GFDL-ESM4_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr1
-  institute: NOAA-GFDL
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 47
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190726
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GISS-E2-1-G-CC_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_GISS-E2-1-G-CC
-  dataset: GISS-E2-1-G-CC
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GISS-E2-1-G-CC_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NASA-GISS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 42
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190815
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_GISS-E2-1-G
-  dataset: GISS-E2-1-G
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GISS-E2-1-G_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NASA-GISS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 41
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20180827
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_GISS-E2-1-H
-  dataset: GISS-E2-1-H
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_GISS-E2-1-H_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NASA-GISS
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 43
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190403
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_ICON-ESM-LR_amip
+  alias: CMIP6_ICON-ESM-LR
   dataset: ICON-ESM-LR
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -1489,45 +522,16 @@
   units: W m-2
   variable_group: swcre
   version: v20220215
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_IITM-ESM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_ICON-ESM-LR_historical
-  dataset: ICON-ESM-LR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_ICON-ESM-LR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: MPI-M
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 56
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20210215
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IITM-ESM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_IITM-ESM_amip
+  alias: CMIP6_IITM-ESM
   dataset: IITM-ESM
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IITM-ESM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_IITM-ESM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -1538,7 +542,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 75
+  recipe_dataset_index: 23
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -1547,45 +551,16 @@
   units: W m-2
   variable_group: swcre
   version: v20200915
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IITM-ESM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_IITM-ESM_historical
-  dataset: IITM-ESM
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IITM-ESM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: CCCR-IITM
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 20
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191226
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_INM-CM4-8_amip
+  alias: CMIP6_INM-CM4-8
   dataset: INM-CM4-8
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
+  filename: swcre/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gr1
@@ -1596,7 +571,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 76
+  recipe_dataset_index: 24
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -1605,45 +580,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190528
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
+? swcre/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_INM-CM4-8_historical
-  dataset: INM-CM4-8
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_INM-CM4-8_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr1
-  institute: INM
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 32
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190530
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_INM-CM5-0_amip
+  alias: CMIP6_INM-CM5-0
   dataset: INM-CM5-0
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
+  filename: swcre/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_swcre_gr1_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gr1
@@ -1663,76 +609,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190610
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
+? swcre/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_INM-CM5-0_historical
-  dataset: INM-CM5-0
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_INM-CM5-0_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr1
-  institute: INM
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 33
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190610
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IPSL-CM5A2-INCA_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_IPSL-CM5A2-INCA
-  dataset: IPSL-CM5A2-INCA
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IPSL-CM5A2-INCA_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: IPSL
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 34
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version:
-  - v20200729
-  - v20240110
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_IPSL-CM6A-LR_amip
+  alias: CMIP6_IPSL-CM6A-LR
   dataset: IPSL-CM6A-LR
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
+  filename: swcre/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gr
@@ -1752,45 +638,16 @@
   units: W m-2
   variable_group: swcre
   version: v20181109
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
+? swcre/CMIP6_KACE-1-0-G_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_IPSL-CM6A-LR_historical
-  dataset: IPSL-CM6A-LR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_IPSL-CM6A-LR_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: IPSL
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 35
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20180803
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_KACE-1-0-G_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_KACE-1-0-G_amip
+  alias: CMIP6_KACE-1-0-G
   dataset: KACE-1-0-G
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_KACE-1-0-G_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
+  filename: swcre/CMIP6_KACE-1-0-G_Amon_amip_r1i1p1f1_swcre_gr_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gr
@@ -1801,7 +658,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 77
+  recipe_dataset_index: 25
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -1810,74 +667,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190813
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
+? swcre/CMIP6_MIROC6_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_KACE-1-0-G_historical
-  dataset: KACE-1-0-G
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_KACE-1-0-G_Amon_historical_r1i1p1f1_swcre_gr_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr
-  institute: NIMS-KMA
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 45
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190910
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_KIOST-ESM_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_KIOST-ESM_historical
-  dataset: KIOST-ESM
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_KIOST-ESM_Amon_historical_r1i1p1f1_swcre_gr1_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gr1
-  institute: KIOST
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 36
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20210601
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MIROC6_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_MIROC6_amip
+  alias: CMIP6_MIROC6
   dataset: MIROC6
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MIROC6_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_MIROC6_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -1888,7 +687,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 78
+  recipe_dataset_index: 26
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -1897,45 +696,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190311
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MIROC6_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MIROC6_historical
-  dataset: MIROC6
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MIROC6_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: MIROC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 37
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190311
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_MPI-ESM-1-2-HAM_amip
+  alias: CMIP6_MPI-ESM-1-2-HAM
   dataset: MPI-ESM-1-2-HAM
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -1946,7 +716,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 81
+  recipe_dataset_index: 29
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -1955,20 +725,49 @@
   units: W m-2
   variable_group: swcre
   version: v20190628
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM-1-2-HAM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MPI-ESM-1-2-HAM_historical
-  dataset: MPI-ESM-1-2-HAM
+  alias: CMIP6_MPI-ESM1-2-HR
+  dataset: MPI-ESM1-2-HR
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM-1-2-HAM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+  exp: amip
+  filename: swcre/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
-  institute: HAMMOZ-Consortium
+  institute: MPI-M
+  long_name: TOA Shortwave Cloud Radiative Effect
+  mip: Amon
+  modeling_realm:
+  - atmos
+  preprocessor: create_global_annual_mean_time_series
+  project: CMIP6
+  recipe_dataset_index: 30
+  short_name: swcre
+  standard_name: ''
+  start_year: 1995
+  timerange: 19950101/20141231
+  title: Global Mean TOA Shortwave Cloud Radiative Effect
+  units: W m-2
+  variable_group: swcre
+  version: v20190710
+? swcre/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+: activity: CMIP
+  alias: CMIP6_MPI-ESM1-2-LR
+  dataset: MPI-ESM1-2-LR
+  derive: true
+  diagnostic: timeseries
+  end_year: 2014
+  ensemble: r1i1p1f1
+  exp: amip
+  filename: swcre/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  force_derivation: true
+  frequency: mon
+  grid: gn
+  institute: MPI-M
   long_name: TOA Shortwave Cloud Radiative Effect
   mip: Amon
   modeling_realm:
@@ -1978,138 +777,22 @@
   recipe_dataset_index: 31
   short_name: swcre
   standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190627
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_MPI-ESM1-2-HR_amip
-  dataset: MPI-ESM1-2-HR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: MPI-M
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 82
-  short_name: swcre
-  standard_name: ''
-  start_year: 1995
-  timerange: 19950101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190710
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM1-2-HR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_MPI-ESM1-2-HR_historical
-  dataset: MPI-ESM1-2-HR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM1-2-HR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: MPI-M
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 38
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190710
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_MPI-ESM1-2-LR_amip
-  dataset: MPI-ESM1-2-LR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: MPI-M
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 83
-  short_name: swcre
-  standard_name: ''
   start_year: 1995
   timerange: 19950101/20141231
   title: Global Mean TOA Shortwave Cloud Radiative Effect
   units: W m-2
   variable_group: swcre
   version: v20190815
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM1-2-LR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MPI-ESM1-2-LR_historical
-  dataset: MPI-ESM1-2-LR
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MPI-ESM1-2-LR_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: MPI-M
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 39
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190710
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_MRI-ESM2-0_amip
+  alias: CMIP6_MRI-ESM2-0
   dataset: MRI-ESM2-0
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -2120,7 +803,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 84
+  recipe_dataset_index: 32
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -2129,45 +812,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190308
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MRI-ESM2-0_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_NESM3_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_MRI-ESM2-0_historical
-  dataset: MRI-ESM2-0
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_MRI-ESM2-0_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: MRI
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 40
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190222
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NESM3_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_NESM3_amip
+  alias: CMIP6_NESM3
   dataset: NESM3
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NESM3_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_NESM3_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -2178,7 +832,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 85
+  recipe_dataset_index: 33
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -2187,45 +841,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190812
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NESM3_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_NorCPM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_NESM3_historical
-  dataset: NESM3
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NESM3_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NUIST
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 48
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190630
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorCPM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_NorCPM1_amip
+  alias: CMIP6_NorCPM1
   dataset: NorCPM1
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorCPM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_NorCPM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -2236,7 +861,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 79
+  recipe_dataset_index: 27
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -2245,45 +870,16 @@
   units: W m-2
   variable_group: swcre
   version: v20191031
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorCPM1_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_NorCPM1_historical
-  dataset: NorCPM1
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorCPM1_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NCC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 60
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20200724
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_NorESM2-LM_amip
+  alias: CMIP6_NorESM2-LM
   dataset: NorESM2-LM
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -2303,74 +899,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190920
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_NorESM2-LM_historical
-  dataset: NorESM2-LM
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorESM2-LM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NCC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 61
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190815
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_NorESM2-MM
-  dataset: NorESM2-MM
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_NorESM2-MM_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: NCC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 62
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20191108
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_SAM0-UNICON_amip
+  alias: CMIP6_SAM0-UNICON
   dataset: SAM0-UNICON
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -2390,45 +928,16 @@
   units: W m-2
   variable_group: swcre
   version: v20190323
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
+? swcre/CMIP6_TaiESM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
 : activity: CMIP
-  alias: CMIP6_SAM0-UNICON_historical
-  dataset: SAM0-UNICON
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_SAM0-UNICON_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: SNU
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 49
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20190323
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_TaiESM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_TaiESM1_amip
+  alias: CMIP6_TaiESM1
   dataset: TaiESM1
   derive: true
   diagnostic: timeseries
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_TaiESM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
+  filename: swcre/CMIP6_TaiESM1_Amon_amip_r1i1p1f1_swcre_gn_19950101-20141231.nc
   force_derivation: true
   frequency: mon
   grid: gn
@@ -2439,7 +948,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: CMIP6
-  recipe_dataset_index: 80
+  recipe_dataset_index: 28
   short_name: swcre
   standard_name: ''
   start_year: 1995
@@ -2448,42 +957,13 @@
   units: W m-2
   variable_group: swcre
   version: v20200817
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-: activity: CMIP
-  alias: CMIP6_TaiESM1_historical
-  dataset: TaiESM1
-  derive: true
-  diagnostic: timeseries
-  end_year: 2014
-  ensemble: r1i1p1f1
-  exp: historical
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/CMIP6_TaiESM1_Amon_historical_r1i1p1f1_swcre_gn_19790101-20141231.nc
-  force_derivation: true
-  frequency: mon
-  grid: gn
-  institute: AS-RCEC
-  long_name: TOA Shortwave Cloud Radiative Effect
-  mip: Amon
-  modeling_realm:
-  - atmos
-  preprocessor: create_global_annual_mean_time_series
-  project: CMIP6
-  recipe_dataset_index: 11
-  short_name: swcre
-  standard_name: ''
-  start_year: 1979
-  timerange: 19790101/20141231
-  title: Global Mean TOA Shortwave Cloud Radiative Effect
-  units: W m-2
-  variable_group: swcre
-  version: v20200623
-? /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20000331-20231130.nc
+? swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20000331-20231130.nc
 : alias: OBS_CERES-EBAF
   dataset: CERES-EBAF
   derive: true
   diagnostic: timeseries
   end_year: 2023
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_timeseries_AMIP_20251027_111027/preproc/timeseries/swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20000331-20231130.nc
+  filename: swcre/OBS_CERES-EBAF_sat_Ed4.2_Amon_swcre_20000331-20231130.nc
   force_derivation: true
   frequency: mon
   long_name: TOA Shortwave Cloud Radiative Effect
@@ -2492,7 +972,7 @@
   - atmos
   preprocessor: create_global_annual_mean_time_series
   project: OBS
-  recipe_dataset_index: 63
+  recipe_dataset_index: 11
   short_name: swcre
   standard_name: ''
   start_year: 2000
