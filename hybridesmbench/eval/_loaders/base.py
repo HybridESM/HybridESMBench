@@ -13,6 +13,7 @@ import cf_units
 from esmvalcore.cmor.fix import fix_data, fix_metadata
 from esmvalcore.cmor.table import get_var_info
 from iris.cube import Cube
+from iris import NameConstraint
 from loguru import logger
 from ncdata.iris_xarray import cubes_from_xarray
 
@@ -268,7 +269,7 @@ class BaseClimSimLoader(Loader):
     """
 
     _PROJECT = "ClimSim"
-    _VAR_LIST: dict[str, str]
+    _VAR_NAMES: dict[str, str]
 
     def __init__(self, path: Path, model_name: str | None = None) -> None:
         """Initialize class instance."""
@@ -280,27 +281,7 @@ class BaseClimSimLoader(Loader):
         self._model_name = model_name
 
         # # ICON grid file
-        # grid_file_pattern = "icon_grid_*.nc"
-        # grid_files = list(self.path.glob(grid_file_pattern))
-        # if not grid_files:
-        #     msg = (
-        #         f"No ICON grid file available (searched for "
-        #         f"{self.path / grid_file_pattern})"
-        #     )
-        #     raise HybridESMBenchException(msg)
-        # if len(grid_files) > 1:
-        #     msg = (
-        #         f"Multiple ICON grid files available (searched for "
-        #         f"{self.path / grid_file_pattern}), choosing first one: "
-        #         f"{grid_files[0]}"
-        #     )
-        #     warnings.warn(msg, HybridESMBenchWarning, stacklevel=2)
-        # self._grid_file = grid_files[0]
-
-    # @property
-    # def grid_file(self) -> Path:
-    #     """Get path to ICON grid file."""
-    #     return self._grid_file
+        # Might need to fix climsim unstructured grid
 
     @functools.lru_cache
     def _load_single_variable(self, var_name: str, mip_table: str) -> Cube:
@@ -309,14 +290,18 @@ class BaseClimSimLoader(Loader):
             f"Invalid variable '{var_name}' for model type '{self.model_type}'"
         )
         assert var_name in self._VAR_NAMES, msg
-        raw_name = self._VAR_NAMES[var_name]
+        #raw_name = self._VAR_NAMES[var_name['raw_name']]
 
         logger.debug(
             f"I am here in the CLimSimLoader  with {var_name}."
         )
 
         # Load xarray.Dataset and convert to iris.cube.CubeList
-        file_pattern = str(self.path / f"{self.model_name}*.nc")
+        #file_pattern = str(self.path / f"{self.model_name}*.nc")
+        # TODO this exp seems kinda of random, maybe we ask to call the folder this?
+        #exp = "unet"
+        #file_pattern = str(self.path / f"climsim_v2_highres_{exp}.*.nc")
+        file_pattern = str(self.path / f"climsim_v2_highres_*.nc")
         logger.debug(f"Loading files {file_pattern}")
         xr_ds = self._load_files(file_pattern).copy()
         print("xarray loaded")
@@ -356,37 +341,59 @@ class BaseClimSimLoader(Loader):
         logger.debug(
             f"I reached this step after cube_from_xarray."
         )
-        # # Remove lat/lon information from cubes (we will use the ones given by
-        # # the grid file which is much safer)
-        # for cube in cubes:
-        #     for coord_name in ("latitude", "longitude"):
-        #         if cube.coords(coord_name):
-        #             cube.remove_coord(coord_name)
 
+        print(self._VAR_NAMES)
+        print(var_name)
+        print(self._VAR_NAMES[var_name])
+        print(self._VAR_NAMES[var_name]["raw_name"])
+
+        # extract cube:
+        var_cube = cubes.extract_cube(NameConstraint(var_name=
+                                               self._VAR_NAMES[var_name]["raw_name"]))
+
+
+        logger.debug(
+            f"I reached this step after extracting cubes."
+        )
+        print(var_cube)
         # Run ESMValCore fixes on the data to "CMORize" it
-        cmor_var_info = get_var_info(self._PROJECT, mip_table, var_name)
+        cmor_var_info = get_var_info("CMIP6", mip_table, var_name)
+
+        # Fix Varname metadata
+        metadata = self.get_metadata(var_name, mip_table)
+        var_cube.long_name = metadata["long_name"]
+        var_cube.standard_name = metadata["standard_name"]
+        var_cube.units = metadata["units"]
+
+        print(var_cube)
         # extra_facets: dict[str, Any] = {
         #     "horizontal_grid": self.grid_file,
         # }
-        cube = fix_metadata(
-            cubes,
-            short_name=raw_name,
-            project='ICON', #self._PROJECT,
-            dataset=self._DATASET,
-            mip=mip_table,
-            frequency=cmor_var_info.frequency,
-            # **extra_facets,
-        )[0]
+        #extra_facets = self._VAR_NAMES
+        #cube = fix_metadata(
+        #    var_cube,
+        #    #cubes,
+        #    short_name=var_name, #raw_name,
+        #    project='ICON', #self._PROJECT,
+        #    dataset=self._DATASET,
+        #    mip=mip_table,
+        #    #frequency=cmor_var_info.frequency,
+        #    frequency='mon',  #cmor_var_info.frequency,
+        #    **extra_facets,
+        #)[0]
         logger.debug(
             f"I reached this step after fix_metadata."
         )
         cube = fix_data(
-            cube,
-            short_name=raw_name,
-            project=self._PROJECT,
+            var_cube,
+            #cube,
+            short_name=var_name, #raw_name,
+            project='ICON',
+            #project=self._PROJECT,
             dataset=self._DATASET,
             mip=mip_table,
-            frequency=cmor_var_info.frequency,
+            #frequency=cmor_var_info.frequency,
+            frequency='mon',  #cmor_var_info.frequency,
             # **extra_facets,
         )
         logger.debug(

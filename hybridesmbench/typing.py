@@ -14,4 +14,5 @@ DiagnosticName = Literal[
 ModelType = Literal[
     "cmip",
     "icon",
+    "climsim",
 ]

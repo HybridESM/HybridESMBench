@@ -15,16 +15,16 @@ class ClimSimLoader(BaseClimSimLoader):
 
     _DATASET = "ClimSim"
     _VAR_NAMES = {
-        "clivi": "TGCLDIWP",
-        "clwvi": "TGCLDCWP",
-        "clt": "CLOUD",
+        "clivi": {"raw_name": "TGCLDIWP"},
+        "clwvi": {"raw_name": "TGCLDCWP"},
+        "clt": {"raw_name": "CLOUD"},
         # "hus": "Q400",
-        "lwp": "TGCLDLWP",
-        "pr": "PRECT",
-        "ps": "PS",
-        "prw": "TMQ",
+        "lwp": {"raw_name": "TGCLDLWP"},
+        "pr": {"raw_name": "PRECT"},
+        "ps": {"raw_name": "PS"},
+        "prw": {"raw_name": "TMQ"},
         # "ta": "T200", "T850"
-        "tas": "TREFHT",
-        "tauu": "TAUX",
+        "tas": {"raw_name": "TREFHT"},
+        "tauu": {"raw_name": "TAUX"},
         # "ua": "U200", "U850"
     }
