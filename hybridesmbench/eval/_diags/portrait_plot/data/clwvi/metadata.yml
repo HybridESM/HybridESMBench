@@ -1,4 +1,4 @@
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_BCC-ESM1_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_BCC-ESM1_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_BCC-ESM1
   dataset: BCC-ESM1
@@ -6,7 +6,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_BCC-ESM1_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_BCC-ESM1_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: BCC
@@ -25,7 +25,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190311
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CAMS-CSM1-0
   dataset: CAMS-CSM1-0
@@ -33,7 +33,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: CAMS
@@ -52,7 +52,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190708
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-FV2
   dataset: CESM2-FV2
@@ -60,7 +60,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -79,7 +79,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20200305
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-WACCM-FV2
   dataset: CESM2-WACCM-FV2
@@ -87,7 +87,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -106,7 +106,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20200305
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-WACCM
   dataset: CESM2-WACCM
@@ -114,7 +114,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -133,7 +133,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190220
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CESM2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_CESM2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2
   dataset: CESM2
@@ -141,7 +141,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CESM2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_CESM2_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -160,7 +160,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190218
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CanESM5_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_CanESM5_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CanESM5
   dataset: CanESM5
@@ -168,7 +168,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_CanESM5_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_CanESM5_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: CCCma
@@ -187,7 +187,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190429
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
+? clwvi/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_EC-Earth3-Veg
   dataset: EC-Earth3-Veg
@@ -195,7 +195,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
+  filename: clwvi/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
   frequency: mon
   grid: gr
   institute: EC-Earth-Consortium
@@ -214,7 +214,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20200225
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
+? clwvi/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_EC-Earth3
   dataset: EC-Earth3
@@ -222,7 +222,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
+  filename: clwvi/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
   frequency: mon
   grid: gr
   institute: EC-Earth-Consortium
@@ -241,7 +241,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20200203
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
+? clwvi/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_FGOALS-f3-L
   dataset: FGOALS-f3-L
@@ -249,7 +249,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
+  filename: clwvi/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
   frequency: mon
   grid: gr
   institute: CAS
@@ -268,7 +268,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190422
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
+? clwvi/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_GFDL-CM4
   dataset: GFDL-CM4
@@ -276,7 +276,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
+  filename: clwvi/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
   frequency: monC
   grid: gr1
   institute: NOAA-GFDL
@@ -295,7 +295,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20180701
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_ICON-ESM-LR
   dataset: ICON-ESM-LR
@@ -303,7 +303,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: MPI-M
@@ -322,7 +322,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20220215
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
+? clwvi/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_INM-CM4-8
   dataset: INM-CM4-8
@@ -330,7 +330,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
+  filename: clwvi/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
   frequency: mon
   grid: gr1
   institute: INM
@@ -349,7 +349,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190528
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
+? clwvi/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_INM-CM5-0
   dataset: INM-CM5-0
@@ -357,7 +357,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
+  filename: clwvi/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_clwvi_gr1_19950101-20141231.nc
   frequency: mon
   grid: gr1
   institute: INM
@@ -376,7 +376,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190610
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
+? clwvi/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_IPSL-CM6A-LR
   dataset: IPSL-CM6A-LR
@@ -384,7 +384,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
+  filename: clwvi/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_clwvi_gr_19950101-20141231.nc
   frequency: mon
   grid: gr
   institute: IPSL
@@ -403,7 +403,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20181109
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MIROC6_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_MIROC6_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MIROC6
   dataset: MIROC6
@@ -411,7 +411,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MIROC6_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_MIROC6_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: MIROC
@@ -430,7 +430,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190311
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MPI-ESM-1-2-HAM
   dataset: MPI-ESM-1-2-HAM
@@ -438,7 +438,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: HAMMOZ-Consortium
@@ -457,7 +457,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190628
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MPI-ESM1-2-HR
   dataset: MPI-ESM1-2-HR
@@ -465,7 +465,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: MPI-M
@@ -484,7 +484,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190710
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MPI-ESM1-2-LR
   dataset: MPI-ESM1-2-LR
@@ -492,7 +492,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: MPI-M
@@ -511,7 +511,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190815
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MRI-ESM2-0
   dataset: MRI-ESM2-0
@@ -519,7 +519,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: MRI
@@ -538,7 +538,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190308
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_NESM3_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_NESM3_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_NESM3
   dataset: NESM3
@@ -546,7 +546,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_NESM3_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_NESM3_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: NUIST
@@ -565,7 +565,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190812
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_NorESM2-LM
   dataset: NorESM2-LM
@@ -573,7 +573,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCC
@@ -592,7 +592,7 @@
   variable: clwvi
   variable_group: clwvi
   version: v20190920
-? /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+? clwvi/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
 : activity: CMIP
   alias: CMIP6_SAM0-UNICON
   dataset: SAM0-UNICON
@@ -600,7 +600,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: /scratch/b/b309059/esmvaltool_output/recipe_portrait_AMIP_v2_20251007_155246/preproc/portrait_plot/clwvi/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
+  filename: clwvi/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_clwvi_gn_19950101-20141231.nc
   frequency: mon
   grid: gn
   institute: SNU
