@@ -1,4 +1,4 @@
-? lwp/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CAMS-CSM1-0
   dataset: CAMS-CSM1-0
@@ -7,7 +7,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_CAMS-CSM1-0_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: CAMS
@@ -20,13 +20,13 @@
   recipe_dataset_index: 12
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190708
-? lwp/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-FV2
   dataset: CESM2-FV2
@@ -35,7 +35,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_CESM2-FV2_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -48,13 +48,13 @@
   recipe_dataset_index: 0
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20200305
-? lwp/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-WACCM-FV2
   dataset: CESM2-WACCM-FV2
@@ -63,7 +63,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_CESM2-WACCM-FV2_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -76,13 +76,13 @@
   recipe_dataset_index: 1
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20200305
-? lwp/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2-WACCM
   dataset: CESM2-WACCM
@@ -91,7 +91,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_CESM2-WACCM_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -104,13 +104,13 @@
   recipe_dataset_index: 14
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190220
-? lwp/CMIP6_CESM2_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_CESM2_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CESM2
   dataset: CESM2
@@ -119,7 +119,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_CESM2_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_CESM2_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCAR
@@ -132,13 +132,13 @@
   recipe_dataset_index: 13
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190218
-? lwp/CMIP6_CanESM5_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_CanESM5_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_CanESM5
   dataset: CanESM5
@@ -147,7 +147,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_CanESM5_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_CanESM5_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: CCCma
@@ -160,13 +160,13 @@
   recipe_dataset_index: 2
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190429
-? lwp/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_lwp_gr_19950101-20141231.nc
+? lwp/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_lwp_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_EC-Earth3-Veg
   dataset: EC-Earth3-Veg
@@ -175,7 +175,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_lwp_gr_19950101-20141231.nc
+  filename: lwp/CMIP6_EC-Earth3-Veg_Amon_amip_r1i1p1f1_lwp_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: EC-Earth-Consortium
@@ -188,13 +188,13 @@
   recipe_dataset_index: 4
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20200225
-? lwp/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_lwp_gr_19950101-20141231.nc
+? lwp/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_lwp_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_EC-Earth3
   dataset: EC-Earth3
@@ -203,7 +203,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_lwp_gr_19950101-20141231.nc
+  filename: lwp/CMIP6_EC-Earth3_Amon_amip_r1i1p1f1_lwp_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: EC-Earth-Consortium
@@ -216,13 +216,13 @@
   recipe_dataset_index: 3
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20200203
-? lwp/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_lwp_gr_19950101-20141231.nc
+? lwp/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_lwp_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_FGOALS-f3-L
   dataset: FGOALS-f3-L
@@ -231,7 +231,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_lwp_gr_19950101-20141231.nc
+  filename: lwp/CMIP6_FGOALS-f3-L_Amon_amip_r1i1p1f1_lwp_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: CAS
@@ -244,13 +244,13 @@
   recipe_dataset_index: 15
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190422
-? lwp/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_lwp_gr1_19950101-20141231.nc
+? lwp/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_lwp_gr1_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_GFDL-CM4
   dataset: GFDL-CM4
@@ -259,7 +259,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_lwp_gr1_19950101-20141231.nc
+  filename: lwp/CMIP6_GFDL-CM4_Amon_amip_r1i1p1f1_lwp_gr1_19790101-20141231.nc
   frequency: monC
   grid: gr1
   institute: NOAA-GFDL
@@ -272,13 +272,13 @@
   recipe_dataset_index: 5
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20180701
-? lwp/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_ICON-ESM-LR
   dataset: ICON-ESM-LR
@@ -287,7 +287,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_ICON-ESM-LR_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: MPI-M
@@ -300,13 +300,13 @@
   recipe_dataset_index: 6
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20220215
-? lwp/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_lwp_gr1_19950101-20141231.nc
+? lwp/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_lwp_gr1_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_INM-CM4-8
   dataset: INM-CM4-8
@@ -315,7 +315,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_lwp_gr1_19950101-20141231.nc
+  filename: lwp/CMIP6_INM-CM4-8_Amon_amip_r1i1p1f1_lwp_gr1_19790101-20141231.nc
   frequency: mon
   grid: gr1
   institute: INM
@@ -328,13 +328,13 @@
   recipe_dataset_index: 16
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190528
-? lwp/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_lwp_gr1_19950101-20141231.nc
+? lwp/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_lwp_gr1_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_INM-CM5-0
   dataset: INM-CM5-0
@@ -343,7 +343,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_lwp_gr1_19950101-20141231.nc
+  filename: lwp/CMIP6_INM-CM5-0_Amon_amip_r1i1p1f1_lwp_gr1_19790101-20141231.nc
   frequency: mon
   grid: gr1
   institute: INM
@@ -356,13 +356,13 @@
   recipe_dataset_index: 7
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190610
-? lwp/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_lwp_gr_19950101-20141231.nc
+? lwp/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_lwp_gr_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_IPSL-CM6A-LR
   dataset: IPSL-CM6A-LR
@@ -371,7 +371,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_lwp_gr_19950101-20141231.nc
+  filename: lwp/CMIP6_IPSL-CM6A-LR_Amon_amip_r1i1p1f1_lwp_gr_19790101-20141231.nc
   frequency: mon
   grid: gr
   institute: IPSL
@@ -384,13 +384,13 @@
   recipe_dataset_index: 8
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20181109
-? lwp/CMIP6_MIROC6_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_MIROC6_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MIROC6
   dataset: MIROC6
@@ -399,7 +399,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_MIROC6_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_MIROC6_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: MIROC
@@ -412,13 +412,13 @@
   recipe_dataset_index: 17
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190311
-? lwp/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MPI-ESM-1-2-HAM
   dataset: MPI-ESM-1-2-HAM
@@ -427,7 +427,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_MPI-ESM-1-2-HAM_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: HAMMOZ-Consortium
@@ -440,13 +440,13 @@
   recipe_dataset_index: 18
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190628
-? lwp/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MPI-ESM1-2-HR
   dataset: MPI-ESM1-2-HR
@@ -455,7 +455,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_MPI-ESM1-2-HR_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: MPI-M
@@ -468,13 +468,13 @@
   recipe_dataset_index: 19
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190710
-? lwp/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MPI-ESM1-2-LR
   dataset: MPI-ESM1-2-LR
@@ -483,7 +483,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_MPI-ESM1-2-LR_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: MPI-M
@@ -496,13 +496,13 @@
   recipe_dataset_index: 20
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190815
-? lwp/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_MRI-ESM2-0
   dataset: MRI-ESM2-0
@@ -511,7 +511,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_MRI-ESM2-0_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: MRI
@@ -524,13 +524,13 @@
   recipe_dataset_index: 21
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190308
-? lwp/CMIP6_NESM3_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_NESM3_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_NESM3
   dataset: NESM3
@@ -539,7 +539,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_NESM3_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_NESM3_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NUIST
@@ -552,13 +552,13 @@
   recipe_dataset_index: 22
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190812
-? lwp/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_NorESM2-LM
   dataset: NorESM2-LM
@@ -567,7 +567,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_NorESM2-LM_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: NCC
@@ -580,13 +580,13 @@
   recipe_dataset_index: 9
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
   version: v20190920
-? lwp/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+? lwp/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
 : activity: CMIP
   alias: CMIP6_SAM0-UNICON
   dataset: SAM0-UNICON
@@ -595,7 +595,7 @@
   end_year: 2014
   ensemble: r1i1p1f1
   exp: amip
-  filename: lwp/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_lwp_gn_19950101-20141231.nc
+  filename: lwp/CMIP6_SAM0-UNICON_Amon_amip_r1i1p1f1_lwp_gn_19790101-20141231.nc
   frequency: mon
   grid: gn
   institute: SNU
@@ -608,8 +608,8 @@
   recipe_dataset_index: 10
   short_name: lwp
   standard_name: atmosphere_mass_content_of_cloud_liquid_water
-  start_year: 1995
-  timerange: 19950101/20141231
+  start_year: 1979
+  timerange: 19790101/20141231
   title: Global Mean Liquid Water Path
   units: kg m-2
   variable_group: lwp
