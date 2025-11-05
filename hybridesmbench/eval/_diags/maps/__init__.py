@@ -71,10 +71,10 @@ class MapsDiagnostic(ESMValToolDiagnostic):
 
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
-        cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
+        #cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
         cube = extract_final_20_years(cube)
         cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
-        cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
+        cube = regrid(cube, "2x2", "linear", cache_weights=True)
         cube = climate_statistics(cube, operator="mean", period="full")
         if cube.var_name == "pr":
             cube = convert_units(cube, "mm day-1")

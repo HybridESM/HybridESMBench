@@ -9,11 +9,12 @@ from typing import Any
 import xarray as xr
 import numpy as np
 import cf_units
-#from datetime import datetime
+from datetime import datetime
 from esmvalcore.cmor.fix import fix_data, fix_metadata
 from esmvalcore.cmor.table import get_var_info
 from iris.cube import Cube
 from iris import NameConstraint
+from iris.coords import DimCoord, AuxCoord
 from loguru import logger
 from ncdata.iris_xarray import cubes_from_xarray
 
@@ -304,15 +305,12 @@ class BaseClimSimLoader(Loader):
         file_pattern = str(self.path / f"climsim_v2_highres_*.nc")
         logger.debug(f"Loading files {file_pattern}")
         xr_ds = self._load_files(file_pattern).copy()
-        print("xarray loaded")
         _Fill_Value = 1.e20
         for var in xr_ds.data_vars:
             xr_ds[var] = xr_ds[var].where(xr_ds[var].notnull(), _Fill_Value)
-        print("Fill_Value set")
         ndtype = np.float64
         for var in xr_ds.data_vars:
             xr_ds[var] = xr_ds[var].astype(ndtype)
-        print("datatype set")
 
         new_time = cf_units.date2num(xr_ds['time'], 'hours since 0001-01-01 00:00:00', cf_units.CALENDAR_STANDARD)
 
@@ -333,71 +331,38 @@ class BaseClimSimLoader(Loader):
         xr_ds.lon.attrs["standard_name"] = "longitude"
         xr_ds.lat.attrs["standard_name"] = "latitude"
 
-        logger.debug(
-            f"I reached this step before cube_from_xarray."
-        )
         cubes = cubes_from_xarray(xr_ds)
-        print(cubes)
-        logger.debug(
-            f"I reached this step after cube_from_xarray."
-        )
-
-        print(self._VAR_NAMES)
-        print(var_name)
-        print(self._VAR_NAMES[var_name])
-        print(self._VAR_NAMES[var_name]["raw_name"])
-
         # extract cube:
         var_cube = cubes.extract_cube(NameConstraint(var_name=
                                                self._VAR_NAMES[var_name]["raw_name"]))
 
+        ncol_coord = DimCoord(np.arange(21600), units="1")
+        ncol_coord.rename("ncol")
+        var_cube.add_dim_coord(ncol_coord, 1)
 
-        logger.debug(
-            f"I reached this step after extracting cubes."
-        )
-        print(var_cube)
-        # Run ESMValCore fixes on the data to "CMORize" it
-        cmor_var_info = get_var_info("CMIP6", mip_table, var_name)
+        lat = cubes.extract_cube(NameConstraint(var_name="lat"))
+        lon = cubes.extract_cube(NameConstraint(var_name="lon"))
+        area = cubes.extract_cube(NameConstraint(var_name="area"))
+
+        lat_coord = AuxCoord(lat.data[0,:], units="degrees_north", standard_name="latitude")
+        lon_coord = AuxCoord(lon.data[0,:], units="degrees_east", standard_name="longitude")
+        areacella = AuxCoord(area.data[0,:], units="m2", standard_name="cell_area")
+        lat_coord.rename("latitude")
+        lon_coord.rename("longitude")
+        areacella.rename("areacella")
+
+        var_cube.add_aux_coord(lat_coord, 1)
+        var_cube.add_aux_coord(lon_coord, 1)
+        var_cube.add_aux_coord(areacella, 1)
+
 
         # Fix Varname metadata
         metadata = self.get_metadata(var_name, mip_table)
+        var_cube.var_name = metadata["short_name"]
         var_cube.long_name = metadata["long_name"]
         var_cube.standard_name = metadata["standard_name"]
         var_cube.units = metadata["units"]
+        
+        var_cube.coord("time").guess_bounds()
 
-        print(var_cube)
-        # extra_facets: dict[str, Any] = {
-        #     "horizontal_grid": self.grid_file,
-        # }
-        #extra_facets = self._VAR_NAMES
-        #cube = fix_metadata(
-        #    var_cube,
-        #    #cubes,
-        #    short_name=var_name, #raw_name,
-        #    project='ICON', #self._PROJECT,
-        #    dataset=self._DATASET,
-        #    mip=mip_table,
-        #    #frequency=cmor_var_info.frequency,
-        #    frequency='mon',  #cmor_var_info.frequency,
-        #    **extra_facets,
-        #)[0]
-        logger.debug(
-            f"I reached this step after fix_metadata."
-        )
-        cube = fix_data(
-            var_cube,
-            #cube,
-            short_name=var_name, #raw_name,
-            project='ICON',
-            #project=self._PROJECT,
-            dataset=self._DATASET,
-            mip=mip_table,
-            #frequency=cmor_var_info.frequency,
-            frequency='mon',  #cmor_var_info.frequency,
-            # **extra_facets,
-        )
-        logger.debug(
-            f"I reached this step after fix_data."
-        )
-
-        return cube
+        return var_cube
