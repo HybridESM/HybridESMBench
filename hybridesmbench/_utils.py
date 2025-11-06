@@ -107,6 +107,7 @@ def extract_vertical_level(var_id: str, cube: Cube, **kwargs: Any) -> Cube:
             f"Variable ID '{var_id}' does not match `cube.var_name`, needs to "
             f"start with '{cube.var_name}'"
         )
+
     level_str = var_id.replace(cube.var_name, "", 1)
 
     # Single level data
