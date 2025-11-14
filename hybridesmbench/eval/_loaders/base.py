@@ -106,13 +106,7 @@ class Loader:
         logger.debug(
             f"Loading variable '{var_name}' from MIP table '{mip_table}'"
         )
-        logger.debug(
-            f"I am here in the BaseLoader. self.__class__ is {self.__class__}"
-        )
         cube = self._load_single_variable(var_name, mip_table).copy()
-        logger.debug(
-            f"I reached this step."
-        )
         logger.debug(
             f"Loaded variable '{var_name}' from MIP table' {mip_table}'"
         )
@@ -155,9 +149,6 @@ class Loader:
         Should be implemented by child classes.
 
         """
-        logger.debug(
-            f"I am here in the BaseLoader _load_single_variable."
-        )
         raise NotImplementedError()
 
 
@@ -214,10 +205,6 @@ class BaseICONLoader(Loader):
         )
         assert var_name in self._VAR_TYPES, msg
         var_type = self._VAR_TYPES[var_name]
-
-        logger.debug(
-            f"I am here in the BaseICONLoader."
-        )
 
         # Load xarray.Dataset and convert to iris.cube.CubeList
         file_pattern = str(self.path / f"{self.exp}_{var_type}_*.nc")
@@ -293,10 +280,6 @@ class BaseClimSimLoader(Loader):
         assert var_name in self._VAR_NAMES, msg
         #raw_name = self._VAR_NAMES[var_name['raw_name']]
 
-        logger.debug(
-            f"I am here in the CLimSimLoader  with {var_name}."
-        )
-
         # Load xarray.Dataset and convert to iris.cube.CubeList
         #file_pattern = str(self.path / f"{self.model_name}*.nc")
         # TODO this exp seems kinda of random, maybe we ask to call the folder this?
@@ -361,8 +344,25 @@ class BaseClimSimLoader(Loader):
         var_cube.var_name = metadata["short_name"]
         var_cube.long_name = metadata["long_name"]
         var_cube.standard_name = metadata["standard_name"]
-        var_cube.units = metadata["units"]
+
+        if 'raw_units' in self._VAR_NAMES[var_name]:
+            var_cube.units = self._VAR_NAMES[var_name]['raw_units']
+            if var_name == "pr":
+                var_cube.data = var_cube.data * 1e3  # from m/s to kg m-2 s-1
+                var_cube.units = "kg m-2 s-1"
+            else:
+                var_cube.convert_units(metadata["units"])
+        else:
+            var_cube.units = metadata["units"]
         
         var_cube.coord("time").guess_bounds()
+
+        if 'fix' in self._VAR_NAMES[var_name]:
+            # Apply fix if necessary
+            if self._VAR_NAMES[var_name]['fix'] == 'negate':
+                fix_expression = -1
+            logger.debug(f"Applying fix '{fix_expression}' to variable '{var_name}'")
+            #var_cube = var_cube.copy()
+            var_cube.data = var_cube.data*fix_expression
 
         return var_cube

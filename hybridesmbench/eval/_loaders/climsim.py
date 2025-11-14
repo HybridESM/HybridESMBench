@@ -20,11 +20,11 @@ class ClimSimLoader(BaseClimSimLoader):
         "clt": {"raw_name": "CLOUD"},
         # "hus": "Q400",
         "lwp": {"raw_name": "TGCLDLWP"},
-        "pr": {"raw_name": "PRECT"},
+        "pr": {"raw_name": "PRECT", "raw_units": "m s-1"},
         "ps": {"raw_name": "PS"},
         "prw": {"raw_name": "TMQ"},
         # "ta": "T200", "T850"
         "tas": {"raw_name": "TREFHT"},
-        "tauu": {"raw_name": "TAUX"},
+        "tauu": {"raw_name": "TAUX", "fix": "negate"},
         # "ua": "U200", "U850"
     }
