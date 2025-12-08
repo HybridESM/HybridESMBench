@@ -17,8 +17,8 @@ from hybridesmbench._utils import (
     extract_vertical_level,
 )
 from hybridesmbench.eval._diags.base import ESMValToolDiagnostic
-from hybridesmbench.exceptions import HybridESMBenchException
 from hybridesmbench.eval._loaders import Loader
+from hybridesmbench.exceptions import HybridESMBenchException
 
 
 class PortraiPlotDiagnostic(ESMValToolDiagnostic):
@@ -78,7 +78,7 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
 
     def _preprocess(self, var_id: str, cube: Cube) -> Cube:
         """Preprocess input data."""
-        #cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
+        cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
         cube = extract_final_20_years(cube)
         cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
         cube = regrid(cube, "2x2", "linear", cache_weights=True)
@@ -86,7 +86,6 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
         ref_cube = self._get_ref_cube(var_id)
         cube = distance_metric([cube], "weighted_rmse", reference=ref_cube)[0]
         return cube
-
 
     def _update_metadata(
         self,

@@ -989,7 +989,7 @@
   units: '1'
   variable_group: hus40000
 ? hus40000/hus40000_ag_atm_amip_r2b5_cov15_tuned_Arthur_long.nc
-: alias: ICON-A-MLe
+: alias: ICON-A-MLe-CloudCover
   dataset: ICON-A
   diagnostic: portrait_plot
   exp: ag_atm_amip_r2b5_cov15_tuned_Arthur_long
@@ -1006,12 +1006,12 @@
   standard_name: ''
   units: '1'
   variable_group: hus40000
-? hus40000/hus40000_arpgem_NNv1.nc
+? hus40000/hus40000_hybridESMBench_NNv1.nc
 : alias: ARP-GEM NNv1
   dataset: ARP-GEM NNv1
   diagnostic: portrait_plot
   exp: arpgem_NNv1
-  filename: hus40000_arpgem_NNv1.nc
+  filename: hus40000_hybridESMBench_NNv1.nc
   frequency: mon
   long_name: RMSE of Specific Humidity
   mip: Amon
@@ -1024,12 +1024,30 @@
   standard_name: ''
   units: '1'
   variable_group: hus40000
-? hus40000/hus40000_arpgem_NNv2.nc
+? hus40000/hus40000_hybridESMBench_arpgem_NNv2.nc
 : alias: ARP-GEM NNv2
   dataset: ARP-GEM NNv2
   diagnostic: portrait_plot
   exp: arpgem_NNv2
-  filename: hus40000_arpgem_NNv2.nc
+  filename: hus40000_hybridESMBench_arpgem_NNv2.nc
+  frequency: mon
+  long_name: RMSE of Specific Humidity
+  mip: Amon
+  modeling_realm: 
+  - atmos
+  preprocessor: portrait_plot_preprocessor
+  project: ARP-GEM
+  recipe_dataset_index: 30
+  short_name: rmse_hus
+  standard_name: ''
+  units: '1'
+  variable_group: hus40000
+? hus40000/hus40000_hybridESMBench_refARPGEM.nc
+: alias: ARP-GEM reference
+  dataset: ARP-GEM reference
+  diagnostic: portrait_plot
+  exp: refARPGEM
+  filename: hus40000_hybridESMBench_refARPGEM.nc
   frequency: mon
   long_name: RMSE of Specific Humidity
   mip: Amon

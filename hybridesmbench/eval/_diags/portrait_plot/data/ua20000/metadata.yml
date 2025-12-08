@@ -989,7 +989,7 @@
   units: m s-1
   variable_group: ua20000
 ? ua20000/ua20000_ag_atm_amip_r2b5_cov15_tuned_Arthur_long.nc
-: alias: ICON-A-MLe
+: alias: ICON-A-MLe-CloudCover
   daua20000et: ICON-A
   diagnostic: portrait_plot
   exp: ag_atm_amip_r2b5_cov15_tuned_Arthur_long
@@ -1006,12 +1006,12 @@
   standard_name: ''
   units: m s-1
   variable_group: ua20000
-? ua20000/ua20000_refARPGEM.nc
+? ua20000/ua20000_hybridESMBench_refARPGEM.nc
 : alias: ARP-GEM reference
   daua20000et: ARP-GEM
   diagnostic: portrait_plot
   exp: refARPGEM
-  filename: ua20000_refARPGEM.nc
+  filename: ua20000_hybridESMBench_refARPGEM.nc
   frequency: mon
   long_name: RMSE of Eastward Wind
   mip: Amon
@@ -1024,12 +1024,12 @@
   standard_name: ''
   units: m s-1
   variable_group: ua20000
-? ua20000/ua20000_arpgem_NNv1.nc
+? ua20000/ua20000_hybridESMBench_NNv1.nc
 : alias: ARP-GEM NNv1
   daua20000et: ARP-GEM NNv1
   diagnostic: portrait_plot
   exp: arpgem_NNv1
-  filename: ua20000_arpgem_NNv1.nc
+  filename: ua20000_hybridESMBench_NNv1.nc
   frequency: mon
   long_name: RMSE of Eastward Wind
   mip: Amon
@@ -1042,12 +1042,12 @@
   standard_name: ''
   units: m s-1
   variable_group: ua20000
-? ua20000/ua20000_arpgem_NNv2.nc
+? ua20000/ua20000_hybridESMBench_arpgem_NNv2.nc
 : alias: ARP-GEM NNv2
   daua20000et: ARP-GEM NNv2
   diagnostic: portrait_plot
   exp: arpgem_NNv2
-  filename: ua20000_arpgem_NNv2.nc
+  filename: ua20000_hybridESMBench_arpgem_NNv2.nc
   frequency: mon
   long_name: RMSE of Eastward Wind
   mip: Amon

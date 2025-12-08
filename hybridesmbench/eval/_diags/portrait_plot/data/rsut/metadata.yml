@@ -962,7 +962,7 @@
   units: W m-2
   variable_group: rsut
 ? rsut/rsut_ag_atm_amip_r2b5_cov15_tuned_Arthur_long.nc
-: alias: ICON-A-MLe
+: alias: ICON-A-MLe-CloudCover
   dataset: ICON-A
   diagnostic: portrait_plot
   exp: ag_atm_amip_r2b5_cov15_tuned_Arthur_long
@@ -979,12 +979,12 @@
   standard_name: ''
   units: W m-2
   variable_group: rsut
-? rsut/rsut_refARPGEM.nc
+? rsut/rsut_hybridESMBench_refARPGEM.nc
 : alias: ARP-GEM reference
   dataset: ARP-GEM
   diagnostic: portrait_plot
   exp: refARPGEM
-  filename: rsut_refARPGEM.nc
+  filename: rsut_hybridESMBench_refARPGEM.nc
   frequency: mon
   long_name: RMSE of TOA Outgoing Shortwave Radiation
   mip: Amon
@@ -997,12 +997,12 @@
   standard_name: ''
   units: W m-2
   variable_group: rsut
-? rsut/rsut_arpgem_NNv1.nc
+? rsut/rsut_hybridESMBench_NNv1.nc
 : alias: ARP-GEM NNv1
   dataset: ARP-GEM NNv1
   diagnostic: portrait_plot
   exp: arpgem_NNv1
-  filename: rsut_arpgem_NNv1.nc
+  filename: rsut_hybridESMBench_NNv1.nc
   frequency: mon
   long_name: RMSE of TOA Outgoing Shortwave Radiation
   mip: Amon
@@ -1015,12 +1015,12 @@
   standard_name: ''
   units: W m-2
   variable_group: rsut
-? rsut/rsut_arpgem_NNv2.nc
+? rsut/rsut_hybridESMBench_arpgem_NNv2.nc
 : alias: ARP-GEM NNv2
   dataset: ARP-GEM NNv2
   diagnostic: portrait_plot
   exp: arpgem_NNv2
-  filename: rsut_arpgem_NNv2.nc
+  filename: rsut_hybridESMBench_arpgem_NNv2.nc
   frequency: mon
   long_name: RMSE of TOA Outgoing Shortwave Radiation
   mip: Amon

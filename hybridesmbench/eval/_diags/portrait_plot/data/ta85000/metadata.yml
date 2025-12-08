@@ -1072,7 +1072,7 @@
   units: K
   variable_group: ta85000
 ? ta85000/ta85000_ag_atm_amip_r2b5_cov15_tuned_Arthur_long.nc
-: alias: ICON-A-MLe
+: alias: ICON-A-MLe-CloudCover
   dataset: ICON-A
   diagnostic: portrait_plot
   exp: ag_atm_amip_r2b5_cov15_tuned_Arthur_long
@@ -1089,12 +1089,12 @@
   standard_name: ''
   units: K
   variable_group: ta85000
-? ta85000/ta85000_refARPGEM.nc
+? ta85000/ta85000_hybridESMBench_refARPGEM.nc
 : alias: ARP-GEM reference
   dataset: ARP-GEM
   diagnostic: portrait_plot
   exp: refARPGEM
-  filename: ta85000_refARPGEM.nc
+  filename: ta85000_hybridESMBench_refARPGEM.nc
   frequency: mon
   long_name: RMSE of Air Temperature
   mip: Amon
@@ -1107,12 +1107,12 @@
   standard_name: ''
   units: K
   variable_group: ta85000
-? ta85000/ta85000_arpgem_NNv1.nc
+? ta85000/ta85000_hybridESMBench_NNv1.nc
 : alias: ARP-GEM NNv1
   dataset: ARP-GEM NNv1
   diagnostic: portrait_plot
   exp: arpgem_NNv1
-  filename: ta85000_arpgem_NNv1.nc
+  filename: ta85000_hybridESMBench_NNv1.nc
   frequency: mon
   long_name: RMSE of Air Temperature
   mip: Amon
@@ -1125,12 +1125,12 @@
   standard_name: ''
   units: K
   variable_group: ta85000
-? ta85000/ta85000_arpgem_NNv2.nc
+? ta85000/ta85000_hybridESMBench_arpgem_NNv2.nc
 : alias: ARP-GEM NNv2
   dataset: ARP-GEM NNv2
   diagnostic: portrait_plot
   exp: arpgem_NNv2
-  filename: ta85000_arpgem_NNv2.nc
+  filename: ta85000_hybridESMBench_arpgem_NNv2.nc
   frequency: mon
   long_name: RMSE of Air Temperature
   mip: Amon

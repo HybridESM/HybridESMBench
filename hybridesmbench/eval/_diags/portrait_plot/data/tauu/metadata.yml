@@ -962,7 +962,7 @@
   units: Pa
   variable_group: tauu
 ? tauu/tauu_ag_atm_amip_r2b5_cov15_tuned_Arthur_long.nc
-: alias: ICON-A-MLe
+: alias: ICON-A-MLe-CloudCover
   dataset: ICON-A
   diagnostic: portrait_plot
   exp: ag_atm_amip_r2b5_cov15_tuned_Arthur_long
@@ -979,12 +979,12 @@
   standard_name: ''
   units: Pa
   variable_group: tauu
-? tauu/tauu_refARPGEM.nc
+? tauu/tauu_hybridESMBench_refARPGEM.nc
 : alias: ARP-GEM reference
   dataset: ARP-GEM
   diagnostic: portrait_plot
   exp: refARPGEM
-  filename: tauu_refARPGEM.nc
+  filename: tauu_hybridESMBench_refARPGEM.nc
   frequency: mon
   long_name: RMSE of Surface Downward Eastward Wind Stress
   mip: Amon
@@ -997,12 +997,12 @@
   standard_name: ''
   units: Pa
   variable_group: tauu
-? tauu/tauu_arpgem_NNv1.nc
+? tauu/tauu_hybridESMBench_NNv1.nc
 : alias: ARP-GEM NNv1
   dataset: ARP-GEM NNv1
   diagnostic: portrait_plot
   exp: arpgem_NNv1
-  filename: tauu_arpgem_NNv1.nc
+  filename: tauu_hybridESMBench_NNv1.nc
   frequency: mon
   long_name: RMSE of Surface Downward Eastward Wind Stress
   mip: Amon
@@ -1015,12 +1015,12 @@
   standard_name: ''
   units: Pa
   variable_group: tauu
-? tauu/tauu_arpgem_NNv2.nc
+? tauu/tauu_hybridESMBench_arpgem_NNv2.nc
 : alias: ARP-GEM NNv2
   dataset: ARP-GEM NNv2
   diagnostic: portrait_plot
   exp: arpgem_NNv2
-  filename: tauu_arpgem_NNv2.nc
+  filename: tauu_hybridESMBench_arpgem_NNv2.nc
   frequency: mon
   long_name: RMSE of Surface Downward Eastward Wind Stress
   mip: Amon
@@ -1065,42 +1065,6 @@
   preprocessor: portrait_plot_preprocessor
   project: HadGEM
   recipe_dataset_index: 31
-  short_name: rmse_tauu
-  standard_name: ''
-  units: Pa
-  variable_group: tauu
-? tauu/tauu_climsim_unet_3yrs.nc
-: alias: ClimSim Unet
-  dataset: ClimSim
-  diagnostic: portrait_plot
-  exp: reference
-  filename: tauu_climsim_unet_3yrs.nc
-  frequency: mon
-  long_name: RMSE of Surface Downward Eastward Wind Stress
-  mip: Amon
-  modeling_realm: 
-  - atmos
-  preprocessor: portrait_plot_preprocessor
-  project: ClimSim
-  recipe_dataset_index: 32
-  short_name: rmse_tauu
-  standard_name: ''
-  units: Pa
-  variable_group: tauu
-? tauu/tauu_climsim_pure-resLSTM.nc
-: alias: ClimSim Pure-ResLSTM
-  dataset: ClimSim
-  diagnostic: portrait_plot
-  exp: reference
-  filename: tauu_climsim_pure-resLSTM.nc
-  frequency: mon
-  long_name: RMSE of Surface Downward Eastward Wind Stress
-  mip: Amon
-  modeling_realm: 
-  - atmos
-  preprocessor: portrait_plot_preprocessor
-  project: ClimSim
-  recipe_dataset_index: 33
   short_name: rmse_tauu
   standard_name: ''
   units: Pa

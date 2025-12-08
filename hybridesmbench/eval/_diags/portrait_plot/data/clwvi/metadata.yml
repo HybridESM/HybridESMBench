@@ -638,7 +638,7 @@
   units: kg m-2
   variable_group: clwvi
 ? clwvi/clwvi_ag_atm_amip_r2b5_cov15_tuned_Arthur_long.nc
-: alias: ICON-A-MLe
+: alias: ICON-A-MLe-CloudCover
   dataset: ICON-A
   diagnostic: portrait_plot
   exp: ag_atm_amip_r2b5_cov15_tuned_Arthur_long
@@ -655,12 +655,12 @@
   standard_name: ''
   units: kg m-2
   variable_group: clwvi
-? clwvi/clwvi_refARPGEM.nc
+? clwvi/clwvi_hybridESMBench_refARPGEM.nc
 : alias: ARP-GEM reference
   dataset: ARP-GEM
   diagnostic: portrait_plot
   exp: refARPGEM
-  filename: clwvi_refARPGEM.nc
+  filename: clwvi_hybridESMBench_refARPGEM.nc
   frequency: mon
   long_name: RMSE of Condensed Water Path
   mip: Amon
@@ -673,12 +673,12 @@
   standard_name: ''
   units: kg m-2
   variable_group: clwvi
-? clwvi/clwvi_arpgem_NNv1.nc
+? clwvi/clwvi_hybridESMBench_NNv1.nc
 : alias: ARP-GEM NNv1
   dataset: ARP-GEM NNv1
   diagnostic: portrait_plot
   exp: arpgem_NNv1
-  filename: clwvi_arpgem_NNv1.nc
+  filename: clwvi_hybridESMBench_NNv1.nc
   frequency: mon
   long_name: RMSE of Condensed Water Path
   mip: Amon
@@ -691,12 +691,12 @@
   standard_name: ''
   units: kg m-2
   variable_group: clwvi
-? clwvi/clwvi_arpgem_NNv2.nc
+? clwvi/clwvi_hybridESMBench_arpgem_NNv2.nc
 : alias: ARP-GEM NNv2
   dataset: ARP-GEM NNv2
   diagnostic: portrait_plot
   exp: arpgem_NNv2
-  filename: clwvi_arpgem_NNv2.nc
+  filename: clwvi_hybridESMBench_arpgem_NNv2.nc
   frequency: mon
   long_name: RMSE of Condensed Water Path
   mip: Amon
@@ -741,42 +741,6 @@
   preprocessor: portrait_plot_preprocessor
   project: HadGEM
   recipe_dataset_index: 31
-  short_name: rmse_clwvi
-  standard_name: ''
-  units: kg m-2
-  variable_group: clwvi
-? clwvi/clwvi_climsim_unet_3yrs.nc
-: alias: ClimSim Unet
-  dataset: ClimSim
-  diagnostic: portrait_plot
-  exp: reference
-  filename: clwvi_climsim_unet_3yrs.nc
-  frequency: mon
-  long_name: RMSE of Condensed Water Path
-  mip: Amon
-  modeling_realm: 
-  - atmos
-  preprocessor: portrait_plot_preprocessor
-  project: ClimSim
-  recipe_dataset_index: 32
-  short_name: rmse_clwvi
-  standard_name: ''
-  units: kg m-2
-  variable_group: clwvi
-? clwvi/clwvi_climsim_pure-resLSTM.nc
-: alias: ClimSim Pure-ResLSTM
-  dataset: ClimSim
-  diagnostic: portrait_plot
-  exp: reference
-  filename: clwvi_climsim_pure-resLSTM.nc
-  frequency: mon
-  long_name: RMSE of Condensed Water Path
-  mip: Amon
-  modeling_realm: 
-  - atmos
-  preprocessor: portrait_plot_preprocessor
-  project: ClimSim
-  recipe_dataset_index: 33
   short_name: rmse_clwvi
   standard_name: ''
   units: kg m-2

@@ -692,7 +692,7 @@
   units: kg m-2
   variable_group: clivi
 ? clivi/clivi_ag_atm_amip_r2b5_cov15_tuned_Arthur_long.nc
-: alias: ICON-A-MLe
+: alias: ICON-A-MLe-CloudCover
   dataset: ICON-A
   diagnostic: portrait_plot
   exp: ag_atm_amip_r2b5_cov15_tuned_Arthur_long
@@ -709,12 +709,12 @@
   standard_name: ''
   units: kg m-2
   variable_group: clivi
-? clivi/clivi_refARPGEM.nc
+? clivi/clivi_hybridESMBench_refARPGEM.nc
 : alias: ARP-GEM reference
   dataset: ARP-GEM
   diagnostic: portrait_plot
   exp: refARPGEM
-  filename: clivi_refARPGEM.nc
+  filename: clivi_hybridESMBench_refARPGEM.nc
   frequency: mon
   long_name: RMSE of Ice Water Path
   mip: Amon
@@ -727,12 +727,12 @@
   standard_name: ''
   units: kg m-2
   variable_group: clivi
-? clivi/clivi_arpgem_NNv1.nc
+? clivi/clivi_hybridESMBench_NNv1.nc
 : alias: ARP-GEM NNv1
   dataset: ARP-GEM NNv1
   diagnostic: portrait_plot
   exp: arpgem_NNv1
-  filename: clivi_arpgem_NNv1.nc
+  filename: clivi_hybridESMBench_NNv1.nc
   frequency: mon
   long_name: RMSE of Ice Water Path
   mip: Amon
@@ -745,12 +745,12 @@
   standard_name: ''
   units: kg m-2
   variable_group: clivi
-? clivi/clivi_arpgem_NNv2.nc
+? clivi/clivi_hybridESMBench_arpgem_NNv2.nc
 : alias: ARP-GEM NNv2
   dataset: ARP-GEM NNv2
   diagnostic: portrait_plot
   exp: arpgem_NNv2
-  filename: clivi_arpgem_NNv2.nc
+  filename: clivi_hybridESMBench_arpgem_NNv2.nc
   frequency: mon
   long_name: RMSE of Ice Water Path
   mip: Amon
@@ -795,42 +795,6 @@
   preprocessor: portrait_plot_preprocessor
   project: HadGEM
   recipe_dataset_index: 31
-  short_name: rmse_clivi
-  standard_name: ''
-  units: kg m-2
-  variable_group: clivi
-? clivi/clivi_climsim_unet_3yrs.nc
-: alias: ClimSim Unet
-  dataset: ClimSim
-  diagnostic: portrait_plot
-  exp: reference
-  filename: clivi_climsim_unet_3yrs.nc
-  frequency: mon
-  long_name: RMSE of Ice Water Path
-  mip: Amon
-  modeling_realm: 
-  - atmos
-  preprocessor: portrait_plot_preprocessor
-  project: ClimSim
-  recipe_dataset_index: 32
-  short_name: rmse_clivi
-  standard_name: ''
-  units: kg m-2
-  variable_group: clivi
-? clivi/clivi_climsim_pure-resLSTM.nc
-: alias: ClimSim Pure-ResLSTM
-  dataset: ClimSim
-  diagnostic: portrait_plot
-  exp: reference
-  filename: clivi_climsim_pure-resLSTM.nc
-  frequency: mon
-  long_name: RMSE of Ice Water Path
-  mip: Amon
-  modeling_realm: 
-  - atmos
-  preprocessor: portrait_plot_preprocessor
-  project: ClimSim
-  recipe_dataset_index: 33
   short_name: rmse_clivi
   standard_name: ''
   units: kg m-2

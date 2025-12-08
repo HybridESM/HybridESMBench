@@ -1070,7 +1070,7 @@
   units: kg m-2 s-1
   variable_group: pr
 ? pr/pr_ag_atm_amip_r2b5_cov15_tuned_Arthur_long.nc
-: alias: ICON-A-MLe
+: alias: ICON-A-MLe-CloudCover
   dataset: ICON-A
   diagnostic: portrait_plot
   exp: ag_atm_amip_r2b5_cov15_tuned_Arthur_long
@@ -1087,12 +1087,12 @@
   standard_name: ''
   units: kg m-2 s-1
   variable_group: pr
-? pr/pr_refARPGEM.nc
+? pr/pr_hybridESMBench_refARPGEM.nc
 : alias: ARP-GEM reference
   dataset: ARP-GEM
   diagnostic: portrait_plot
   exp: refARPGEM
-  filename: pr_refARPGEM.nc
+  filename: pr_hybridESMBench_refARPGEM.nc
   frequency: mon
   long_name: RMSE of Precipitation
   mip: Amon
@@ -1105,12 +1105,12 @@
   standard_name: ''
   units: kg m-2 s-1
   variable_group: pr
-? pr/pr_arpgem_NNv1.nc
+? pr/pr_hybridESMBench_NNv1.nc
 : alias: ARP-GEM NNv1
   dataset: ARP-GEM NNv1
   diagnostic: portrait_plot
   exp: arpgem_NNv1
-  filename: pr_arpgem_NNv1.nc
+  filename: pr_hybridESMBench_NNv1.nc
   frequency: mon
   long_name: RMSE of Precipitation
   mip: Amon
@@ -1123,12 +1123,12 @@
   standard_name: ''
   units: kg m-2 s-1
   variable_group: pr
-? pr/pr_arpgem_NNv2.nc
+? pr/pr_hybridESMBench_arpgem_NNv2.nc
 : alias: ARP-GEM NNv2
   dataset: ARP-GEM NNv2
   diagnostic: portrait_plot
   exp: arpgem_NNv2
-  filename: pr_arpgem_NNv2.nc
+  filename: pr_hybridESMBench_arpgem_NNv2.nc
   frequency: mon
   long_name: RMSE of Precipitation
   mip: Amon
@@ -1173,42 +1173,6 @@
   preprocessor: portrait_plot_preprocessor
   project: HadGEM
   recipe_dataset_index: 31
-  short_name: rmse_pr
-  standard_name: ''
-  units: kg m-2 s-1
-  variable_group: pr
-? pr/pr_climsim_unet_3yrs.nc
-: alias: ClimSim Unet
-  dataset: ClimSim
-  diagnostic: portrait_plot
-  exp: reference
-  filename: pr_climsim_unet_3yrs.nc
-  frequency: mon
-  long_name: RMSE of Precipitation
-  mip: Amon
-  modeling_realm: 
-  - atmos
-  preprocessor: portrait_plot_preprocessor
-  project: ClimSim
-  recipe_dataset_index: 32
-  short_name: rmse_pr
-  standard_name: ''
-  units: kg m-2 s-1
-  variable_group: pr
-? pr/pr_climsim_pure-resLSTM.nc
-: alias: ClimSim Pure-ResLSTM
-  dataset: ClimSim
-  diagnostic: portrait_plot
-  exp: reference
-  filename: pr_climsim_pure-resLSTM.nc
-  frequency: mon
-  long_name: RMSE of Precipitation
-  mip: Amon
-  modeling_realm: 
-  - atmos
-  preprocessor: portrait_plot_preprocessor
-  project: ClimSim
-  recipe_dataset_index: 33
   short_name: rmse_pr
   standard_name: ''
   units: kg m-2 s-1
