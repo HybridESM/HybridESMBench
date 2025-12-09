@@ -17,6 +17,7 @@ from hybridesmbench._utils import (
     extract_vertical_level,
 )
 from hybridesmbench.eval._diags.base import ESMValToolDiagnostic
+from hybridesmbench.eval._loaders import Loader
 from hybridesmbench.exceptions import HybridESMBenchException
 
 
@@ -80,11 +81,21 @@ class PortraiPlotDiagnostic(ESMValToolDiagnostic):
         cube = cube.extract(Constraint(time=lambda c: c.point.year >= 1979))
         cube = extract_final_20_years(cube)
         cube = extract_vertical_level(var_id, cube, coordinate="air_pressure")
-        cube = regrid(cube, "2x2", "area_weighted", cache_weights=True)
+        cube = regrid(cube, "2x2", "linear", cache_weights=True)
         cube = climate_statistics(cube, operator="mean", period="month")
         ref_cube = self._get_ref_cube(var_id)
         cube = distance_metric([cube], "weighted_rmse", reference=ref_cube)[0]
         return cube
+
+    def _update_metadata(
+        self,
+        var_id: str,
+        loader: Loader,
+        metadata: dict[str, Any],
+    ) -> dict[str, Any]:
+        """Update hybrid ESM output metadata (in-place)."""
+        metadata["project"] = "HybridESM"
+        return metadata
 
     def _run_esmvaltool_diag(self, cfg: dict[str, Any]) -> None:
         """Run ESMValTool diagnostic."""

@@ -7,9 +7,14 @@ from pathlib import Path
 from typing import Any
 
 import xarray as xr
+import numpy as np
+import cf_units
+from datetime import datetime
 from esmvalcore.cmor.fix import fix_data, fix_metadata
 from esmvalcore.cmor.table import get_var_info
 from iris.cube import Cube
+from iris import NameConstraint
+from iris.coords import DimCoord, AuxCoord
 from loguru import logger
 from ncdata.iris_xarray import cubes_from_xarray
 
@@ -135,7 +140,8 @@ class Loader:
 
         """
         kwargs.setdefault("chunks", "auto")
-        return xr.open_mfdataset(path, **kwargs)
+        # return xr.open_mfdataset(path, **kwargs)
+        return xr.open_mfdataset(path)
 
     def _load_single_variable(self, var_name: str, mip_table: str) -> Cube:
         """Load single variable.
@@ -238,3 +244,125 @@ class BaseICONLoader(Loader):
         )
 
         return cube
+
+
+class BaseClimSimLoader(Loader):
+    """Load ClimSim hybrid Earth system model output (base class).
+
+    Parameters
+    ----------
+    path:
+        Path to ClimSim output.
+
+    """
+
+    _PROJECT = "ClimSim"
+    _VAR_NAMES: dict[str, str]
+
+    def __init__(self, path: Path, model_name: str | None = None) -> None:
+        """Initialize class instance."""
+        super().__init__(path, model_name=model_name)
+
+        # ClimSim model name
+        if model_name is None:
+            model_name = f"{self._DATASET} ({self.exp})"
+        self._model_name = model_name
+
+        # # ICON grid file
+        # Might need to fix climsim unstructured grid
+
+    @functools.lru_cache
+    def _load_single_variable(self, var_name: str, mip_table: str) -> Cube:
+        """Load single variable."""
+        msg = (
+            f"Invalid variable '{var_name}' for model type '{self.model_type}'"
+        )
+        assert var_name in self._VAR_NAMES, msg
+        #raw_name = self._VAR_NAMES[var_name['raw_name']]
+
+        # Load xarray.Dataset and convert to iris.cube.CubeList
+        #file_pattern = str(self.path / f"{self.model_name}*.nc")
+        # TODO this exp seems kinda of random, maybe we ask to call the folder this?
+        #exp = "unet"
+        #file_pattern = str(self.path / f"climsim_v2_highres_{exp}.*.nc")
+        file_pattern = str(self.path / f"climsim_v2_highres_*.nc")
+        logger.debug(f"Loading files {file_pattern}")
+        xr_ds = self._load_files(file_pattern).copy()
+        _Fill_Value = 1.e20
+        for var in xr_ds.data_vars:
+            xr_ds[var] = xr_ds[var].where(xr_ds[var].notnull(), _Fill_Value)
+        ndtype = np.float64
+        for var in xr_ds.data_vars:
+            xr_ds[var] = xr_ds[var].astype(ndtype)
+
+        new_time = cf_units.date2num(xr_ds['time'], 'hours since 0001-01-01 00:00:00', cf_units.CALENDAR_STANDARD)
+
+        time_array = xr.DataArray(
+            data=new_time,
+            dims=['time'],
+            coords={'time': new_time},
+            attrs={
+                'standard_name': 'time',
+                'long_name': 'time',
+                'units': 'hours since 0001-01-01 00:00:00',
+                'calendar': cf_units.CALENDAR_STANDARD
+            }
+        )
+
+        xr_ds['time'] = time_array
+
+        xr_ds.lon.attrs["standard_name"] = "longitude"
+        xr_ds.lat.attrs["standard_name"] = "latitude"
+
+        cubes = cubes_from_xarray(xr_ds)
+        # extract cube:
+        var_cube = cubes.extract_cube(NameConstraint(var_name=
+                                               self._VAR_NAMES[var_name]["raw_name"]))
+
+        ncol_coord = DimCoord(np.arange(21600), units="1")
+        ncol_coord.rename("ncol")
+        var_cube.add_dim_coord(ncol_coord, 1)
+
+        lat = cubes.extract_cube(NameConstraint(var_name="lat"))
+        lon = cubes.extract_cube(NameConstraint(var_name="lon"))
+        area = cubes.extract_cube(NameConstraint(var_name="area"))
+
+        lat_coord = AuxCoord(lat.data[0,:], units="degrees_north", standard_name="latitude")
+        lon_coord = AuxCoord(lon.data[0,:], units="degrees_east", standard_name="longitude")
+        areacella = AuxCoord(area.data[0,:], units="m2", standard_name="cell_area")
+        lat_coord.rename("latitude")
+        lon_coord.rename("longitude")
+        areacella.rename("areacella")
+
+        var_cube.add_aux_coord(lat_coord, 1)
+        var_cube.add_aux_coord(lon_coord, 1)
+        var_cube.add_aux_coord(areacella, 1)
+
+
+        # Fix Varname metadata
+        metadata = self.get_metadata(var_name, mip_table)
+        var_cube.var_name = metadata["short_name"]
+        var_cube.long_name = metadata["long_name"]
+        var_cube.standard_name = metadata["standard_name"]
+
+        if 'raw_units' in self._VAR_NAMES[var_name]:
+            var_cube.units = self._VAR_NAMES[var_name]['raw_units']
+            if var_name == "pr":
+                var_cube.data = var_cube.data * 1e3  # from m/s to kg m-2 s-1
+                var_cube.units = "kg m-2 s-1"
+            else:
+                var_cube.convert_units(metadata["units"])
+        else:
+            var_cube.units = metadata["units"]
+        
+        var_cube.coord("time").guess_bounds()
+
+        if 'fix' in self._VAR_NAMES[var_name]:
+            # Apply fix if necessary
+            if self._VAR_NAMES[var_name]['fix'] == 'negate':
+                fix_expression = -1
+            logger.debug(f"Applying fix '{fix_expression}' to variable '{var_name}'")
+            #var_cube = var_cube.copy()
+            var_cube.data = var_cube.data*fix_expression
+
+        return var_cube
